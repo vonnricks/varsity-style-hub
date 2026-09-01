@@ -103,7 +103,7 @@ export function Header() {
             <MegaMenu key={item.label} item={item} open={hovered === item.label} />
           ))}
         </nav>
-      </div>
+    </header>
 
       {/* Search overlay */}
       <div
