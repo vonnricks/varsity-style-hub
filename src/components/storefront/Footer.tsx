@@ -64,8 +64,8 @@ export function Footer() {
                   />
                 </button>
                 <div
-                  className="grid overflow-hidden transition-all duration-300 ease-out"
-                  style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                  className="overflow-hidden transition-all duration-300 ease-out"
+                  style={{ maxHeight: isOpen ? "1000px" : "0px", opacity: isOpen ? 1 : 0 }}
                 >
                   <ul className="min-h-0 space-y-2.5 pb-4">
                     {group.links.map((link) => (

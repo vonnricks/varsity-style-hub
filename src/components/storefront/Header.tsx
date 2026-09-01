@@ -184,8 +184,8 @@ export function Header() {
                     />
                   </button>
                   <div
-                    className="grid overflow-hidden transition-all duration-300 ease-out"
-                    style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                    className="overflow-hidden transition-all duration-300 ease-out"
+                    style={{ maxHeight: isOpen ? "1000px" : "0px", opacity: isOpen ? 1 : 0 }}
                   >
                     <div className="min-h-0 space-y-5 px-4 pb-5">
                       {item.columns.map((column) => (
