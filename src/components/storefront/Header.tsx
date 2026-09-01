@@ -42,7 +42,7 @@ export function Header() {
   const searchOpen = overlay === "search";
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-background">
       <AnnouncementBar />
       <div className="border-b border-border">
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 md:px-8">
