@@ -48,12 +48,16 @@ export function Header() {
       <div className="border-b border-border">
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 md:px-8">
           <div className="flex flex-1 items-center gap-1">
-            <IconButton label="Open menu" onClick={() => open("menu")}>
-              <Menu className="size-5 lg:hidden" />
-              <span className="hidden lg:block">
+            <span className="lg:hidden">
+              <IconButton label="Open menu" onClick={() => open("menu")}>
+                <Menu className="size-5" />
+              </IconButton>
+            </span>
+            <span className="hidden lg:block">
+              <IconButton label="Open search" onClick={() => open("search")}>
                 <Search className="size-5" />
-              </span>
-            </IconButton>
+              </IconButton>
+            </span>
             <button
               type="button"
               onClick={() => open("search")}
