@@ -26,16 +26,12 @@ type StoreValue = {
 const StoreContext = createContext<StoreValue | null>(null);
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [lines, setLines] = useState<CartLine[]>([
-    {
-      id: products[0].id,
-      name: products[0].name,
-      size: "M",
-      price: products[0].price,
-      image: products[0].image,
-      qty: 1,
-    },
-  ]);
+  const [lines, setLines] = useState<CartLine[]>(() => {
+    const seed = products[0]!;
+    return [
+      { id: seed.id, name: seed.name, size: "M", price: seed.price, image: seed.image, qty: 1 },
+    ];
+  });
   const [overlay, setOverlay] = useState<Overlay>("none");
 
   const addLine = useCallback((product: Product, size = "M") => {
