@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Eye } from "lucide-react";
 import type { Product } from "@/lib/shop-data";
 import { useStore } from "./store-context";
@@ -66,7 +67,11 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="mt-3">
-        <h3 className="text-sm font-medium">{product.name}</h3>
+        <h3 className="text-sm font-medium">
+          <Link to="/product/$productId" params={{ productId: product.id }}>
+            {product.name}
+          </Link>
+        </h3>
         <p className="text-xs text-muted-foreground">{product.blurb}</p>
         <p className="mt-1 flex items-center gap-2 text-sm">
           <span className={product.compareAt ? "text-sale font-medium" : ""}>${product.price}</span>
