@@ -1,74 +1,73 @@
-import heroImage from "@/assets/hero-varsity.jpg";
-import { categoryPills, categoryTiles, colorSwatches, trustMessages } from "@/lib/shop-data";
+import { Link } from "@tanstack/react-router";
+import { colorSwatches, heroImage, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
   return (
-    <section>
-      <div className="relative h-[72vh] min-h-[440px] w-full overflow-hidden md:h-[82vh]">
-        <img
-          src={heroImage}
-          alt="Model wearing a navy and cream wool varsity jacket"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 size-full object-cover"
-        />
-        <div className="absolute inset-0 bg-ink/25" />
-        <div className="relative mx-auto flex h-full max-w-[1600px] flex-col justify-end px-4 pb-12 md:px-8 md:pb-16">
-          <p className="text-[11px] label-caps text-primary-foreground/85">Lorem ipsum dolor</p>
-          <h1 className="mt-3 max-w-2xl display-title text-5xl text-primary-foreground md:text-7xl">
-            Consectetur adipiscing elit
-          </h1>
-          <p className="mt-4 max-w-md text-sm text-primary-foreground/85">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.
-          </p>
-          <div className="mt-7">
-            <a
-              href="#new-arrivals"
-              className="inline-block bg-card px-8 py-4 text-[11px] label-caps text-foreground transition-opacity hover:opacity-90"
-            >
-              Shop lorem ipsum
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="no-scrollbar flex gap-2 overflow-x-auto border-b border-border px-4 py-4 md:px-8">
-        {categoryPills.map((pill) => (
+    <section className="relative aspect-4/5 w-full overflow-hidden md:aspect-16/9">
+      <img
+        src={heroImage}
+        alt="Four rivals standing shoulder to shoulder in wool varsity jackets"
+        width={1280}
+        height={1600}
+        className="absolute inset-0 size-full object-cover object-top"
+      />
+      <div className="absolute inset-0 bg-linear-to-t from-ink/75 via-ink/10 to-transparent" />
+      <div className="relative flex h-full flex-col justify-end px-5 pb-8 md:mx-auto md:max-w-[1600px] md:px-8 md:pb-16">
+        <p className="text-[11px] label-caps text-primary-foreground/85">Lorem ipsum dolor</p>
+        <h1 className="mt-2 display-title text-4xl leading-[0.95] text-primary-foreground md:text-7xl">
+          Rep your team
+        </h1>
+        <p className="mt-3 max-w-md text-sm text-primary-foreground/85">
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div className="mt-5">
           <a
-            key={pill}
-            href="#"
-            className="shrink-0 rounded-full border border-border px-4 py-2 text-[11px] label-caps transition-colors hover:border-foreground hover:bg-secondary"
+            href="#the-lineup"
+            className="inline-block bg-card px-7 py-3.5 text-[11px] label-caps text-foreground transition-opacity hover:opacity-90"
           >
-            {pill}
+            Shop lorem ipsum
           </a>
-        ))}
+        </div>
       </div>
     </section>
   );
 }
 
-export function CategoryGrid() {
+export function TeamShots() {
   return (
-    <section className="mx-auto max-w-[1600px] px-4 pb-14 md:px-8 md:pb-20">
-      <h2 className="display-title text-3xl md:text-5xl">Lorem categoriae</h2>
-      <div className="mt-8 grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-4">
-        {categoryTiles.map((tile, i) => (
-          <a key={`${tile.title}-${i}`} href="#" className="group relative overflow-hidden">
+    <section className="px-0 py-10 md:py-16">
+      <div className="mx-auto max-w-[1600px] px-5 md:px-8">
+        <h2 className="display-title text-3xl md:text-5xl">Pick a side</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit.
+        </p>
+      </div>
+      <div className="mt-6 grid grid-cols-1 gap-3 px-5 md:grid-cols-2 md:gap-4 md:px-8 lg:grid-cols-4">
+        {teamShots.map((shot) => (
+          <Link
+            key={shot.team}
+            to="/product/$productId"
+            params={{ productId: shot.productId }}
+            className="group relative block aspect-square overflow-hidden"
+          >
             <img
-              src={tile.image}
-              alt={tile.title}
+              src={shot.image}
+              alt={`${shot.team} wool varsity jacket lifestyle shot`}
               loading="lazy"
               width={1024}
               height={1024}
-              className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-ink/70 to-transparent" />
-            <div className="absolute bottom-0 p-4">
-              <p className="display-title text-lg text-primary-foreground md:text-xl">
-                {tile.title}
-              </p>
-              <p className="text-[11px] text-primary-foreground/80">{tile.copy}</p>
+            <div className="absolute inset-0 bg-linear-to-t from-ink/75 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-4">
+              <p className="text-[10px] label-caps text-primary-foreground/80">{shot.rivalry}</p>
+              <p className="display-title text-2xl text-primary-foreground">{shot.team}</p>
+              <p className="mt-1 text-[11px] text-primary-foreground/80">{shot.copy}</p>
+              <span className="mt-3 inline-block bg-card px-5 py-2.5 text-[10px] label-caps text-foreground">
+                Shop this team
+              </span>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
@@ -78,7 +77,7 @@ export function CategoryGrid() {
 export function PromoBanner() {
   return (
     <section className="bg-maroon text-maroon-foreground">
-      <div className="mx-auto flex max-w-[1600px] flex-col items-start gap-6 px-4 py-16 md:flex-row md:items-center md:justify-between md:px-8 md:py-20">
+      <div className="mx-auto flex max-w-[1600px] flex-col items-start gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8 md:py-20">
         <div>
           <h2 className="display-title text-4xl md:text-6xl">Ipsum dolor sit amet</h2>
           <p className="mt-3 max-w-xl text-sm text-maroon-foreground/85">
@@ -87,7 +86,7 @@ export function PromoBanner() {
           </p>
         </div>
         <a
-          href="#"
+          href="#the-lineup"
           className="bg-card px-8 py-4 text-[11px] label-caps text-foreground transition-opacity hover:opacity-90"
         >
           Tempor incididunt
@@ -99,11 +98,11 @@ export function PromoBanner() {
 
 export function ShopByColor() {
   return (
-    <section className="mx-auto max-w-[1600px] px-4 py-14 md:px-8 md:py-20">
+    <section className="mx-auto max-w-[1600px] px-5 py-12 md:px-8 md:py-20">
       <h2 className="display-title text-3xl md:text-5xl">Lorem per colorem</h2>
-      <div className="no-scrollbar mt-8 flex gap-5 overflow-x-auto pb-2 md:gap-8">
+      <div className="no-scrollbar mt-6 flex gap-5 overflow-x-auto pb-2 md:gap-8">
         {colorSwatches.map((swatch) => (
-          <a key={swatch.name} href="#" className="group shrink-0 text-center">
+          <a key={swatch.name} href="#the-lineup" className="group shrink-0 text-center">
             <span
               className={`block size-20 rounded-full border border-border transition-transform duration-300 group-hover:scale-105 md:size-24 ${swatch.token}`}
             />
