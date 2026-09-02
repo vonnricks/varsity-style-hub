@@ -4,10 +4,13 @@ import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
 import jacketGreen from "@/assets/jacket-green.jpg";
 import jacketGrey from "@/assets/jacket-grey.jpg";
-import tileVarsity from "@/assets/tile-varsity.jpg";
-import tilePatches from "@/assets/tile-patches.jpg";
-import tileBomber from "@/assets/tile-bomber.jpg";
-import tileAccessories from "@/assets/tile-accessories.jpg";
+import teamNavy from "@/assets/team-navy.jpg";
+import teamMaroon from "@/assets/team-maroon.jpg";
+import teamBlack from "@/assets/team-black.jpg";
+import teamGreen from "@/assets/team-green.jpg";
+import heroRivals from "@/assets/hero-rivals.jpg";
+
+export const heroImage = heroRivals;
 
 export const BRAND = "Woolworks";
 
@@ -169,26 +172,43 @@ export const products: Product[] = [
   },
 ];
 
-export const categoryPills = [
-  "Lorem ipsum",
-  "Dolor sit",
-  "Amet elit",
-  "Consectetur",
-  "Adipiscing",
-  "Eiusmod tempor",
-  "Incididunt",
-  "Labore magna",
-];
+export type TeamShot = {
+  team: string;
+  rivalry: string;
+  copy: string;
+  image: string;
+  productId: string;
+};
 
-export const categoryTiles = [
-  { title: "Lorem ipsum", copy: "Dolor sit amet", image: tileVarsity },
-  { title: "Consectetur", copy: "Adipiscing elit sed", image: tilePatches },
-  { title: "Eiusmod tempor", copy: "Incididunt ut labore", image: tileBomber },
-  { title: "Magna aliqua", copy: "Ut enim ad minim", image: tileAccessories },
-  { title: "Veniam quis", copy: "Nostrud exercitation", image: tileBomber },
-  { title: "Ullamco laboris", copy: "Nisi ut aliquip ex", image: tilePatches },
-  { title: "Ea commodo", copy: "Duis aute irure dolor", image: tileVarsity },
-  { title: "Reprehenderit", copy: "In voluptate velit esse", image: tileAccessories },
+export const teamShots: TeamShot[] = [
+  {
+    team: "Team Lorem",
+    rivalry: "Lorem vs Ipsum",
+    copy: "Consectetur adipiscing elit, sed do eiusmod tempor.",
+    image: teamNavy,
+    productId: "item-1",
+  },
+  {
+    team: "Team Ipsum",
+    rivalry: "Ipsum vs Dolor",
+    copy: "Incididunt ut labore et dolore magna aliqua veniam.",
+    image: teamMaroon,
+    productId: "item-3",
+  },
+  {
+    team: "Team Dolor",
+    rivalry: "Dolor vs Amet",
+    copy: "Quis nostrud exercitation ullamco laboris nisi ut.",
+    image: teamBlack,
+    productId: "item-4",
+  },
+  {
+    team: "Team Amet",
+    rivalry: "Amet vs Lorem",
+    copy: "Duis aute irure dolor in reprehenderit voluptate.",
+    image: teamGreen,
+    productId: "item-5",
+  },
 ];
 
 export const colorSwatches = [
