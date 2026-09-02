@@ -17,7 +17,9 @@ export function Hero() {
           />
         ))}
       </div>
+      <div className="pointer-events-none absolute inset-0 bg-ink/35" />
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
+
         <p className="text-[11px] label-caps text-primary-foreground drop-shadow-md">
           Lorem ipsum dolor
         </p>
