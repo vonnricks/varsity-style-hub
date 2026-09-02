@@ -4,7 +4,7 @@ import { colorSwatches, heroTiles, teamShots, trustMessages } from "@/lib/shop-d
 export function Hero() {
   return (
     <section className="relative w-full">
-      <div className="grid grid-cols-2">
+      <div className="grid h-[calc(100svh-6.5rem)] grid-cols-2 grid-rows-2 md:h-[80vh]">
         {heroTiles.map((tile, i) => (
           <img
             key={tile.alt}
@@ -13,14 +13,25 @@ export function Hero() {
             width={1024}
             height={1024}
             loading={i === 0 ? "eager" : "lazy"}
-            className="aspect-square size-full object-cover"
+            className="size-full object-cover"
           />
         ))}
       </div>
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+      <div className="pointer-events-none absolute inset-0 bg-ink/35" />
+      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
+
+        <p className="text-[11px] label-caps text-primary-foreground drop-shadow-md">
+          Lorem ipsum dolor
+        </p>
+        <h1 className="mt-2 display-title text-5xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-7xl">
+          Rep your team
+        </h1>
+        <p className="mt-3 max-w-xs text-sm text-primary-foreground/90 drop-shadow-md md:max-w-md">
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
         <a
           href="#pick-a-side"
-          className="pointer-events-auto bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
+          className="pointer-events-auto mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
         >
           Shop lorem ipsum
         </a>
@@ -28,6 +39,7 @@ export function Hero() {
     </section>
   );
 }
+
 
 function DealBand({ eyebrow, heading, copy }: { eyebrow: string; heading: string; copy: string }) {
   return (
