@@ -9,8 +9,19 @@ import teamMaroon from "@/assets/team-maroon.jpg";
 import teamBlack from "@/assets/team-black.jpg";
 import teamGreen from "@/assets/team-green.jpg";
 import heroRivals from "@/assets/hero-rivals.jpg";
+import rival1 from "@/assets/rival-1.jpg";
+import rival2 from "@/assets/rival-2.jpg";
+import rival3 from "@/assets/rival-3.jpg";
+import rival4 from "@/assets/rival-4.jpg";
 
 export const heroImage = heroRivals;
+
+export const heroTiles = [
+  { image: rival1, alt: "Rival in navy and cream wool varsity jacket" },
+  { image: rival2, alt: "Rival in maroon and cream wool varsity jacket" },
+  { image: rival3, alt: "Rival in black and cream wool varsity jacket" },
+  { image: rival4, alt: "Rival in forest green and cream wool varsity jacket" },
+];
 
 export const BRAND = "Woolworks";
 
