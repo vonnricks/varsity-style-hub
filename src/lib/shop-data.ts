@@ -6,7 +6,8 @@ import jacketGreen from "@/assets/jacket-green.jpg";
 import jacketGrey from "@/assets/jacket-grey.jpg";
 import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
 import item1SideAsset from "@/assets/item1-side.png.asset.json";
-import lineupItem2Asset from "@/assets/lineup-item-2.png.asset.json";
+import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
+import item2SideAsset from "@/assets/item2-side.png.asset.json";
 import lineupItem3Asset from "@/assets/lineup-item-3.jpeg.asset.json";
 import lineupItem4Asset from "@/assets/lineup-item-4.png.asset.json";
 import lineupItem5Asset from "@/assets/lineup-item-5.png.asset.json";
@@ -145,8 +146,8 @@ export const products: Product[] = [
     blurb: "Consectetur adipiscing elit",
     price: 372,
     compareAt: 430,
-    image: lineupItem2Asset.url,
-    hoverImage: jacketMaroon,
+    image: item2FrontBackAsset.url,
+    hoverImage: item2SideAsset.url,
     sizes: sizeSet(["S", "XL"]),
     badge: "Ipsum",
   },
