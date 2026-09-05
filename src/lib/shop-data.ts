@@ -1,4 +1,3 @@
-import jacketNavy from "@/assets/jacket-navy.jpg";
 import jacketCream from "@/assets/jacket-cream.jpg";
 import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
@@ -22,7 +21,8 @@ import item4FrontAsset from "@/assets/item4-front.png.asset.json";
 import item4BackAsset from "@/assets/item4-back.png.asset.json";
 import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
 import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.json";
-import lineupItem6Asset from "@/assets/lineup-item-6.png.asset.json";
+import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
+import item6FrontAsset from "@/assets/item6-front.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
@@ -199,9 +199,10 @@ export const products: Product[] = [
     name: "Item 6",
     blurb: "Quis nostrud exercitation",
     price: 415,
-    image: lineupItem6Asset.url,
-    hoverImage: jacketNavy,
+    image: item6FrontBackAsset.url,
+    hoverImage: item6FrontAsset.url,
     sizes: sizeSet(["XS", "S"]),
+    imageFit: "contain",
   },
 ];
 
