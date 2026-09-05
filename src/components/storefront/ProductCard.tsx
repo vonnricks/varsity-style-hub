@@ -14,7 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="relative aspect-4/5 overflow-hidden bg-secondary">
+      <div className="relative aspect-4/5 overflow-hidden bg-white">
         <img
           src={product.image}
           alt={`${product.name} wool varsity jacket`}
