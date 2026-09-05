@@ -33,7 +33,7 @@ export function Hero() {
           href="#pick-a-side"
           className="pointer-events-auto mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
         >
-          Shop lorem ipsum
+          SHOP INVENTORY
         </a>
       </div>
     </section>
