@@ -21,7 +21,7 @@ export function ProductCard({ product }: { product: Product }) {
           loading="lazy"
           width={1024}
           height={1280}
-          className={`absolute inset-0 size-full object-contain p-4 transition-opacity duration-500 ${
+          className={`absolute inset-0 size-full object-cover transition-opacity duration-500 ${
             hover ? "opacity-0" : "opacity-100"
           }`}
         />
@@ -31,7 +31,7 @@ export function ProductCard({ product }: { product: Product }) {
           loading="lazy"
           width={1024}
           height={1280}
-          className={`absolute inset-0 size-full object-contain p-4 transition-opacity duration-500 ${
+          className={`absolute inset-0 size-full object-cover transition-opacity duration-500 ${
             hover ? "opacity-100" : "opacity-0"
           }`}
         />
