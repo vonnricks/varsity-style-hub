@@ -9,10 +9,10 @@ import teamMaroon from "@/assets/team-maroon.jpg";
 import teamBlack from "@/assets/team-black.jpg";
 import teamGreen from "@/assets/team-green.jpg";
 import heroRivals from "@/assets/hero-rivals.jpg";
-import rival1 from "@/assets/rival-1.jpg";
-import rival2 from "@/assets/rival-2.jpg";
-import rival3 from "@/assets/rival-3.jpg";
-import rival4 from "@/assets/rival-4.jpg";
+import heroRival1Asset from "@/assets/hero-rival-1.png.asset.json";
+import heroRival2Asset from "@/assets/hero-rival-2.png.asset.json";
+import heroRival3Asset from "@/assets/hero-rival-3.png.asset.json";
+import heroRival4Asset from "@/assets/hero-rival-4.png.asset.json";
 
 export const heroImage = heroRivals;
 
