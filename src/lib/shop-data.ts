@@ -164,7 +164,7 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "XL"]),
     badge: "Ipsum",
     imageFit: "contain",
-    imageBg: "#f4f1ea",
+    imageBg: "#ffffff",
   },
   {
     id: "item-3",
