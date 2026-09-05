@@ -129,6 +129,7 @@ export type Product = {
   hoverImage: string;
   sizes: { label: string; soldOut?: boolean }[];
   badge?: string;
+  imageFit?: "cover" | "contain";
 };
 
 const sizeSet = (soldOut: string[] = []) =>
@@ -158,6 +159,7 @@ export const products: Product[] = [
     hoverImage: item2SideAsset.url,
     sizes: sizeSet(["S", "XL"]),
     badge: "Ipsum",
+    imageFit: "contain",
   },
   {
     id: "item-3",
