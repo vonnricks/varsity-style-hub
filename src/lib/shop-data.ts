@@ -217,7 +217,7 @@ export const teamShots: TeamShot[] = [
     team: "Team Amet",
     rivalry: "Amet vs Lorem",
     copy: "Duis aute irure dolor in reprehenderit voluptate.",
-    image: teamGreen,
+    image: teamGreenAsset.url,
     productId: "item-5",
   },
 ];
