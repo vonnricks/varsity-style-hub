@@ -134,10 +134,10 @@ export const products: Product[] = [
     id: "item-1",
     name: "Item 1",
     blurb: "Lorem ipsum dolor sit amet",
-    price: 348,
+    price: 225,
     image: item1FrontBackAsset.url,
     hoverImage: item1SideAsset.url,
-    sizes: sizeSet(["XS"]),
+    sizes: ["S", "M", "L", "XL", "2XL"].map((label) => ({ label })),
     badge: "Lorem",
   },
   {
