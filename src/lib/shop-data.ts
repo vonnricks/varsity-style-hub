@@ -133,6 +133,7 @@ export type Product = {
   sizes: { label: string; soldOut?: boolean }[];
   badge?: string;
   imageFit?: "cover" | "contain";
+  imageBg?: string;
 };
 
 const sizeSet = (soldOut: string[] = []) =>
