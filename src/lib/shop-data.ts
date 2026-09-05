@@ -4,7 +4,8 @@ import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
 import jacketGreen from "@/assets/jacket-green.jpg";
 import jacketGrey from "@/assets/jacket-grey.jpg";
-import lineupItem1Asset from "@/assets/lineup-item-1.png.asset.json";
+import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
+import item1SideAsset from "@/assets/item1-side.png.asset.json";
 import lineupItem2Asset from "@/assets/lineup-item-2.png.asset.json";
 import lineupItem3Asset from "@/assets/lineup-item-3.jpeg.asset.json";
 import lineupItem4Asset from "@/assets/lineup-item-4.png.asset.json";
@@ -133,8 +134,8 @@ export const products: Product[] = [
     name: "Item 1",
     blurb: "Lorem ipsum dolor sit amet",
     price: 348,
-    image: lineupItem1Asset.url,
-    hoverImage: jacketCream,
+    image: item1FrontBackAsset.url,
+    hoverImage: item1SideAsset.url,
     sizes: sizeSet(["XS"]),
     badge: "Lorem",
   },
