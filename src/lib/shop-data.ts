@@ -192,6 +192,7 @@ export const products: Product[] = [
     hoverImage: item5FrontAsset.url,
     sizes: sizeSet(["L", "XL"]),
     badge: "Dolor",
+    imageFit: "contain",
   },
   {
     id: "item-6",
