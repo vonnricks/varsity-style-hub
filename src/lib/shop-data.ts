@@ -17,10 +17,10 @@ import heroRival4Asset from "@/assets/hero-rival-4.png.asset.json";
 export const heroImage = heroRivals;
 
 export const heroTiles = [
-  { image: rival1, alt: "Rival in navy and cream wool varsity jacket" },
-  { image: rival2, alt: "Rival in maroon and cream wool varsity jacket" },
-  { image: rival3, alt: "Rival in black and cream wool varsity jacket" },
-  { image: rival4, alt: "Rival in forest green and cream wool varsity jacket" },
+  { image: heroRival1Asset.url, alt: "Rival in black and red wool varsity jacket" },
+  { image: heroRival2Asset.url, alt: "Rival in navy and grey wool varsity jacket" },
+  { image: heroRival3Asset.url, alt: "Rival in maroon and gold wool varsity jacket" },
+  { image: heroRival4Asset.url, alt: "Rival in black and silver wool varsity jacket" },
 ];
 
 export const BRAND = "Woolworks";
