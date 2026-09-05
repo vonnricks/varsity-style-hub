@@ -4,7 +4,7 @@ import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
 import jacketGreen from "@/assets/jacket-green.jpg";
 import jacketGrey from "@/assets/jacket-grey.jpg";
-import teamNavy from "@/assets/team-navy.jpg";
+import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroon from "@/assets/team-maroon.jpg";
 import teamBlack from "@/assets/team-black.jpg";
 import teamGreen from "@/assets/team-green.jpg";
@@ -196,7 +196,7 @@ export const teamShots: TeamShot[] = [
     team: "Team Lorem",
     rivalry: "Lorem vs Ipsum",
     copy: "Consectetur adipiscing elit, sed do eiusmod tempor.",
-    image: teamNavy,
+    image: teamNavyAsset.url,
     productId: "item-1",
   },
   {
