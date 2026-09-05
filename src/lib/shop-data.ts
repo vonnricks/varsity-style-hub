@@ -13,7 +13,11 @@ import item3FrontAsset from "@/assets/item3-front.jpg.asset.json";
 import item3BackAsset from "@/assets/item3-back.jpg.asset.json";
 import item3Side1Asset from "@/assets/item3-side-1.jpg.asset.json";
 import item3Side2Asset from "@/assets/item3-side-2.jpg.asset.json";
-import lineupItem4Asset from "@/assets/lineup-item-4.png.asset.json";
+import item4FrontBackAsset from "@/assets/item4-front-back.png.asset.json";
+import item4FrontAsset from "@/assets/item4-front.png.asset.json";
+import item4BackAsset from "@/assets/item4-back.png.asset.json";
+import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
+import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.json";
 import lineupItem5Asset from "@/assets/lineup-item-5.png.asset.json";
 import lineupItem6Asset from "@/assets/lineup-item-6.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
@@ -169,8 +173,8 @@ export const products: Product[] = [
     name: "Item 4",
     blurb: "Incididunt ut labore",
     price: 395,
-    image: lineupItem4Asset.url,
-    hoverImage: jacketGreen,
+    image: item4FrontBackAsset.url,
+    hoverImage: item4FrontAsset.url,
     sizes: sizeSet([]),
   },
   {
