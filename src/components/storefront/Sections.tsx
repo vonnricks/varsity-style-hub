@@ -13,7 +13,7 @@ export function Hero() {
             width={1024}
             height={1024}
             loading={i === 0 ? "eager" : "lazy"}
-            className="size-full object-cover"
+            className="size-full object-cover object-center"
           />
         ))}
       </div>
