@@ -133,6 +133,7 @@ export type Product = {
   sizes: { label: string; soldOut?: boolean }[];
   badge?: string;
   imageFit?: "cover" | "contain";
+  imageBg?: string;
 };
 
 const sizeSet = (soldOut: string[] = []) =>
@@ -163,6 +164,7 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "XL"]),
     badge: "Ipsum",
     imageFit: "contain",
+    imageBg: "#f4f1ea",
   },
   {
     id: "item-3",
