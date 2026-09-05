@@ -15,18 +15,18 @@ import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
 import teamGreenAsset from "@/assets/team-green.png.asset.json";
 import heroRivals from "@/assets/hero-rivals.jpg";
-import heroRival1Asset from "@/assets/hero-rival-1.png.asset.json";
-import heroRival2Asset from "@/assets/hero-rival-2.png.asset.json";
-import heroRival3Asset from "@/assets/hero-rival-3.png.asset.json";
-import heroRival4Asset from "@/assets/hero-rival-4.png.asset.json";
+import heroRival1Asset from "@/assets/hero-rival-1.jpg.asset.json";
+import heroRival2Asset from "@/assets/hero-rival-2.jpg.asset.json";
+import heroRival3Asset from "@/assets/hero-rival-3.jpg.asset.json";
+import heroRival4Asset from "@/assets/hero-rival-4.jpg.asset.json";
 
 export const heroImage = heroRivals;
 
 export const heroTiles = [
-  { image: heroRival1Asset.url, alt: "Rival in black and red wool varsity jacket" },
-  { image: heroRival2Asset.url, alt: "Rival in navy and grey wool varsity jacket" },
-  { image: heroRival3Asset.url, alt: "Rival in maroon and gold wool varsity jacket" },
-  { image: heroRival4Asset.url, alt: "Rival in black and silver wool varsity jacket" },
+  { image: heroRival1Asset.url, alt: "Woman wearing a maroon and gold wool varsity jacket" },
+  { image: heroRival2Asset.url, alt: "Man wearing a navy and grey wool varsity jacket" },
+  { image: heroRival3Asset.url, alt: "Woman cheering in a black and red wool varsity jacket" },
+  { image: heroRival4Asset.url, alt: "Man wearing a black and grey wool varsity jacket" },
 ];
 
 export const BRAND = "Woolworks";
