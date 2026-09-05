@@ -29,7 +29,7 @@ export const heroTiles = [
   { image: heroRival4Asset.url, alt: "Man wearing a black and grey wool varsity jacket" },
 ];
 
-export const BRAND = "Woolworks";
+export const BRAND = "CETS APPAREL";
 
 export const announcements = [
   "Lorem ipsum dolor sit amet — consectetur adipiscing elit",
