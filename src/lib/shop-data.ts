@@ -8,7 +8,11 @@ import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
 import item1SideAsset from "@/assets/item1-side.png.asset.json";
 import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
 import item2SideAsset from "@/assets/item2-side.png.asset.json";
-import lineupItem3Asset from "@/assets/lineup-item-3.jpeg.asset.json";
+import item3FrontBackAsset from "@/assets/item3-front-back.png.asset.json";
+import item3FrontAsset from "@/assets/item3-front.jpg.asset.json";
+import item3BackAsset from "@/assets/item3-back.jpg.asset.json";
+import item3Side1Asset from "@/assets/item3-side-1.jpg.asset.json";
+import item3Side2Asset from "@/assets/item3-side-2.jpg.asset.json";
 import lineupItem4Asset from "@/assets/lineup-item-4.png.asset.json";
 import lineupItem5Asset from "@/assets/lineup-item-5.png.asset.json";
 import lineupItem6Asset from "@/assets/lineup-item-6.png.asset.json";
@@ -156,8 +160,8 @@ export const products: Product[] = [
     name: "Item 3",
     blurb: "Sed do eiusmod tempor",
     price: 329,
-    image: lineupItem3Asset.url,
-    hoverImage: jacketBlack,
+    image: item3FrontBackAsset.url,
+    hoverImage: item3FrontAsset.url,
     sizes: sizeSet(["M"]),
   },
   {
