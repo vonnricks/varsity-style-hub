@@ -4,6 +4,12 @@ import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
 import jacketGreen from "@/assets/jacket-green.jpg";
 import jacketGrey from "@/assets/jacket-grey.jpg";
+import lineupItem1Asset from "@/assets/lineup-item-1.png.asset.json";
+import lineupItem2Asset from "@/assets/lineup-item-2.png.asset.json";
+import lineupItem3Asset from "@/assets/lineup-item-3.jpeg.asset.json";
+import lineupItem4Asset from "@/assets/lineup-item-4.png.asset.json";
+import lineupItem5Asset from "@/assets/lineup-item-5.png.asset.json";
+import lineupItem6Asset from "@/assets/lineup-item-6.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
@@ -127,7 +133,7 @@ export const products: Product[] = [
     name: "Item 1",
     blurb: "Lorem ipsum dolor sit amet",
     price: 348,
-    image: jacketNavy,
+    image: lineupItem1Asset.url,
     hoverImage: jacketCream,
     sizes: sizeSet(["XS"]),
     badge: "Lorem",
@@ -138,7 +144,7 @@ export const products: Product[] = [
     blurb: "Consectetur adipiscing elit",
     price: 372,
     compareAt: 430,
-    image: jacketCream,
+    image: lineupItem2Asset.url,
     hoverImage: jacketMaroon,
     sizes: sizeSet(["S", "XL"]),
     badge: "Ipsum",
@@ -148,7 +154,7 @@ export const products: Product[] = [
     name: "Item 3",
     blurb: "Sed do eiusmod tempor",
     price: 329,
-    image: jacketMaroon,
+    image: lineupItem3Asset.url,
     hoverImage: jacketBlack,
     sizes: sizeSet(["M"]),
   },
@@ -157,7 +163,7 @@ export const products: Product[] = [
     name: "Item 4",
     blurb: "Incididunt ut labore",
     price: 395,
-    image: jacketBlack,
+    image: lineupItem4Asset.url,
     hoverImage: jacketGreen,
     sizes: sizeSet([]),
   },
@@ -167,7 +173,7 @@ export const products: Product[] = [
     blurb: "Magna aliqua ut enim",
     price: 310,
     compareAt: 360,
-    image: jacketGreen,
+    image: lineupItem5Asset.url,
     hoverImage: jacketGrey,
     sizes: sizeSet(["L", "XL"]),
     badge: "Dolor",
@@ -177,7 +183,7 @@ export const products: Product[] = [
     name: "Item 6",
     blurb: "Quis nostrud exercitation",
     price: 415,
-    image: jacketGrey,
+    image: lineupItem6Asset.url,
     hoverImage: jacketNavy,
     sizes: sizeSet(["XS", "S"]),
   },
