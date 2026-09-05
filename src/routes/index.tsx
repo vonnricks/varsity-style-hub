@@ -12,7 +12,6 @@ import {
   TeamShots,
   TrustMarquee,
 } from "@/components/storefront/Sections";
-import { StoreProvider } from "@/components/storefront/store-context";
 import { products } from "@/lib/shop-data";
 
 export const Route = createFileRoute("/")({
@@ -39,7 +38,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <StoreProvider>
+    <>
       <div className="min-h-screen bg-background">
         <Header />
         <main>
@@ -60,6 +59,6 @@ function Index() {
         <CartDrawer />
         <RegionModal />
       </div>
-    </StoreProvider>
+    </>
   );
 }

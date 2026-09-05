@@ -5,7 +5,7 @@ import { CartDrawer } from "@/components/storefront/CartDrawer";
 import { RegionModal } from "@/components/storefront/RegionModal";
 import { Carousel } from "@/components/storefront/Carousel";
 import { ProductCard } from "@/components/storefront/ProductCard";
-import { StoreProvider, useStore } from "@/components/storefront/store-context";
+import { useStore } from "@/components/storefront/store-context";
 import { products } from "@/lib/shop-data";
 
 export const Route = createFileRoute("/product/$productId")({
@@ -39,7 +39,7 @@ function ProductPage() {
   const product = products.find((p) => p.id === productId)!;
 
   return (
-    <StoreProvider>
+    <>
       <div className="min-h-screen bg-background">
         <Header />
         <main>
@@ -58,7 +58,7 @@ function ProductPage() {
         <CartDrawer />
         <RegionModal />
       </div>
-    </StoreProvider>
+    </>
   );
 }
 
