@@ -199,15 +199,15 @@ export type TeamShot = {
 
 export const teamShots: TeamShot[] = [
   {
-    team: "Team Lorem",
-    rivalry: "Lorem vs Ipsum",
+    team: "TEAM DALLAS",
+    rivalry: "BRIGHT BLUE AND GRAY",
     copy: "Consectetur adipiscing elit, sed do eiusmod tempor.",
     image: teamNavyAsset.url,
     productId: "item-1",
   },
   {
-    team: "Team Ipsum",
-    rivalry: "Ipsum vs Dolor",
+    team: "TEAM WASHINGTON",
+    rivalry: "TRIPLE BACK",
     copy: "Incididunt ut labore et dolore magna aliqua veniam.",
     image: teamMaroonAsset.url,
     productId: "item-3",
