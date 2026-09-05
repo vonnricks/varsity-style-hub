@@ -3,7 +3,11 @@ import jacketCream from "@/assets/jacket-cream.jpg";
 import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
 import jacketGreen from "@/assets/jacket-green.jpg";
-import jacketGrey from "@/assets/jacket-grey.jpg";
+import item5FrontBackAsset from "@/assets/item5-front-back.png.asset.json";
+import item5FrontAsset from "@/assets/item5-front.png.asset.json";
+import item5BackAsset from "@/assets/item5-back.png.asset.json";
+import item5SideAsset from "@/assets/item5-side.png.asset.json";
+import item5BackAltAsset from "@/assets/item5-back-alt.png.asset.json";
 import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
 import item1SideAsset from "@/assets/item1-side.png.asset.json";
 import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
@@ -18,7 +22,6 @@ import item4FrontAsset from "@/assets/item4-front.png.asset.json";
 import item4BackAsset from "@/assets/item4-back.png.asset.json";
 import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
 import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.json";
-import lineupItem5Asset from "@/assets/lineup-item-5.png.asset.json";
 import lineupItem6Asset from "@/assets/lineup-item-6.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
@@ -185,8 +188,8 @@ export const products: Product[] = [
     blurb: "Magna aliqua ut enim",
     price: 310,
     compareAt: 360,
-    image: lineupItem5Asset.url,
-    hoverImage: jacketGrey,
+    image: item5FrontBackAsset.url,
+    hoverImage: item5FrontAsset.url,
     sizes: sizeSet(["L", "XL"]),
     badge: "Dolor",
   },
