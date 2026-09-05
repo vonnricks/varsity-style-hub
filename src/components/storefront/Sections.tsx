@@ -4,7 +4,7 @@ import { colorSwatches, heroTiles, teamShots, trustMessages } from "@/lib/shop-d
 export function Hero() {
   return (
     <section className="relative w-full">
-      <div className="grid h-[calc(100svh-6.5rem)] grid-cols-2 grid-rows-2 md:h-[80vh]">
+      <div className="grid h-[calc(100svh+2rem)] grid-cols-2 grid-rows-2 md:h-[92vh]">
         {heroTiles.map((tile, i) => (
           <img
             key={tile.alt}
