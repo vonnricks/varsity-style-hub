@@ -199,29 +199,29 @@ export type TeamShot = {
 
 export const teamShots: TeamShot[] = [
   {
-    team: "TEAM DALLAS",
+    team: "TEAM DALLAS JKT",
     rivalry: "BRIGHT BLUE AND GRAY",
     copy: "Consectetur adipiscing elit, sed do eiusmod tempor.",
     image: teamNavyAsset.url,
     productId: "item-1",
   },
   {
-    team: "TEAM WASHINGTON",
+    team: "TEAM WASHINGTON JKT",
     rivalry: "TRIPLE BACK",
     copy: "Incididunt ut labore et dolore magna aliqua veniam.",
     image: teamMaroonAsset.url,
     productId: "item-3",
   },
   {
-    team: "Team Dolor",
-    rivalry: "Dolor vs Amet",
+    team: "TEAM WASHINGTON SWT",
+    rivalry: "BRIGHT BURGUNDY & GOLD",
     copy: "Quis nostrud exercitation ullamco laboris nisi ut.",
     image: teamBlackAsset.url,
     productId: "item-4",
   },
   {
-    team: "Team Amet",
-    rivalry: "Amet vs Lorem",
+    team: "TEAM WASHINGTON SWT",
+    rivalry: "BLACK & BURGUNDY",
     copy: "Duis aute irure dolor in reprehenderit voluptate.",
     image: teamGreenAsset.url,
     productId: "item-5",
