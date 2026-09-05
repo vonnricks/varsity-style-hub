@@ -21,9 +21,9 @@ export function ProductCard({ product }: { product: Product }) {
           loading="lazy"
           width={1024}
           height={1280}
-          className={`absolute inset-0 size-full object-cover transition-opacity duration-500 ${
-            hover ? "opacity-0" : "opacity-100"
-          }`}
+          className={`absolute inset-0 size-full transition-opacity duration-500 ${
+            product.imageFit === "contain" ? "object-contain p-4" : "object-cover"
+          } ${hover ? "opacity-0" : "opacity-100"}`}
         />
         <img
           src={product.hoverImage}
@@ -31,9 +31,9 @@ export function ProductCard({ product }: { product: Product }) {
           loading="lazy"
           width={1024}
           height={1280}
-          className={`absolute inset-0 size-full object-cover transition-opacity duration-500 ${
-            hover ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 size-full transition-opacity duration-500 ${
+            product.imageFit === "contain" ? "object-contain p-4" : "object-cover"
+          } ${hover ? "opacity-100" : "opacity-0"}`}
         />
         {product.badge ? (
           <span className="absolute left-3 top-3 bg-ink px-2 py-1 text-[10px] label-caps text-primary-foreground">
