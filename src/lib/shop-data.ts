@@ -7,7 +7,7 @@ import jacketGrey from "@/assets/jacket-grey.jpg";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
-import teamGreen from "@/assets/team-green.jpg";
+import teamGreenAsset from "@/assets/team-green.png.asset.json";
 import heroRivals from "@/assets/hero-rivals.jpg";
 import heroRival1Asset from "@/assets/hero-rival-1.png.asset.json";
 import heroRival2Asset from "@/assets/hero-rival-2.png.asset.json";
@@ -217,7 +217,7 @@ export const teamShots: TeamShot[] = [
     team: "Team Amet",
     rivalry: "Amet vs Lorem",
     copy: "Duis aute irure dolor in reprehenderit voluptate.",
-    image: teamGreen,
+    image: teamGreenAsset.url,
     productId: "item-5",
   },
 ];
