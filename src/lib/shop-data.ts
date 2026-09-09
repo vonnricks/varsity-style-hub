@@ -171,7 +171,7 @@ export const products: Product[] = [
   },
   {
     id: "item-2",
-    name: "Item 2",
+    name: "Capital Gold Varsity Jacket",
     blurb: "Bright burgundy and gold wool varsity",
     price: 225,
     image: item2FrontBackAsset.url,
