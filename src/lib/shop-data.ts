@@ -232,7 +232,7 @@ export const teamShots: TeamShot[] = [
     rivalry: "TRIPLE BACK",
     copy: "Stand Out In Comfort",
     image: teamMaroonAsset.url,
-    productId: "item-3",
+    productId: "item-1",
   },
   {
     team: "TEAM WASHINGTON SWT",
