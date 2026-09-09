@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { colorSwatches, heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
+import { heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
   return (
