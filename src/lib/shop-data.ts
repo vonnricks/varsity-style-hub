@@ -45,9 +45,9 @@ export const heroTiles = [
 export const BRAND = "CETS APPAREL";
 
 export const announcements = [
-  "Lorem ipsum dolor sit amet — consectetur adipiscing elit",
-  "Sed do eiusmod tempor incididunt ut labore et dolore",
-  "Ut enim ad minim veniam, quis nostrud exercitation",
+  "Free shipping on all orders over $150",
+  "New team colorways drop every Friday",
+  "Rep your rivalry — limited run styles available now",
 ];
 
 export type MegaColumn = { heading: string; links: string[] };
@@ -57,16 +57,16 @@ export type NavItem = {
   columns: MegaColumn[];
 };
 
-const loremLinks = (n: number, seed: string) =>
+const navLinks = (n: number, seed: string) =>
   [
-    "Lorem ipsum",
-    "Dolor sit amet",
-    "Consectetur",
-    "Adipiscing elit",
-    "Sed do eiusmod",
-    "Tempor incididunt",
-    "Labore et dolore",
-    "Magna aliqua",
+    "Jackets",
+    "Vests",
+    "Crewnecks",
+    "Caps",
+    "Accessories",
+    "New In",
+    "Best Sellers",
+    "Gift Cards",
   ]
     .slice(0, n)
     .map((l) => `${l} ${seed}`);
@@ -75,49 +75,49 @@ export const navItems: NavItem[] = [
   {
     label: "Men",
     columns: [
-      { heading: "Lorem categoria", links: loremLinks(5, "i") },
-      { heading: "Ipsum collectio", links: loremLinks(4, "ii") },
-      { heading: "Dolor essentia", links: loremLinks(4, "iii") },
+      { heading: "Shop By Team", links: navLinks(5, "i") },
+      { heading: "Collections", links: navLinks(4, "ii") },
+      { heading: "Essentials", links: navLinks(4, "iii") },
     ],
   },
   {
     label: "Women",
     columns: [
-      { heading: "Amet lineae", links: loremLinks(5, "iv") },
-      { heading: "Consectetur", links: loremLinks(4, "v") },
-      { heading: "Adipiscing", links: loremLinks(3, "vi") },
+      { heading: "Shop By Team", links: navLinks(5, "iv") },
+      { heading: "Collections", links: navLinks(4, "v") },
+      { heading: "Essentials", links: navLinks(3, "vi") },
     ],
   },
   {
     label: "Kids",
     columns: [
-      { heading: "Elit parvus", links: loremLinks(4, "vii") },
-      { heading: "Sed eiusmod", links: loremLinks(4, "viii") },
-      { heading: "Tempor", links: loremLinks(3, "ix") },
+      { heading: "Shop By Team", links: navLinks(4, "vii") },
+      { heading: "Collections", links: navLinks(4, "viii") },
+      { heading: "Essentials", links: navLinks(3, "ix") },
     ],
   },
   {
     label: "New Arrivals",
     columns: [
-      { heading: "Incididunt", links: loremLinks(4, "x") },
-      { heading: "Ut labore", links: loremLinks(4, "xi") },
-      { heading: "Magna aliqua", links: loremLinks(3, "xii") },
+      { heading: "Just Dropped", links: navLinks(4, "x") },
+      { heading: "Trending Now", links: navLinks(4, "xi") },
+      { heading: "Coming Soon", links: navLinks(3, "xii") },
     ],
   },
   {
     label: "Sale",
     columns: [
-      { heading: "Veniam", links: loremLinks(4, "xiii") },
-      { heading: "Quis nostrud", links: loremLinks(3, "xiv") },
-      { heading: "Exercitation", links: loremLinks(3, "xv") },
+      { heading: "Last Chance", links: navLinks(4, "xiii") },
+      { heading: "Under $100", links: navLinks(3, "xiv") },
+      { heading: "Bundle Deals", links: navLinks(3, "xv") },
     ],
   },
   {
     label: "Discover",
     columns: [
-      { heading: "Ullamco laboris", links: loremLinks(4, "xvi") },
-      { heading: "Nisi ut aliquip", links: loremLinks(3, "xvii") },
-      { heading: "Ex ea commodo", links: loremLinks(3, "xviii") },
+      { heading: "Our Story", links: navLinks(4, "xvi") },
+      { heading: "Rivalries", links: navLinks(3, "xvii") },
+      { heading: "Lookbook", links: navLinks(3, "xviii") },
     ],
   },
 ];
@@ -146,7 +146,7 @@ export const products: Product[] = [
   {
     id: "item-1",
     name: "Item 1",
-    blurb: "Lorem ipsum dolor sit amet",
+    blurb: "Bright blue and gray wool varsity",
     price: 225,
     image: item1FrontBackAsset.url,
     hoverImage: item1SideAsset.url,
@@ -162,7 +162,7 @@ export const products: Product[] = [
   {
     id: "item-2",
     name: "Item 2",
-    blurb: "Consectetur adipiscing elit",
+    blurb: "Bright burgundy and gold wool varsity",
     price: 225,
     image: item2FrontBackAsset.url,
     hoverImage: item2SideAsset.url,
@@ -173,7 +173,7 @@ export const products: Product[] = [
   {
     id: "item-3",
     name: "Item 3",
-    blurb: "Sed do eiusmod tempor",
+    blurb: "Triple back wool varsity",
     price: 225,
     image: item3FrontBackAsset.url,
     hoverImage: item3FrontAsset.url,
@@ -183,7 +183,7 @@ export const products: Product[] = [
   {
     id: "item-4",
     name: "Item 4",
-    blurb: "Incididunt ut labore",
+    blurb: "Black and burgundy wool varsity",
     price: 225,
     image: item4FrontBackAsset.url,
     hoverImage: item4FrontAsset.url,
@@ -192,7 +192,7 @@ export const products: Product[] = [
   {
     id: "item-5",
     name: "Item 5",
-    blurb: "Magna aliqua ut enim",
+    blurb: "Premium wool team vest",
     price: 125,
     image: item5FrontBackAsset.url,
     hoverImage: item5FrontAsset.url,
@@ -202,7 +202,7 @@ export const products: Product[] = [
   {
     id: "item-6",
     name: "Item 6",
-    blurb: "Quis nostrud exercitation",
+    blurb: "Classic black team vest",
     price: 125,
     image: item6FrontBackAsset.url,
     hoverImage: item6FrontAsset.url,
@@ -251,43 +251,43 @@ export const teamShots: TeamShot[] = [
 ];
 
 export const colorSwatches = [
-  { name: "Lorem navy", token: "bg-swatch-navy", count: 12 },
-  { name: "Ipsum cream", token: "bg-swatch-cream", count: 9 },
-  { name: "Dolor maroon", token: "bg-swatch-maroon", count: 7 },
-  { name: "Amet black", token: "bg-swatch-black", count: 14 },
-  { name: "Elit green", token: "bg-swatch-green", count: 5 },
-  { name: "Sed grey", token: "bg-swatch-grey", count: 8 },
+  { name: "Navy", token: "bg-swatch-navy", count: 12 },
+  { name: "Cream", token: "bg-swatch-cream", count: 9 },
+  { name: "Maroon", token: "bg-swatch-maroon", count: 7 },
+  { name: "Black", token: "bg-swatch-black", count: 14 },
+  { name: "Green", token: "bg-swatch-green", count: 5 },
+  { name: "Grey", token: "bg-swatch-grey", count: 8 },
 ];
 
 export const trustMessages = [
-  "Lorem ipsum dolor sit amet",
-  "Consectetur adipiscing elit",
-  "Sed do eiusmod tempor",
-  "Incididunt ut labore et dolore",
-  "Magna aliqua ut enim ad minim",
+  "Free shipping over $150",
+  "Premium wool and leather",
+  "30-day easy returns",
+  "Embroidered team crests",
+  "Made in small batches",
 ];
 
 export const footerGroups = [
   {
     heading: "Shop",
-    links: ["Lorem ipsum", "Dolor sit amet", "Consectetur elit", "Sed eiusmod", "Tempor labore"],
+    links: ["Jackets", "Vests", "New Arrivals", "Best Sellers", "Gift Cards"],
   },
   {
     heading: "Support",
-    links: ["Incididunt ut", "Labore dolore", "Magna aliqua", "Enim ad minim", "Quis nostrud"],
+    links: ["Contact Us", "Shipping Info", "Returns", "Size Guide", "FAQ"],
   },
   {
     heading: "About",
-    links: ["Exercitation", "Ullamco laboris", "Nisi aliquip", "Ex ea commodo", "Consequat duis"],
+    links: ["Our Story", "Rivalries", "Lookbook", "Journal", "Stores"],
   },
   {
     heading: "Legal",
-    links: ["Aute irure", "In reprehenderit", "Voluptate velit", "Esse cillum", "Fugiat nulla"],
+    links: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Accessibility", "Do Not Sell"],
   },
 ];
 
 export const regions = {
-  countries: ["Lorem States", "Ipsum Kingdom", "Dolor Republic", "Amet Federation"],
-  currencies: ["LRM $", "IPS €", "DLR £", "AMT ¥"],
-  languages: ["Lorem (LM)", "Ipsum (IP)", "Dolor (DL)", "Amet (AM)"],
+  countries: ["United States", "United Kingdom", "Canada", "Australia"],
+  currencies: ["USD $", "GBP £", "CAD $", "AUD $"],
+  languages: ["English (US)", "English (UK)", "English (CA)", "English (AU)"],
 };

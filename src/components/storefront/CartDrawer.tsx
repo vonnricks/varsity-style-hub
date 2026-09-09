@@ -22,7 +22,7 @@ export function CartDrawer() {
         }`}
       >
         <div className="flex h-16 items-center justify-between border-b border-border px-5">
-          <h2 className="text-[12px] label-caps">Lorem ipsum cart</h2>
+          <h2 className="text-[12px] label-caps">Your cart</h2>
           <button type="button" aria-label="Close cart" onClick={close}>
             <X className="size-5" />
           </button>
@@ -31,8 +31,8 @@ export function CartDrawer() {
         <div className="border-b border-border px-5 py-4">
           <p className="text-xs text-muted-foreground">
             {progress >= 100
-              ? "Lorem ipsum dolor sit amet — consectetur."
-              : `Adipiscing elit $${Math.max(0, FREE_THRESHOLD - subtotal)} sed do eiusmod.`}
+              ? "You've unlocked free shipping!"
+              : `Add $${Math.max(0, FREE_THRESHOLD - subtotal)} more for free shipping.`}
           </p>
           <div className="mt-2 h-1.5 w-full bg-secondary">
             <div
@@ -45,7 +45,7 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-5">
           {lines.length === 0 ? (
             <p className="py-12 text-center text-sm text-muted-foreground">
-              Lorem ipsum dolor sit amet.
+              Your cart is empty.
             </p>
           ) : (
             lines.map((line) => (
@@ -63,7 +63,7 @@ export function CartDrawer() {
                     <span className="font-medium">{line.name}</span>
                     <span>${line.price * line.qty}</span>
                   </div>
-                  <p className="text-xs text-muted-foreground">Lorem — {line.size}</p>
+                  <p className="text-xs text-muted-foreground">Size — {line.size}</p>
                   <div className="mt-3 inline-flex items-center border border-border">
                     <button
                       type="button"
@@ -88,26 +88,26 @@ export function CartDrawer() {
             ))
           )}
           <div className="my-5 bg-secondary p-4">
-            <p className="text-[11px] label-caps">Ipsum upsell</p>
+            <p className="text-[11px] label-caps">Complete your look</p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Tempor incididunt ut labore et dolore magna aliqua enim.
+              Add a matching cap or crewneck to your order.
             </p>
           </div>
         </div>
 
         <div className="border-t border-border p-5">
           <div className="flex justify-between text-sm">
-            <span className="label-caps text-[11px]">Lorem subtotal</span>
+            <span className="label-caps text-[11px]">Subtotal</span>
             <span className="font-medium">${subtotal}</span>
           </div>
           <button
             type="button"
             className="mt-4 w-full bg-ink py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Consectetur checkout
+            Checkout
           </button>
           <p className="mt-3 text-center text-[11px] text-muted-foreground">
-            Sed do eiusmod tempor incididunt.
+            Free returns within 30 days.
           </p>
         </div>
       </aside>

@@ -28,12 +28,12 @@ export function MegaMenu({ item, open }: { item: NavItem; open: boolean }) {
           </div>
         ))}
         <div className="bg-secondary p-6">
-          <p className="display-title text-2xl">Lorem ipsum</p>
+          <p className="display-title text-2xl">New season</p>
           <p className="mt-2 text-sm text-muted-foreground">
-            Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+            Fresh team colorways have just landed for the new season.
           </p>
           <a href="#" className="mt-4 inline-block text-[11px] label-caps underline">
-            Incididunt
+            Shop now
           </a>
         </div>
       </div>

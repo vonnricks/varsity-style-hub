@@ -39,21 +39,21 @@ export function RegionModal() {
         >
           <X className="size-4" />
         </button>
-        <h2 className="display-title text-2xl">Lorem regio</h2>
+        <h2 className="display-title text-2xl">Your region</h2>
         <p className="mt-1 text-sm text-muted-foreground">
-          Dolor sit amet consectetur adipiscing elit sed do eiusmod.
+          Choose your country, currency, and language.
         </p>
         <div className="mt-6 space-y-4">
-          <Field label="Lorem country" options={regions.countries} />
-          <Field label="Ipsum currency" options={regions.currencies} />
-          <Field label="Dolor language" options={regions.languages} />
+          <Field label="Country" options={regions.countries} />
+          <Field label="Currency" options={regions.currencies} />
+          <Field label="Language" options={regions.languages} />
         </div>
         <button
           type="button"
           onClick={close}
           className="mt-6 w-full bg-ink py-3.5 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90"
         >
-          Confirm amet
+          Confirm
         </button>
       </div>
     </div>

@@ -45,7 +45,7 @@ function ProductPage() {
         <main>
           <Detail productId={product.id} />
           <div id="the-lineup">
-            <Carousel title="The Lineup" subtitle="Lorem ipsum dolor sit amet consectetur.">
+            <Carousel title="The Lineup" subtitle="Shop the rest of the team collection.">
               {products
                 .filter((p) => p.id !== product.id)
                 .map((p) => (
@@ -83,7 +83,7 @@ function Detail({ productId }: { productId: string }) {
       </div>
       <div className="px-5 py-8 md:px-0 md:py-0">
         <Link to="/" className="text-[10px] label-caps text-muted-foreground">
-          ← Lorem ipsum
+          ← Back to shop
         </Link>
         <h1 className="mt-3 display-title text-4xl md:text-5xl">{product.name}</h1>
         <p className="mt-2 text-sm text-muted-foreground">{product.blurb}</p>
@@ -94,7 +94,7 @@ function Detail({ productId }: { productId: string }) {
           ) : null}
         </p>
 
-        <p className="mt-7 text-[10px] label-caps text-muted-foreground">Lorem magnitudo</p>
+        <p className="mt-7 text-[10px] label-caps text-muted-foreground">Select a size</p>
         <div className="mt-2 flex flex-wrap gap-2">
           {product.sizes.map((size) => (
             <span
@@ -119,8 +119,8 @@ function Detail({ productId }: { productId: string }) {
         </button>
 
         <p className="mt-6 text-sm text-muted-foreground">
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+          Crafted from premium wool with genuine leather sleeves and hand-embroidered team
+          details. Cut for a classic fit that keeps you warm on game day and beyond.
         </p>
       </div>
     </section>
