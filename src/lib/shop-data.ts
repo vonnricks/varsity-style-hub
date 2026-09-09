@@ -220,8 +220,8 @@ export const products: Product[] = [
   },
   {
     id: "item-7",
-    name: "Item 7",
-    blurb: "Black team hoodie",
+    name: "WASHINGTON INDIAN SWEATSHIRT",
+    blurb: "Black and Burgundy Team Hoodie",
     price: 65,
     image: item7HoverAsset.url,
     hoverImage: item7HoverAsset.url,
