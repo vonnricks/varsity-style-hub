@@ -272,7 +272,7 @@ export const teamShots: TeamShot[] = [
     rivalry: "BRIGHT BURGUNDY & GOLD",
     copy: "Thick Cotton and Bright Colors",
     image: teamBlackAsset.url,
-    productId: "item-4",
+    productId: "item-8",
   },
   {
     team: "TEAM WASHINGTON SWT",
