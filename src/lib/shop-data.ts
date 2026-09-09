@@ -279,7 +279,7 @@ export const teamShots: TeamShot[] = [
     rivalry: "BLACK & BURGUNDY",
     copy: "Impecable Embroidery",
     image: teamGreenAsset.url,
-    productId: "item-5",
+    productId: "item-7",
   },
 ];
 
