@@ -69,7 +69,11 @@ function Detail({ productId }: { productId: string }) {
   return (
     <section className="md:mx-auto md:grid md:max-w-[1600px] md:grid-cols-2 md:gap-10 md:px-8 md:py-10">
       <div className="grid grid-cols-1 gap-1 md:gap-3">
-        {[product.image, product.hoverImage, ...(product.images || [])].map((src, i) => (
+        {[
+          product.image,
+          ...(product.hoverImage !== product.image ? [product.hoverImage] : []),
+          ...(product.images || []),
+        ].map((src, i) => (
           <img
             key={src}
             src={src}
