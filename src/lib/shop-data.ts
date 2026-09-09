@@ -75,49 +75,49 @@ export const navItems: NavItem[] = [
   {
     label: "Men",
     columns: [
-      { heading: "Lorem categoria", links: loremLinks(5, "i") },
-      { heading: "Ipsum collectio", links: loremLinks(4, "ii") },
-      { heading: "Dolor essentia", links: loremLinks(4, "iii") },
+      { heading: "Shop By Team", links: navLinks(5, "i") },
+      { heading: "Collections", links: navLinks(4, "ii") },
+      { heading: "Essentials", links: navLinks(4, "iii") },
     ],
   },
   {
     label: "Women",
     columns: [
-      { heading: "Amet lineae", links: loremLinks(5, "iv") },
-      { heading: "Consectetur", links: loremLinks(4, "v") },
-      { heading: "Adipiscing", links: loremLinks(3, "vi") },
+      { heading: "Shop By Team", links: navLinks(5, "iv") },
+      { heading: "Collections", links: navLinks(4, "v") },
+      { heading: "Essentials", links: navLinks(3, "vi") },
     ],
   },
   {
     label: "Kids",
     columns: [
-      { heading: "Elit parvus", links: loremLinks(4, "vii") },
-      { heading: "Sed eiusmod", links: loremLinks(4, "viii") },
-      { heading: "Tempor", links: loremLinks(3, "ix") },
+      { heading: "Shop By Team", links: navLinks(4, "vii") },
+      { heading: "Collections", links: navLinks(4, "viii") },
+      { heading: "Essentials", links: navLinks(3, "ix") },
     ],
   },
   {
     label: "New Arrivals",
     columns: [
-      { heading: "Incididunt", links: loremLinks(4, "x") },
-      { heading: "Ut labore", links: loremLinks(4, "xi") },
-      { heading: "Magna aliqua", links: loremLinks(3, "xii") },
+      { heading: "Just Dropped", links: navLinks(4, "x") },
+      { heading: "Trending Now", links: navLinks(4, "xi") },
+      { heading: "Coming Soon", links: navLinks(3, "xii") },
     ],
   },
   {
     label: "Sale",
     columns: [
-      { heading: "Veniam", links: loremLinks(4, "xiii") },
-      { heading: "Quis nostrud", links: loremLinks(3, "xiv") },
-      { heading: "Exercitation", links: loremLinks(3, "xv") },
+      { heading: "Last Chance", links: navLinks(4, "xiii") },
+      { heading: "Under $100", links: navLinks(3, "xiv") },
+      { heading: "Bundle Deals", links: navLinks(3, "xv") },
     ],
   },
   {
     label: "Discover",
     columns: [
-      { heading: "Ullamco laboris", links: loremLinks(4, "xvi") },
-      { heading: "Nisi ut aliquip", links: loremLinks(3, "xvii") },
-      { heading: "Ex ea commodo", links: loremLinks(3, "xviii") },
+      { heading: "Our Story", links: navLinks(4, "xvi") },
+      { heading: "Rivalries", links: navLinks(3, "xvii") },
+      { heading: "Lookbook", links: navLinks(3, "xviii") },
     ],
   },
 ];
