@@ -81,7 +81,9 @@ function Detail({ productId }: { productId: string }) {
             loading={i === 0 ? "eager" : "lazy"}
             width={1024}
             height={1280}
-            className="aspect-4/5 w-full object-cover"
+            className={`aspect-4/5 w-full ${
+              i === 0 ? "bg-white object-contain" : "object-cover"
+            }`}
           />
         ))}
       </div>
