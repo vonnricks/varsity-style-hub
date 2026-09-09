@@ -232,7 +232,7 @@ export const products: Product[] = [
   },
   {
     id: "item-8",
-    name: "Item 8",
+    name: "WASHINGTON INDIAN SWEATSHIRT",
     blurb: "Burgundy and gold team hoodie",
     price: 95,
     image: item8FrontAsset.url,
