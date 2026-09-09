@@ -207,6 +207,12 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [
+      item2Stack1Asset.url,
+      item2Stack2Asset.url,
+      item2Stack3Asset.url,
+      item2Stack4Asset.url,
+    ],
   },
   {
     id: "item-3",
