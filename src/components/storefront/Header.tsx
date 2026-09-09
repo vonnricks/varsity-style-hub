@@ -63,7 +63,7 @@ export function Header() {
               onClick={() => open("search")}
               className="hidden text-[11px] label-caps text-muted-foreground transition-colors hover:text-foreground lg:block"
             >
-              Lorem
+              Search
             </button>
           </div>
 
@@ -126,7 +126,7 @@ export function Header() {
           <div className="mx-auto flex max-w-3xl items-center gap-4">
             <Search className="size-5 text-muted-foreground" />
             <input
-              placeholder="Lorem ipsum dolor sit amet"
+              placeholder="Search for your team"
               className="h-12 w-full border-0 bg-transparent text-lg outline-none placeholder:text-muted-foreground"
             />
             <button type="button" aria-label="Close search" onClick={close}>
@@ -134,7 +134,7 @@ export function Header() {
             </button>
           </div>
           <div className="mx-auto mt-6 flex max-w-3xl flex-wrap gap-2">
-            {["Lorem ipsum", "Dolor sit", "Consectetur", "Adipiscing"].map((t) => (
+            {["Varsity jackets", "Team vests", "New arrivals", "Sale"].map((t) => (
               <span key={t} className="border border-border px-3 py-1.5 text-xs text-foreground/80">
                 {t}
               </span>
@@ -168,7 +168,7 @@ export function Header() {
           <div className="flex items-center gap-3 border-b border-border px-4 py-3">
             <Search className="size-4 text-muted-foreground" />
             <input
-              placeholder="Lorem ipsum dolor"
+              placeholder="Search"
               className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
           </div>
@@ -216,10 +216,10 @@ export function Header() {
           </div>
           <div className="flex items-center gap-4 border-t border-border px-4 py-4 text-[11px] label-caps">
             <span className="flex items-center gap-2">
-              <MapPin className="size-4" /> Lorem
+              <MapPin className="size-4" /> Stores
             </span>
             <span className="flex items-center gap-2">
-              <User className="size-4" /> Ipsum
+              <User className="size-4" /> Account
             </span>
           </div>
         </div>
