@@ -82,7 +82,7 @@ function Detail({ productId }: { productId: string }) {
             width={1024}
             height={1280}
             className={`aspect-4/5 w-full ${
-              i === 0 || i === 1 || i === 2 || i === 4 ? "bg-white object-contain" : "object-cover"
+              i === 0 || i === 1 || i === 2 || i === 3 || i === 4 ? "bg-white object-contain" : "object-cover"
             }`}
           />
         ))}
