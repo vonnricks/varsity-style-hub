@@ -242,7 +242,7 @@ export const products: Product[] = [
     id: "item-8",
     name: "Warrior Legacy Hoodie – Burgundy",
     blurb: "Burgundy and gold team hoodie",
-    price: 95,
+    price: 65,
     image: item8FrontAsset.url,
     hoverImage: item8FrontAsset.url,
     sizes: [
