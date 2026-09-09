@@ -197,7 +197,7 @@ export const products: Product[] = [
     name: "Capital Gold Varsity Jacket",
     blurb: "Bright burgundy and gold wool varsity",
     price: 225,
-    image: item2FrontBackAsset.url,
+    image: item2CoverNoBg,
     hoverImage: item2SideAsset.url,
     sizes: sizeSet(["S", "XL"]),
     imageFit: "contain",
