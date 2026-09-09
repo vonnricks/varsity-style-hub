@@ -240,7 +240,7 @@ export const products: Product[] = [
   },
   {
     id: "item-8",
-    name: "Warrior Legacy Hoodie – Burgundy",
+    name: "WASHINGTON INDIAN SWEATSHIRT",
     blurb: "Burgundy and gold team hoodie",
     price: 95,
     image: item8FrontAsset.url,
