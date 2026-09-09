@@ -27,6 +27,7 @@ import item7FrontAsset from "@/assets/item7-front.png.asset.json";
 import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
 import item7Lifestyle1Asset from "@/assets/Black_and_Burgundy_2.PNG.asset.json";
 import item7Lifestyle2Asset from "@/assets/Black_and_Burgundy.PNG.asset.json";
+import item7Lifestyle3Asset from "@/assets/PBlack_and_Burgundy_3PNG.PNG.asset.json";
 import item8FrontAsset from "@/assets/item8-front.jpg.asset.json";
 import item8Lifestyle1Asset from "@/assets/Burgundy_and_Gold.PNG.asset.json";
 import item8Lifestyle2Asset from "@/assets/Burgundy_and_Gold_2.PNG.asset.json";
@@ -235,7 +236,7 @@ export const products: Product[] = [
     ],
     imageFit: "contain",
     imageBg: "#ffffff",
-    images: [item7Lifestyle1Asset.url, item7Lifestyle2Asset.url],
+    images: [item7Lifestyle1Asset.url, item7Lifestyle2Asset.url, item7Lifestyle3Asset.url],
   },
   {
     id: "item-8",
