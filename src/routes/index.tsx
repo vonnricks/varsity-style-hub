@@ -8,7 +8,6 @@ import { Footer } from "@/components/storefront/Footer";
 import {
   Hero,
   PromoBanner,
-  ShopByColor,
   TeamShots,
   TrustMarquee,
 } from "@/components/storefront/Sections";
@@ -52,7 +51,6 @@ function Index() {
             </Carousel>
           </div>
           <PromoBanner />
-          <ShopByColor />
           <TrustMarquee />
         </main>
         <Footer />

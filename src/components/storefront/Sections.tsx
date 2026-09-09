@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { colorSwatches, heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
+import { heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
   return (
@@ -129,25 +129,6 @@ export function PromoBanner() {
         >
           
         </a>
-      </div>
-    </section>
-  );
-}
-
-export function ShopByColor() {
-  return (
-    <section className="mx-auto max-w-[1600px] px-5 py-12 md:px-8 md:py-20">
-      <h2 className="display-title text-3xl md:text-5xl">{`\n`}</h2>
-      <div className="no-scrollbar mt-6 flex gap-5 overflow-x-auto pb-2 md:gap-8">
-        {colorSwatches.map((swatch) => (
-          <a key={swatch.name} href="#the-lineup" className="group shrink-0 text-center">
-            <span
-              className={`block size-20 rounded-full border border-border transition-transform duration-300 group-hover:scale-105 md:size-24 ${swatch.token}`}
-            />
-            <span className="mt-3 block text-[11px] label-caps">{swatch.name}</span>
-            <span className="block text-[11px] text-muted-foreground">{swatch.count} lorem</span>
-          </a>
-        ))}
       </div>
     </section>
   );
