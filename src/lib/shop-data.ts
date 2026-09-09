@@ -144,6 +144,8 @@ export type Product = {
   badge?: string;
   imageFit?: "cover" | "contain";
   imageBg?: string;
+  hoverImageFit?: "cover" | "contain";
+  hoverImageBg?: string;
   images?: string[];
 };
 
