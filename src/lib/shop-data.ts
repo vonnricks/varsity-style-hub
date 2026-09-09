@@ -207,7 +207,7 @@ export const products: Product[] = [
   {
     id: "item-3",
     name: "Bay Dynasty Varsity Jacket",
-    blurb: "Triple back wool varsity",
+    blurb: "",
     price: 225,
     image: item3CoverNoBg,
     hoverImage: item3FrontAsset.url,
@@ -226,7 +226,7 @@ export const products: Product[] = [
   {
     id: "item-4",
     name: "District Legacy Varsity Jacket",
-    blurb: "Black and burgundy wool varsity",
+    blurb: "",
     price: 225,
     image: item4CoverNoBg,
     hoverImage: item4FrontAsset.url,
@@ -244,7 +244,7 @@ export const products: Product[] = [
   {
     id: "item-5",
     name: "Burgundy Capital Puffer Vest",
-    blurb: "Premium wool team vest",
+    blurb: "",
     price: 125,
     image: item5FrontBackAsset.url,
     hoverImage: item5FrontAsset.url,
@@ -261,7 +261,7 @@ export const products: Product[] = [
   {
     id: "item-6",
     name: "District Shadow Puffer Vest",
-    blurb: "Classic black team vest",
+    blurb: "",
     price: 125,
     image: item6FrontBackAsset.url,
     hoverImage: item6FrontAsset.url,
@@ -278,7 +278,7 @@ export const products: Product[] = [
   {
     id: "item-7",
     name: "Warrior Legacy Hoodie – Black",
-    blurb: "Black and Burgundy Team Hoodie",
+    blurb: "",
     price: 65,
     image: item7HoverAsset.url,
     hoverImage: item7HoverAsset.url,
@@ -297,7 +297,7 @@ export const products: Product[] = [
   {
     id: "item-8",
     name: "Warrior Legacy Hoodie – Burgundy",
-    blurb: "Burgundy and gold team hoodie",
+    blurb: "",
     price: 65,
     image: item8FrontAsset.url,
     hoverImage: item8FrontAsset.url,
