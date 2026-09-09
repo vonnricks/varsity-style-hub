@@ -168,7 +168,7 @@ export const products: Product[] = [
     blurb: "A varsity classic built for the city, with bold details that carry DMV pride everywhere you go.",
     price: 225,
     image: item1FixedArmPatchAsset.url,
-    hoverImage: item1FrontBackAsset.url,
+    hoverImage: item1FixedArmPatchAsset.url,
     sizes: [
       { label: "S", soldOut: true },
       { label: "M" },
