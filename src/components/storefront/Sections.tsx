@@ -137,7 +137,7 @@ export function PromoBanner() {
 export function ShopByColor() {
   return (
     <section className="mx-auto max-w-[1600px] px-5 py-12 md:px-8 md:py-20">
-      <h2 className="display-title text-3xl md:text-5xl">Lorem per colorem</h2>
+      <h2 className="display-title text-3xl md:text-5xl">{`\n`}</h2>
       <div className="no-scrollbar mt-6 flex gap-5 overflow-x-auto pb-2 md:gap-8">
         {colorSwatches.map((swatch) => (
           <a key={swatch.name} href="#the-lineup" className="group shrink-0 text-center">
