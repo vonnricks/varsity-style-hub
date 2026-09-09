@@ -179,6 +179,14 @@ export const products: Product[] = [
     ],
     hoverImageFit: "contain",
     hoverImageBg: "#ffffff",
+    images: [
+      item1Stack2Asset.url,
+      item1Stack3Asset.url,
+      item1Stack4Asset.url,
+      item1Stack5Asset.url,
+      item1Stack6Asset.url,
+      item1Stack7Asset.url,
+    ],
   },
   {
     id: "item-2",
