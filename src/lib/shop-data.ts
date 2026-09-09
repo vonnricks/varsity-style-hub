@@ -25,6 +25,8 @@ import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
 import item7FrontAsset from "@/assets/item7-front.png.asset.json";
 import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
+import item7Lifestyle1Asset from "@/assets/Black_and_Burgundy_2.PNG.asset.json";
+import item7Lifestyle2Asset from "@/assets/Black_and_Burgundy.PNG.asset.json";
 import item8FrontAsset from "@/assets/item8-front.jpg.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
@@ -137,6 +139,7 @@ export type Product = {
   badge?: string;
   imageFit?: "cover" | "contain";
   imageBg?: string;
+  images?: string[];
 };
 
 const sizeSet = (soldOut: string[] = []) =>
