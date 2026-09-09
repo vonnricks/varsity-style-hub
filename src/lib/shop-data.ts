@@ -26,6 +26,7 @@ import item3BackAsset from "@/assets/item3-back.jpg.asset.json";
 import item3Side1Asset from "@/assets/item3-side-1.jpg.asset.json";
 import item3Side2Asset from "@/assets/item3-side-2.jpg.asset.json";
 import item4FrontBackAsset from "@/assets/item4-front-back.png.asset.json";
+import item4CoverNoBg from "@/assets/item4-cover-nobg.png";
 import item4FrontAsset from "@/assets/item4-front.png.asset.json";
 import item4BackAsset from "@/assets/item4-back.png.asset.json";
 import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
