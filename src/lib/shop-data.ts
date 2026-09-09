@@ -151,7 +151,6 @@ export const products: Product[] = [
     image: item1FrontBackAsset.url,
     hoverImage: item1SideAsset.url,
     sizes: ["S", "M", "L", "XL", "2XL"].map((label) => ({ label })),
-    badge: "Lorem",
   },
   {
     id: "item-2",
@@ -161,7 +160,6 @@ export const products: Product[] = [
     image: item2FrontBackAsset.url,
     hoverImage: item2SideAsset.url,
     sizes: sizeSet(["S", "XL"]),
-    badge: "Ipsum",
     imageFit: "contain",
     imageBg: "#ffffff",
   },
@@ -173,6 +171,7 @@ export const products: Product[] = [
     image: item3FrontBackAsset.url,
     hoverImage: item3FrontAsset.url,
     sizes: sizeSet(["M"]),
+    badge: "Sold Out",
   },
   {
     id: "item-4",
@@ -191,7 +190,6 @@ export const products: Product[] = [
     image: item5FrontBackAsset.url,
     hoverImage: item5FrontAsset.url,
     sizes: sizeSet(["L", "XL"]),
-    badge: "Dolor",
     imageFit: "contain",
   },
   {
