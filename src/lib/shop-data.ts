@@ -160,7 +160,7 @@ export const products: Product[] = [
     blurb: "Bright blue and gray wool varsity",
     price: 225,
     image: item1FrontBackAsset.url,
-    hoverImage: item1SideAsset.url,
+    hoverImage: item1FixedArmPatchAsset.url,
     sizes: [
       { label: "S", soldOut: true },
       { label: "M" },
