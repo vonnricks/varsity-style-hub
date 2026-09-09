@@ -269,28 +269,28 @@ export type TeamShot = {
 
 export const teamShots: TeamShot[] = [
   {
-    team: "TEAM DALLAS JKT",
+    team: "DALLAS LEGACY VARSITY JACKET",
     rivalry: "BRIGHT BLUE AND GRAY",
     copy: "Luxury Style and Warmth",
     image: teamNavyAsset.url,
     productId: "item-4",
   },
   {
-    team: "TEAM WASHINGTON JKT",
+    team: "MIDNIGHT DISTRICT VARSITY JACKET",
     rivalry: "TRIPLE BACK",
     copy: "Stand Out In Comfort",
     image: teamMaroonAsset.url,
     productId: "item-1",
   },
   {
-    team: "TEAM WASHINGTON SWT",
+    team: "WARRIOR LEGACY HOODIE – BURGUNDY",
     rivalry: "BRIGHT BURGUNDY & GOLD",
     copy: "Thick Cotton and Bright Colors",
     image: teamBlackAsset.url,
     productId: "item-8",
   },
   {
-    team: "TEAM WASHINGTON SWT",
+    team: "WARRIOR LEGACY HOODIE – BLACK",
     rivalry: "BLACK & BURGUNDY",
     copy: "Impecable Embroidery",
     image: teamGreenAsset.url,
