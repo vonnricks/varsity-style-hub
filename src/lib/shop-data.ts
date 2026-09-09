@@ -240,6 +240,7 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [item8Lifestyle1Asset.url, item8Lifestyle2Asset.url, item8Lifestyle3Asset.url],
   },
 ];
 
