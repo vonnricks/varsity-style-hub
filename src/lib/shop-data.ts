@@ -144,6 +144,8 @@ export type Product = {
   badge?: string;
   imageFit?: "cover" | "contain";
   imageBg?: string;
+  hoverImageFit?: "cover" | "contain";
+  hoverImageBg?: string;
   images?: string[];
 };
 
@@ -169,6 +171,8 @@ export const products: Product[] = [
       { label: "2XL", soldOut: true },
       { label: "4XL" },
     ],
+    hoverImageFit: "contain",
+    hoverImageBg: "#ffffff",
   },
   {
     id: "item-2",
