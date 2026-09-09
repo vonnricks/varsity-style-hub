@@ -34,7 +34,7 @@ type StoreValue = {
 // Keep a single context instance across hot-module reloads so that a provider
 // created by an older module copy is still readable by newer consumers.
 const globalStore = globalThis as typeof globalThis & {
-  __storefrontStoreContext?: React.Context<StoreValue | null>;
+  __storefrontStoreContext?: Context<StoreValue | null>;
 };
 const StoreContext =
   globalStore.__storefrontStoreContext ??
