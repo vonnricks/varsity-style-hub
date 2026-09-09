@@ -9,7 +9,6 @@ import item5SideAsset from "@/assets/item5-side.png.asset.json";
 import item5BackAltAsset from "@/assets/item5-back-alt.png.asset.json";
 import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
 import item1SideAsset from "@/assets/item1-side.png.asset.json";
-import item1FixedArmPatchAsset from "@/assets/Fixed_Arm_Patch.png.asset.json";
 import item1CoverNoBg from "@/assets/item1-cover.png";
 import item1Stack2Asset from "@/assets/Black_stack_2.PNG.asset.json";
 import item1Stack3Asset from "@/assets/Black_stack_3.PNG.asset.json";
