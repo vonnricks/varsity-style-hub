@@ -211,7 +211,7 @@ export const products: Product[] = [
   },
   {
     id: "item-6",
-    name: "Item 6",
+    name: "District Shadow Puffer Vest",
     blurb: "Classic black team vest",
     price: 125,
     image: item6FrontBackAsset.url,
