@@ -50,7 +50,7 @@ export function ProductCard({ product }: { product: Product }) {
             hover ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
           }`}
         >
-          <Eye className="size-3.5" /> Lorem quick view
+          <Eye className="size-3.5" /> Quick view
         </button>
       </div>
 
