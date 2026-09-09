@@ -38,11 +38,6 @@ export function ProductCard({ product }: { product: Product }) {
             product.imageFit === "contain" ? "object-contain p-4" : "object-cover"
           } ${hover ? "opacity-100" : "opacity-0"}`}
         />
-        {product.badge ? (
-          <span className="absolute left-3 top-3 bg-ink px-2 py-1 text-[10px] label-caps text-primary-foreground">
-            {product.badge}
-          </span>
-        ) : null}
         <button
           type="button"
           onClick={() => addLine(product)}
