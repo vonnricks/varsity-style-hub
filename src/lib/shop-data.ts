@@ -155,7 +155,7 @@ const sizeSet = (soldOut: string[] = []) =>
 export const products: Product[] = [
   {
     id: "item-1",
-    name: "Item 1",
+    name: "Midnight District Varsity Jacket",
     blurb: "Bright blue and gray wool varsity",
     price: 225,
     image: item1FrontBackAsset.url,
