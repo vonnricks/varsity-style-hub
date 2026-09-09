@@ -177,6 +177,8 @@ export const products: Product[] = [
       { label: "2XL", soldOut: true },
       { label: "4XL" },
     ],
+    imageFit: "contain",
+    imageBg: "#ffffff",
     hoverImageFit: "contain",
     hoverImageBg: "#ffffff",
     images: [
