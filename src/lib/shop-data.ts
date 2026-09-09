@@ -28,6 +28,9 @@ import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
 import item7Lifestyle1Asset from "@/assets/Black_and_Burgundy_2.PNG.asset.json";
 import item7Lifestyle2Asset from "@/assets/Black_and_Burgundy.PNG.asset.json";
 import item8FrontAsset from "@/assets/item8-front.jpg.asset.json";
+import item8Lifestyle1Asset from "@/assets/Burgundy_and_Gold.PNG.asset.json";
+import item8Lifestyle2Asset from "@/assets/Burgundy_and_Gold_2.PNG.asset.json";
+import item8Lifestyle3Asset from "@/assets/Burgundy_and_Gold3.PNG.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
@@ -237,6 +240,7 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [item8Lifestyle1Asset.url, item8Lifestyle2Asset.url, item8Lifestyle3Asset.url],
   },
 ];
 
