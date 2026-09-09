@@ -150,7 +150,14 @@ export const products: Product[] = [
     price: 225,
     image: item1FrontBackAsset.url,
     hoverImage: item1SideAsset.url,
-    sizes: ["S", "M", "L", "XL", "2XL"].map((label) => ({ label })),
+    sizes: [
+      { label: "S", soldOut: true },
+      { label: "M" },
+      { label: "L", soldOut: true },
+      { label: "XL", soldOut: true },
+      { label: "2XL", soldOut: true },
+      { label: "4XL" },
+    ],
   },
   {
     id: "item-2",
