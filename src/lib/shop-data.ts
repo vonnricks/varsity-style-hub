@@ -182,7 +182,7 @@ export const products: Product[] = [
   },
   {
     id: "item-3",
-    name: "Item 3",
+    name: "Bay Dynasty Varsity Jacket",
     blurb: "Triple back wool varsity",
     price: 225,
     image: item3FrontBackAsset.url,
