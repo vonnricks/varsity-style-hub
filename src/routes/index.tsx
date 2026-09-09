@@ -44,7 +44,7 @@ function Index() {
           <Hero />
           <TeamShots />
           <div id="the-lineup">
-            <Carousel title="The Lineup" subtitle="Lorem ipsum dolor sit amet consectetur.">
+            <Carousel title="The Lineup" subtitle="Shop the full team collection.">
               {products.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
