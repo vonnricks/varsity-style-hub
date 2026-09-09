@@ -203,7 +203,7 @@ export const products: Product[] = [
     blurb: "",
     price: 225,
     image: item2CoverNoBg,
-    hoverImage: item2SideAsset.url,
+    hoverImage: item2CoverNoBg,
     sizes: sizeSet(["S", "XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
@@ -212,6 +212,7 @@ export const products: Product[] = [
       item2Stack2Asset.url,
       item2Stack3Asset.url,
       item2Stack4Asset.url,
+      item2SideAsset.url,
     ],
   },
   {
