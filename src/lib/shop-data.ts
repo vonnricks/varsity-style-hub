@@ -228,7 +228,7 @@ export const products: Product[] = [
     name: "District Legacy Varsity Jacket",
     blurb: "Black and burgundy wool varsity",
     price: 225,
-    image: item4FrontBackAsset.url,
+    image: item4CoverNoBg,
     hoverImage: item4FrontAsset.url,
     sizes: [
       { label: "M" },
@@ -238,6 +238,8 @@ export const products: Product[] = [
       { label: "3XL" },
       { label: "4XL" },
     ],
+    imageFit: "contain",
+    imageBg: "#ffffff",
   },
   {
     id: "item-5",
