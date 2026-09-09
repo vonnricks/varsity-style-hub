@@ -123,12 +123,6 @@ export function PromoBanner() {
             Produced with quality material to give you stile while you cheer on your team.
           </p>
         </div>
-        <a
-          href="#the-lineup"
-          className="bg-card px-8 py-4 text-[11px] label-caps text-foreground transition-opacity hover:opacity-90"
-        >
-          
-        </a>
       </div>
     </section>
   );
