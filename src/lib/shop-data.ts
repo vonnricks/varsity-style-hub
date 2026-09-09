@@ -17,6 +17,7 @@ import item1Stack5Asset from "@/assets/Black_Stack.PNG.asset.json";
 import item1Stack6Asset from "@/assets/Black_Stack_6.JPG.asset.json";
 import item1Stack7Asset from "@/assets/ChatGPT_Image_Sep_4_2026_10_43_46_AM.png.asset.json";
 import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
+import item2CoverNoBg from "@/assets/item2-cover-nobg.png";
 import item2SideAsset from "@/assets/item2-side.png.asset.json";
 import item3FrontBackAsset from "@/assets/item3-front-back.png.asset.json";
 import item3CoverNoBg from "@/assets/item3-cover-nobg.png";
