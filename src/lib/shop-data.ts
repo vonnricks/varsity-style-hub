@@ -23,6 +23,8 @@ import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
 import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.json";
 import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
+import item7FrontAsset from "@/assets/item7-front.png.asset.json";
+import item8FrontAsset from "@/assets/item8-front.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
@@ -208,6 +210,28 @@ export const products: Product[] = [
     hoverImage: item6FrontAsset.url,
     sizes: sizeSet(["XS", "S"]),
     imageFit: "contain",
+  },
+  {
+    id: "item-7",
+    name: "Item 7",
+    blurb: "Black team hoodie",
+    price: 95,
+    image: item7FrontAsset.url,
+    hoverImage: item7FrontAsset.url,
+    sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
+    imageFit: "contain",
+    imageBg: "#ffffff",
+  },
+  {
+    id: "item-8",
+    name: "Item 8",
+    blurb: "Burgundy and gold team hoodie",
+    price: 95,
+    image: item8FrontAsset.url,
+    hoverImage: item8FrontAsset.url,
+    sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
+    imageFit: "contain",
+    imageBg: "#ffffff",
   },
 ];
 
