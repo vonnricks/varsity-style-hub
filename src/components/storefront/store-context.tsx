@@ -23,7 +23,14 @@ type StoreValue = {
   close: () => void;
 };
 
-const StoreContext = createContext<StoreValue | null>(null);
+// Keep a single context instance across hot-module reloads so that a provider
+// created by an older module copy is still readable by newer consumers.
+const globalStore = globalThis as typeof globalThis & {
+  __storefrontStoreContext?: React.Context<StoreValue | null>;
+};
+const StoreContext =
+  globalStore.__storefrontStoreContext ??
+  (globalStore.__storefrontStoreContext = createContext<StoreValue | null>(null));
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<CartLine[]>(() => {
