@@ -255,6 +255,12 @@ export const products: Product[] = [
     ],
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [
+      item4Stack1Asset.url,
+      item4Stack2Asset.url,
+      item4Stack3Asset.url,
+      item4Stack4Asset.url,
+    ],
   },
   {
     id: "item-5",
