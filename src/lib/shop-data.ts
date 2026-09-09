@@ -19,6 +19,7 @@ import item1Stack7Asset from "@/assets/ChatGPT_Image_Sep_4_2026_10_43_46_AM.png.
 import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
 import item2SideAsset from "@/assets/item2-side.png.asset.json";
 import item3FrontBackAsset from "@/assets/item3-front-back.png.asset.json";
+import item3CoverNoBg from "@/assets/item3-cover-nobg.png";
 import item3FrontAsset from "@/assets/item3-front.jpg.asset.json";
 import item3BackAsset from "@/assets/item3-back.jpg.asset.json";
 import item3Side1Asset from "@/assets/item3-side-1.jpg.asset.json";
