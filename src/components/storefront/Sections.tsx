@@ -52,14 +52,14 @@ function DealBand({ eyebrow, heading, copy }: { eyebrow: string; heading: string
 
 const deals = [
   {
-    eyebrow: "Lorem offer",
+    eyebrow: "Limited offer",
     heading: "Perfect duo: buy 2 get 15% off",
-    copy: "Mix and match any two lorem ipsum team jackets to build your perfect duo.",
+    copy: "Mix and match any two team jackets to build your perfect duo.",
   },
   {
-    eyebrow: "Ipsum offer",
-    heading: "Free lorem shipping over $100",
-    copy: "Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.",
+    eyebrow: "Free shipping",
+    heading: "Free shipping on orders over $100",
+    copy: "Every order ships fast and free when you spend $100 or more.",
   },
 ];
 
@@ -69,7 +69,7 @@ export function TeamShots() {
       <div className="mx-auto max-w-[1600px] px-5 md:px-8">
         <h2 className="display-title text-3xl md:text-5xl">Pick a side</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          Choose your team and wear your colors with pride.
         </p>
       </div>
 
