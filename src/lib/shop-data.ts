@@ -35,6 +35,10 @@ import item4FrontAsset from "@/assets/item4-front.png.asset.json";
 import item4BackAsset from "@/assets/item4-back.png.asset.json";
 import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
 import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.json";
+import item4Stack1Asset from "@/assets/3-2.png.asset.json";
+import item4Stack2Asset from "@/assets/Photoroom_20260525_205704-2.PNG.asset.json";
+import item4Stack3Asset from "@/assets/Photoroom_20260526_212932_2.PNG.asset.json";
+import item4Stack4Asset from "@/assets/Photoroom_20260526_212943_2.PNG.asset.json";
 import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
 import item7FrontAsset from "@/assets/item7-front.png.asset.json";
@@ -251,6 +255,12 @@ export const products: Product[] = [
     ],
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [
+      item4Stack1Asset.url,
+      item4Stack2Asset.url,
+      item4Stack3Asset.url,
+      item4Stack4Asset.url,
+    ],
   },
   {
     id: "item-5",
