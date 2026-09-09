@@ -25,7 +25,7 @@ import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
 import item7FrontAsset from "@/assets/item7-front.png.asset.json";
 import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
-import item8FrontAsset from "@/assets/item8-front.png.asset.json";
+import item8FrontAsset from "@/assets/item8-front.jpg.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
 import teamBlackAsset from "@/assets/team-black.png.asset.json";
