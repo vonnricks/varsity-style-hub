@@ -71,7 +71,9 @@ function Detail({ productId }: { productId: string }) {
       <div className="grid grid-cols-1 gap-1 md:gap-3">
         {[
           product.image,
-          ...(product.hoverImage !== product.image ? [product.hoverImage] : []),
+          ...(product.hoverImage && product.hoverImage !== product.image
+            ? [product.hoverImage]
+            : []),
           ...(product.images || []),
         ].map((src, i) => (
           <img

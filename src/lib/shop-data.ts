@@ -139,7 +139,7 @@ export type Product = {
   price: number;
   compareAt?: number;
   image: string;
-  hoverImage: string;
+  hoverImage?: string;
   sizes: { label: string; soldOut?: boolean }[];
   badge?: string;
   imageFit?: "cover" | "contain";
@@ -160,7 +160,6 @@ export const products: Product[] = [
     blurb: "Bright blue and gray wool varsity",
     price: 225,
     image: item1FixedArmPatchAsset.url,
-    hoverImage: item1FrontBackAsset.url,
     sizes: [
       { label: "S", soldOut: true },
       { label: "M" },
