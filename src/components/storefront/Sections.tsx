@@ -118,17 +118,16 @@ export function PromoBanner() {
     <section className="bg-maroon text-maroon-foreground">
       <div className="mx-auto flex max-w-[1600px] flex-col items-start gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between md:px-8 md:py-20">
         <div>
-          <h2 className="display-title text-4xl md:text-6xl">Ipsum dolor sit amet</h2>
+          <h2 className="display-title text-4xl md:text-6xl">BRINGING LUXURY TO SPORTS</h2>
           <p className="mt-3 max-w-xl text-sm text-maroon-foreground/85">
-            Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.
+            Produced with quality material to give you stile while you cheer on your team.
           </p>
         </div>
         <a
           href="#the-lineup"
           className="bg-card px-8 py-4 text-[11px] label-caps text-foreground transition-opacity hover:opacity-90"
         >
-          Tempor incididunt
+          
         </a>
       </div>
     </section>
