@@ -45,9 +45,9 @@ export const heroTiles = [
 export const BRAND = "CETS APPAREL";
 
 export const announcements = [
-  "Lorem ipsum dolor sit amet — consectetur adipiscing elit",
-  "Sed do eiusmod tempor incididunt ut labore et dolore",
-  "Ut enim ad minim veniam, quis nostrud exercitation",
+  "Free shipping on all orders over $150",
+  "New team colorways drop every Friday",
+  "Rep your rivalry — limited run styles available now",
 ];
 
 export type MegaColumn = { heading: string; links: string[] };
@@ -57,16 +57,16 @@ export type NavItem = {
   columns: MegaColumn[];
 };
 
-const loremLinks = (n: number, seed: string) =>
+const navLinks = (n: number, seed: string) =>
   [
-    "Lorem ipsum",
-    "Dolor sit amet",
-    "Consectetur",
-    "Adipiscing elit",
-    "Sed do eiusmod",
-    "Tempor incididunt",
-    "Labore et dolore",
-    "Magna aliqua",
+    "Jackets",
+    "Vests",
+    "Crewnecks",
+    "Caps",
+    "Accessories",
+    "New In",
+    "Best Sellers",
+    "Gift Cards",
   ]
     .slice(0, n)
     .map((l) => `${l} ${seed}`);
