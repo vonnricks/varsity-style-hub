@@ -225,6 +225,7 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [item7Lifestyle1Asset.url, item7Lifestyle2Asset.url],
   },
   {
     id: "item-8",
