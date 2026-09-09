@@ -41,10 +41,10 @@ import item4Stack3Asset from "@/assets/Photoroom_20260526_212932_2.PNG.asset.jso
 import item4Stack4Asset from "@/assets/Photoroom_20260526_212943_2.PNG.asset.json";
 import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
-import item6Stack1Asset from "@/assets/item6-stack-1.png.asset.json";
-import item6Stack2Asset from "@/assets/item6-stack-2.png.asset.json";
-import item6Stack3Asset from "@/assets/item6-stack-3.jpg.asset.json";
-import item6Stack4Asset from "@/assets/item6-stack-4.PNG.asset.json";
+import item5Stack1Asset from "@/assets/item6-stack-1.png.asset.json";
+import item5Stack2Asset from "@/assets/item6-stack-2.png.asset.json";
+import item5Stack3Asset from "@/assets/item6-stack-3.jpg.asset.json";
+import item5Stack4Asset from "@/assets/item6-stack-4.PNG.asset.json";
 import item7FrontAsset from "@/assets/item7-front.png.asset.json";
 import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
 import item7Lifestyle1Asset from "@/assets/Black_and_Burgundy_2.PNG.asset.json";
@@ -282,6 +282,13 @@ export const products: Product[] = [
       { label: "4XL" },
     ],
     imageFit: "contain",
+    imageBg: "#ffffff",
+    images: [
+      item5Stack1Asset.url,
+      item5Stack2Asset.url,
+      item5Stack3Asset.url,
+      item5Stack4Asset.url,
+    ],
   },
   {
     id: "item-6",
@@ -299,13 +306,6 @@ export const products: Product[] = [
       { label: "4XL" },
     ],
     imageFit: "contain",
-    imageBg: "#ffffff",
-    images: [
-      item6Stack1Asset.url,
-      item6Stack2Asset.url,
-      item6Stack3Asset.url,
-      item6Stack4Asset.url,
-    ],
   },
   {
     id: "item-7",
