@@ -46,7 +46,7 @@ export const BRAND = "CETS APPAREL";
 
 export const announcements = [
   "Free shipping on all orders over $150",
-  "New team colorways drop every Friday",
+  "NEW TEAM COLORWAYS DROP EVERY SEASON",
   "Rep your rivalry — limited run styles available now",
 ];
 
