@@ -19,6 +19,10 @@ import item1Stack7Asset from "@/assets/ChatGPT_Image_Sep_4_2026_10_43_46_AM.png.
 import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
 import item2CoverNoBg from "@/assets/item2-cover-nobg.png";
 import item2SideAsset from "@/assets/item2-side.png.asset.json";
+import item2Stack1Asset from "@/assets/Burgundy_Stack_1.png.asset.json";
+import item2Stack2Asset from "@/assets/Burgundy_Stack_7.png.asset.json";
+import item2Stack3Asset from "@/assets/Photoroom_20260827_192836-2.PNG.asset.json";
+import item2Stack4Asset from "@/assets/Photoroom_20260827_192843-2.PNG.asset.json";
 import item3FrontBackAsset from "@/assets/item3-front-back.png.asset.json";
 import item3CoverNoBg from "@/assets/item3-cover-nobg.png";
 import item3FrontAsset from "@/assets/item3-front.jpg.asset.json";
@@ -203,6 +207,12 @@ export const products: Product[] = [
     sizes: sizeSet(["S", "XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
+    images: [
+      item2Stack1Asset.url,
+      item2Stack2Asset.url,
+      item2Stack3Asset.url,
+      item2Stack4Asset.url,
+    ],
   },
   {
     id: "item-3",
