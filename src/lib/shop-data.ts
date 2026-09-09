@@ -201,7 +201,7 @@ export const products: Product[] = [
   },
   {
     id: "item-5",
-    name: "Item 5",
+    name: "Burgundy Capital Puffer Vest",
     blurb: "Premium wool team vest",
     price: 125,
     image: item5FrontBackAsset.url,
