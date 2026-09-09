@@ -206,7 +206,14 @@ export const products: Product[] = [
     price: 125,
     image: item5FrontBackAsset.url,
     hoverImage: item5FrontAsset.url,
-    sizes: sizeSet(["L", "XL"]),
+    sizes: [
+      { label: "M" },
+      { label: "L" },
+      { label: "XL" },
+      { label: "2XL" },
+      { label: "3XL" },
+      { label: "4XL" },
+    ],
     imageFit: "contain",
   },
   {
