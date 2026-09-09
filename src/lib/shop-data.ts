@@ -24,6 +24,7 @@ import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.jso
 import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
 import item7FrontAsset from "@/assets/item7-front.png.asset.json";
+import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
 import item8FrontAsset from "@/assets/item8-front.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png.asset.json";
 import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
@@ -217,7 +218,7 @@ export const products: Product[] = [
     blurb: "Black team hoodie",
     price: 95,
     image: item7FrontAsset.url,
-    hoverImage: item7FrontAsset.url,
+    hoverImage: item7HoverAsset.url,
     sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
     imageFit: "contain",
     imageBg: "#ffffff",
