@@ -207,7 +207,7 @@ export const products: Product[] = [
     name: "Bay Dynasty Varsity Jacket",
     blurb: "Triple back wool varsity",
     price: 225,
-    image: item3FrontBackAsset.url,
+    image: item3CoverNoBg,
     hoverImage: item3FrontAsset.url,
     sizes: [
       { label: "M", soldOut: true },
@@ -218,6 +218,8 @@ export const products: Product[] = [
       { label: "4XL", soldOut: true },
     ],
     badge: "Sold Out",
+    imageFit: "contain",
+    imageBg: "#ffffff",
   },
   {
     id: "item-4",
