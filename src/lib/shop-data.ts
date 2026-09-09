@@ -168,7 +168,7 @@ export const products: Product[] = [
   {
     id: "item-1",
     name: "Midnight District Varsity Jacket",
-    blurb: "\n",
+    blurb: "",
     price: 225,
     image: item1CoverNoBg,
     hoverImage: item1CoverNoBg,

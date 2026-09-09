@@ -80,7 +80,9 @@ export function ProductCard({ product }: { product: Product }) {
             {product.name}
           </Link>
         </h3>
-        <p className="text-xs text-muted-foreground">{product.blurb}</p>
+        {product.blurb ? (
+          <p className="text-xs text-muted-foreground">{product.blurb}</p>
+        ) : null}
         <p className="mt-1 flex items-center gap-2 text-sm">
           <span className={product.compareAt ? "text-sale font-medium" : ""}>${product.price}</span>
           {product.compareAt ? (
