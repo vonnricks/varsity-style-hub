@@ -217,7 +217,7 @@ export const products: Product[] = [
     name: "Item 7",
     blurb: "Black team hoodie",
     price: 95,
-    image: item7FrontAsset.url,
+    image: item7HoverAsset.url,
     hoverImage: item7HoverAsset.url,
     sizes: sizeSet(["S", "M", "L", "XL", "2XL"]),
     imageFit: "contain",
