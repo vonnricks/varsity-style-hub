@@ -165,7 +165,7 @@ export const products: Product[] = [
   {
     id: "item-1",
     name: "Midnight District Varsity Jacket",
-    blurb: "Bright blue and gray wool varsity",
+    blurb: "A varsity classic built for the city, with bold details that carry DMV pride everywhere you go.",
     price: 225,
     image: item1FixedArmPatchAsset.url,
     hoverImage: item1FrontBackAsset.url,
