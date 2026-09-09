@@ -88,10 +88,10 @@ export function Footer() {
             onClick={() => open("region")}
             className="flex items-center gap-2 border border-primary-foreground/25 px-4 py-2.5 text-[11px] label-caps transition-colors hover:bg-primary-foreground/10"
           >
-            <Globe className="size-4" /> Lorem States / LRM $
+            <Globe className="size-4" /> United States / USD $
           </button>
           <p className="text-[11px] text-primary-foreground/60">
-            © {new Date().getFullYear()} {BRAND}. Lorem ipsum dolor sit amet consectetur.
+            © {new Date().getFullYear()} {BRAND}. All rights reserved.
           </p>
         </div>
       </div>
