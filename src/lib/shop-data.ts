@@ -9,6 +9,7 @@ import item5SideAsset from "@/assets/item5-side.png.asset.json";
 import item5BackAltAsset from "@/assets/item5-back-alt.png.asset.json";
 import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
 import item1SideAsset from "@/assets/item1-side.png.asset.json";
+import item1FixedArmPatchAsset from "@/assets/Fixed_Arm_Patch.png.asset.json";
 import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
 import item2SideAsset from "@/assets/item2-side.png.asset.json";
 import item3FrontBackAsset from "@/assets/item3-front-back.png.asset.json";
@@ -159,7 +160,7 @@ export const products: Product[] = [
     blurb: "Bright blue and gray wool varsity",
     price: 225,
     image: item1FrontBackAsset.url,
-    hoverImage: item1SideAsset.url,
+    hoverImage: item1FixedArmPatchAsset.url,
     sizes: [
       { label: "S", soldOut: true },
       { label: "M" },
