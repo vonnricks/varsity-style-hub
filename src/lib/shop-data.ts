@@ -309,6 +309,12 @@ export const products: Product[] = [
       { label: "4XL" },
     ],
     imageFit: "contain",
+    imageBg: "#ffffff",
+    images: [
+      item6Stack5Asset.url,
+      item6Stack6Asset.url,
+      item6Stack7Asset.url,
+    ],
   },
   {
     id: "item-7",
