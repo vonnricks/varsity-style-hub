@@ -41,6 +41,9 @@ import item4Stack3Asset from "@/assets/Photoroom_20260526_212932_2.PNG.asset.jso
 import item4Stack4Asset from "@/assets/Photoroom_20260526_212943_2.PNG.asset.json";
 import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
 import item6FrontAsset from "@/assets/item6-front.png.asset.json";
+import item6Stack5Asset from "@/assets/item6-stack-5.jpg.asset.json";
+import item6Stack6Asset from "@/assets/item6-stack-6.jpg.asset.json";
+import item6Stack7Asset from "@/assets/item6-stack-7.jpg.asset.json";
 import item5Stack1Asset from "@/assets/item6-stack-1.png.asset.json";
 import item5Stack2Asset from "@/assets/item6-stack-2.png.asset.json";
 import item5Stack3Asset from "@/assets/item6-stack-3.jpg.asset.json";
