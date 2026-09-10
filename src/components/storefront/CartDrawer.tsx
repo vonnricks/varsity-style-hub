@@ -87,12 +87,6 @@ export function CartDrawer() {
               </div>
             ))
           )}
-          <div className="my-5 bg-secondary p-4">
-            <p className="text-[11px] label-caps">Complete your look</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Add a matching cap or crewneck to your order.
-            </p>
-          </div>
         </div>
 
         <div className="border-t border-border p-5">
