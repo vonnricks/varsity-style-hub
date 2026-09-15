@@ -2,78 +2,78 @@ import jacketCream from "@/assets/jacket-cream.jpg";
 import jacketMaroon from "@/assets/jacket-maroon.jpg";
 import jacketBlack from "@/assets/jacket-black.jpg";
 import jacketGreen from "@/assets/jacket-green.jpg";
-import item5FrontBackAsset from "@/assets/item5-front-back.png.asset.json";
-import item5FrontAsset from "@/assets/item5-front.png.asset.json";
-import item5BackAsset from "@/assets/item5-back.png.asset.json";
-import item5SideAsset from "@/assets/item5-side.png.asset.json";
-import item5BackAltAsset from "@/assets/item5-back-alt.png.asset.json";
-import item1FrontBackAsset from "@/assets/item1-front-back.png.asset.json";
-import item1SideAsset from "@/assets/item1-side.png.asset.json";
+import item5FrontBackAsset from "@/assets/item5-front-back.png";
+import item5FrontAsset from "@/assets/item5-front.png";
+import item5BackAsset from "@/assets/item5-back.png";
+import item5SideAsset from "@/assets/item5-side.png";
+import item5BackAltAsset from "@/assets/item5-back-alt.png";
+import item1FrontBackAsset from "@/assets/item1-front-back.png";
+import item1SideAsset from "@/assets/item1-side.png";
 import item1CoverNoBg from "@/assets/item1-cover.png";
-import item1Stack2Asset from "@/assets/Black_stack_2.PNG.asset.json";
-import item1Stack3Asset from "@/assets/Black_stack_3.PNG.asset.json";
-import item1Stack4Asset from "@/assets/Black_stack_4.PNG.asset.json";
-import item1Stack5Asset from "@/assets/Black_Stack.PNG.asset.json";
-import item1Stack6Asset from "@/assets/Black_Stack_6.JPG.asset.json";
-import item1Stack7Asset from "@/assets/ChatGPT_Image_Sep_4_2026_10_43_46_AM.png.asset.json";
-import item2FrontBackAsset from "@/assets/item2-front-back.png.asset.json";
+import item1Stack2Asset from "@/assets/Black_stack_2.PNG";
+import item1Stack3Asset from "@/assets/Black_stack_3.PNG";
+import item1Stack4Asset from "@/assets/Black_stack_4.PNG";
+import item1Stack5Asset from "@/assets/Black_Stack.PNG";
+import item1Stack6Asset from "@/assets/Black_Stack_6.JPG";
+import item1Stack7Asset from "@/assets/ChatGPT_Image_Sep_4_2026_10_43_46_AM.png";
+import item2FrontBackAsset from "@/assets/item2-front-back.png";
 import item2CoverNoBg from "@/assets/item2-cover-nobg.png";
-import item2SideAsset from "@/assets/item2-side.png.asset.json";
-import item2Stack1Asset from "@/assets/Burgundy_Stack_1.png.asset.json";
-import item2Stack2Asset from "@/assets/Burgundy_Stack_7.png.asset.json";
-import item2Stack3Asset from "@/assets/Photoroom_20260827_192836-2.PNG.asset.json";
-import item2Stack4Asset from "@/assets/Photoroom_20260827_192843-2.PNG.asset.json";
-import item3FrontBackAsset from "@/assets/item3-front-back.png.asset.json";
+import item2SideAsset from "@/assets/item2-side.png";
+import item2Stack1Asset from "@/assets/Burgundy_Stack_1.png";
+import item2Stack2Asset from "@/assets/Burgundy_Stack_7.png";
+import item2Stack3Asset from "@/assets/Photoroom_20260827_192836-2.PNG";
+import item2Stack4Asset from "@/assets/Photoroom_20260827_192843-2.PNG";
+import item3FrontBackAsset from "@/assets/item3-front-back.png";
 import item3CoverNoBg from "@/assets/item3-cover-nobg.png";
-import item3FrontAsset from "@/assets/item3-front.jpg.asset.json";
-import item3BackAsset from "@/assets/item3-back.jpg.asset.json";
-import item3Side1Asset from "@/assets/item3-side-1.jpg.asset.json";
-import item3Side2Asset from "@/assets/item3-side-2.jpg.asset.json";
-import item4FrontBackAsset from "@/assets/item4-front-back.png.asset.json";
+import item3FrontAsset from "@/assets/item3-front.jpg";
+import item3BackAsset from "@/assets/item3-back.jpg";
+import item3Side1Asset from "@/assets/item3-side-1.jpg";
+import item3Side2Asset from "@/assets/item3-side-2.jpg";
+import item4FrontBackAsset from "@/assets/item4-front-back.png";
 import item4CoverNoBg from "@/assets/item4-cover-nobg.png";
-import item4FrontAsset from "@/assets/item4-front.png.asset.json";
-import item4BackAsset from "@/assets/item4-back.png.asset.json";
-import item4AngleAsset from "@/assets/item4-angle.png.asset.json";
-import item4FrontStraightAsset from "@/assets/item4-front-straight.png.asset.json";
-import item4Stack1Asset from "@/assets/3-2.png.asset.json";
-import item4Stack2Asset from "@/assets/Photoroom_20260525_205704-2.PNG.asset.json";
-import item4Stack3Asset from "@/assets/Photoroom_20260526_212932_2.PNG.asset.json";
-import item4Stack4Asset from "@/assets/Photoroom_20260526_212943_2.PNG.asset.json";
-import item6FrontBackAsset from "@/assets/item6-front-back.png.asset.json";
-import item6FrontAsset from "@/assets/item6-front.png.asset.json";
-import item6Stack5Asset from "@/assets/item6-stack-5.jpg.asset.json";
-import item6Stack6Asset from "@/assets/item6-stack-6.jpg.asset.json";
-import item6Stack7Asset from "@/assets/item6-stack-7.jpg.asset.json";
-import item5Stack1Asset from "@/assets/item6-stack-1.png.asset.json";
-import item5Stack2Asset from "@/assets/item6-stack-2.png.asset.json";
-import item5Stack3Asset from "@/assets/item6-stack-3.jpg.asset.json";
-import item5Stack4Asset from "@/assets/item6-stack-4.PNG.asset.json";
-import item7FrontAsset from "@/assets/item7-front.png.asset.json";
-import item7HoverAsset from "@/assets/item7-hover.jpg.asset.json";
-import item7Lifestyle1Asset from "@/assets/Black_and_Burgundy_2.PNG.asset.json";
-import item7Lifestyle2Asset from "@/assets/Black_and_Burgundy.PNG.asset.json";
-import item7Lifestyle3Asset from "@/assets/PBlack_and_Burgundy_3PNG.PNG.asset.json";
-import item8FrontAsset from "@/assets/item8-front.jpg.asset.json";
-import item8Lifestyle1Asset from "@/assets/Burgundy_and_Gold.PNG.asset.json";
-import item8Lifestyle2Asset from "@/assets/Burgundy_and_Gold_2.PNG.asset.json";
-import item8Lifestyle3Asset from "@/assets/Burgundy_and_Gold3.PNG.asset.json";
-import teamNavyAsset from "@/assets/team-navy.png.asset.json";
-import teamMaroonAsset from "@/assets/team-maroon.png.asset.json";
-import teamBlackAsset from "@/assets/team-black.png.asset.json";
-import teamGreenAsset from "@/assets/team-green.png.asset.json";
+import item4FrontAsset from "@/assets/item4-front.png";
+import item4BackAsset from "@/assets/item4-back.png";
+import item4AngleAsset from "@/assets/item4-angle.png";
+import item4FrontStraightAsset from "@/assets/item4-front-straight.png";
+import item4Stack1Asset from "@/assets/3-2.png";
+import item4Stack2Asset from "@/assets/Photoroom_20260525_205704-2.PNG";
+import item4Stack3Asset from "@/assets/Photoroom_20260526_212932_2.PNG";
+import item4Stack4Asset from "@/assets/Photoroom_20260526_212943_2.PNG";
+import item6FrontBackAsset from "@/assets/item6-front-back.png";
+import item6FrontAsset from "@/assets/item6-front.png";
+import item6Stack5Asset from "@/assets/item6-stack-5.jpg";
+import item6Stack6Asset from "@/assets/item6-stack-6.jpg";
+import item6Stack7Asset from "@/assets/item6-stack-7.jpg";
+import item5Stack1Asset from "@/assets/item6-stack-1.png";
+import item5Stack2Asset from "@/assets/item6-stack-2.png";
+import item5Stack3Asset from "@/assets/item6-stack-3.jpg";
+import item5Stack4Asset from "@/assets/item6-stack-4.PNG";
+import item7FrontAsset from "@/assets/item7-front.png";
+import item7HoverAsset from "@/assets/item7-hover.jpg";
+import item7Lifestyle1Asset from "@/assets/Black_and_Burgundy_2.PNG";
+import item7Lifestyle2Asset from "@/assets/Black_and_Burgundy.PNG";
+import item7Lifestyle3Asset from "@/assets/PBlack_and_Burgundy_3PNG.PNG";
+import item8FrontAsset from "@/assets/item8-front.jpg";
+import item8Lifestyle1Asset from "@/assets/Burgundy_and_Gold.PNG";
+import item8Lifestyle2Asset from "@/assets/Burgundy_and_Gold_2.PNG";
+import item8Lifestyle3Asset from "@/assets/Burgundy_and_Gold3.PNG";
+import teamNavyAsset from "@/assets/team-navy.png";
+import teamMaroonAsset from "@/assets/team-maroon.png";
+import teamBlackAsset from "@/assets/team-black.png";
+import teamGreenAsset from "@/assets/team-green.png";
 import heroRivals from "@/assets/hero-rivals.jpg";
-import heroRival1Asset from "@/assets/hero-rival-1.jpg.asset.json";
-import heroRival2Asset from "@/assets/hero-rival-2.jpg.asset.json";
-import heroRival3Asset from "@/assets/hero-rival-3.jpg.asset.json";
-import heroRival4Asset from "@/assets/hero-rival-4.jpg.asset.json";
+import heroRival1Asset from "@/assets/hero-rival-1.jpg";
+import heroRival2Asset from "@/assets/hero-rival-2.jpg";
+import heroRival3Asset from "@/assets/hero-rival-3.jpg";
+import heroRival4Asset from "@/assets/hero-rival-4.jpg";
 
 export const heroImage = heroRivals;
 
 export const heroTiles = [
-  { image: heroRival1Asset.url, alt: "Woman wearing a maroon and gold wool varsity jacket" },
-  { image: heroRival2Asset.url, alt: "Man wearing a navy and grey wool varsity jacket" },
-  { image: heroRival3Asset.url, alt: "Woman cheering in a black and red wool varsity jacket" },
-  { image: heroRival4Asset.url, alt: "Man wearing a black and grey wool varsity jacket" },
+  { image: heroRival1Asset, alt: "Woman wearing a maroon and gold wool varsity jacket" },
+  { image: heroRival2Asset, alt: "Man wearing a navy and grey wool varsity jacket" },
+  { image: heroRival3Asset, alt: "Woman cheering in a black and red wool varsity jacket" },
+  { image: heroRival4Asset, alt: "Man wearing a black and grey wool varsity jacket" },
 ];
 
 export const BRAND = "CETS APPAREL";
@@ -200,12 +200,12 @@ export const products: Product[] = [
     hoverImageFit: "contain",
     hoverImageBg: "#ffffff",
     images: [
-      item1Stack2Asset.url,
-      item1Stack3Asset.url,
-      item1Stack4Asset.url,
-      item1Stack5Asset.url,
-      item1Stack6Asset.url,
-      item1Stack7Asset.url,
+      item1Stack2Asset,
+      item1Stack3Asset,
+      item1Stack4Asset,
+      item1Stack5Asset,
+      item1Stack6Asset,
+      item1Stack7Asset,
     ],
   },
   {
@@ -219,11 +219,11 @@ export const products: Product[] = [
     imageFit: "contain",
     imageBg: "#ffffff",
     images: [
-      item2Stack1Asset.url,
-      item2Stack2Asset.url,
-      item2Stack3Asset.url,
-      item2Stack4Asset.url,
-      item2SideAsset.url,
+      item2Stack1Asset,
+      item2Stack2Asset,
+      item2Stack3Asset,
+      item2Stack4Asset,
+      item2SideAsset,
     ],
   },
   {
@@ -232,7 +232,7 @@ export const products: Product[] = [
     blurb: "",
     price: 225,
     image: item3CoverNoBg,
-    hoverImage: item3FrontAsset.url,
+    hoverImage: item3FrontAsset,
     sizes: [
       { label: "M", soldOut: true },
       { label: "L", soldOut: true },
@@ -251,7 +251,7 @@ export const products: Product[] = [
     blurb: "",
     price: 225,
     image: item4CoverNoBg,
-    hoverImage: item4FrontAsset.url,
+    hoverImage: item4FrontAsset,
     sizes: [
       { label: "M" },
       { label: "L" },
@@ -263,10 +263,10 @@ export const products: Product[] = [
     imageFit: "contain",
     imageBg: "#ffffff",
     images: [
-      item4Stack1Asset.url,
-      item4Stack2Asset.url,
-      item4Stack3Asset.url,
-      item4Stack4Asset.url,
+      item4Stack1Asset,
+      item4Stack2Asset,
+      item4Stack3Asset,
+      item4Stack4Asset,
     ],
   },
   {
@@ -274,8 +274,8 @@ export const products: Product[] = [
     name: "Burgundy Capital Puffer Vest",
     blurb: "",
     price: 125,
-    image: item5FrontBackAsset.url,
-    hoverImage: item5FrontAsset.url,
+    image: item5FrontBackAsset,
+    hoverImage: item5FrontAsset,
     sizes: [
       { label: "M" },
       { label: "L" },
@@ -287,10 +287,10 @@ export const products: Product[] = [
     imageFit: "contain",
     imageBg: "#ffffff",
     images: [
-      item5Stack1Asset.url,
-      item5Stack2Asset.url,
-      item5Stack3Asset.url,
-      item5Stack4Asset.url,
+      item5Stack1Asset,
+      item5Stack2Asset,
+      item5Stack3Asset,
+      item5Stack4Asset,
     ],
   },
   {
@@ -298,8 +298,8 @@ export const products: Product[] = [
     name: "District Shadow Puffer Vest",
     blurb: "",
     price: 125,
-    image: item6FrontBackAsset.url,
-    hoverImage: item6FrontAsset.url,
+    image: item6FrontBackAsset,
+    hoverImage: item6FrontAsset,
     sizes: [
       { label: "M" },
       { label: "L" },
@@ -311,9 +311,9 @@ export const products: Product[] = [
     imageFit: "contain",
     imageBg: "#ffffff",
     images: [
-      item6Stack5Asset.url,
-      item6Stack6Asset.url,
-      item6Stack7Asset.url,
+      item6Stack5Asset,
+      item6Stack6Asset,
+      item6Stack7Asset,
     ],
   },
   {
@@ -321,8 +321,8 @@ export const products: Product[] = [
     name: "Warrior Legacy Hoodie – Black",
     blurb: "",
     price: 65,
-    image: item7HoverAsset.url,
-    hoverImage: item7HoverAsset.url,
+    image: item7HoverAsset,
+    hoverImage: item7HoverAsset,
     sizes: [
       { label: "M" },
       { label: "L" },
@@ -333,15 +333,15 @@ export const products: Product[] = [
     ],
     imageFit: "contain",
     imageBg: "#ffffff",
-    images: [item7Lifestyle1Asset.url, item7Lifestyle2Asset.url, item7Lifestyle3Asset.url],
+    images: [item7Lifestyle1Asset, item7Lifestyle2Asset, item7Lifestyle3Asset],
   },
   {
     id: "item-8",
     name: "Warrior Legacy Hoodie – Burgundy",
     blurb: "",
     price: 65,
-    image: item8FrontAsset.url,
-    hoverImage: item8FrontAsset.url,
+    image: item8FrontAsset,
+    hoverImage: item8FrontAsset,
     sizes: [
       { label: "M" },
       { label: "L" },
@@ -352,7 +352,7 @@ export const products: Product[] = [
     ],
     imageFit: "contain",
     imageBg: "#ffffff",
-    images: [item8Lifestyle1Asset.url, item8Lifestyle2Asset.url, item8Lifestyle3Asset.url],
+    images: [item8Lifestyle1Asset, item8Lifestyle2Asset, item8Lifestyle3Asset],
   },
 ];
 
@@ -369,28 +369,28 @@ export const teamShots: TeamShot[] = [
     team: "DALLAS LEGACY VARSITY JACKET",
     rivalry: "BRIGHT BLUE AND GRAY",
     copy: "Luxury Style and Warmth",
-    image: teamNavyAsset.url,
+    image: teamNavyAsset,
     productId: "item-4",
   },
   {
     team: "MIDNIGHT DISTRICT VARSITY JACKET",
     rivalry: "TRIPLE BACK",
     copy: "Stand Out In Comfort",
-    image: teamMaroonAsset.url,
+    image: teamMaroonAsset,
     productId: "item-1",
   },
   {
     team: "WARRIOR LEGACY HOODIE – BURGUNDY",
     rivalry: "BRIGHT BURGUNDY & GOLD",
     copy: "Thick Cotton and Bright Colors",
-    image: teamBlackAsset.url,
+    image: teamBlackAsset,
     productId: "item-8",
   },
   {
     team: "WARRIOR LEGACY HOODIE – BLACK",
     rivalry: "BLACK & BURGUNDY",
     copy: "Impecable Embroidery",
-    image: teamGreenAsset.url,
+    image: teamGreenAsset,
     productId: "item-7",
   },
 ];
