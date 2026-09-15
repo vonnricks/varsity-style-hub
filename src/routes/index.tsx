@@ -11,9 +11,10 @@ import {
   TeamShots,
   TrustMarquee,
 } from "@/components/storefront/Sections";
-import { products } from "@/lib/shop-data";
+import { productsQueryOptions } from "@/lib/use-products";
 
 export const Route = createFileRoute("/")({
+  loader: ({ context }) => context.queryClient.ensureQueryData(productsQueryOptions),
   head: () => ({
     meta: [
       { title: "Woolworks — Wool Varsity Jackets to Rep Your Team" },
@@ -36,6 +37,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const products = Route.useLoaderData();
+
   return (
     <>
       <div className="min-h-screen bg-background">
@@ -45,9 +48,13 @@ function Index() {
           <TeamShots />
           <div id="the-lineup">
             <Carousel title="The Lineup" subtitle="Shop the full team collection.">
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+              {products.length === 0 ? (
+                <p className="py-12 text-sm text-muted-foreground">
+                  No products are published yet.
+                </p>
+              ) : (
+                products.map((product) => <ProductCard key={product.id} product={product} />)
+              )}
             </Carousel>
           </div>
           <PromoBanner />

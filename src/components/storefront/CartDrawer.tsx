@@ -4,7 +4,7 @@ import { useStore } from "./store-context";
 const FREE_THRESHOLD = 500;
 
 export function CartDrawer() {
-  const { overlay, close, lines, setQty, subtotal } = useStore();
+  const { overlay, close, lines, setQty, subtotal, checkout, isCheckingOut } = useStore();
   const isOpen = overlay === "cart";
   const progress = Math.min(100, (subtotal / FREE_THRESHOLD) * 100);
 
@@ -49,35 +49,41 @@ export function CartDrawer() {
             </p>
           ) : (
             lines.map((line) => (
-              <div key={`${line.id}-${line.size}`} className="flex gap-4 border-b border-border py-5">
-                <img
-                  src={line.image}
-                  alt={line.name}
-                  loading="lazy"
-                  width={1024}
-                  height={1280}
-                  className="h-24 w-20 shrink-0 object-cover"
-                />
+              <div key={line.id} className="flex gap-4 border-b border-border py-5">
+                {line.image ? (
+                  <img
+                    src={line.image}
+                    alt={line.name}
+                    loading="lazy"
+                    width={1024}
+                    height={1280}
+                    className="h-24 w-20 shrink-0 object-cover"
+                  />
+                ) : (
+                  <div className="h-24 w-20 shrink-0 bg-secondary" />
+                )}
                 <div className="flex-1">
                   <div className="flex justify-between text-sm">
                     <span className="font-medium">{line.name}</span>
-                    <span>${line.price * line.qty}</span>
+                    <span>${line.lineTotal}</span>
                   </div>
-                  <p className="text-xs text-muted-foreground">Size — {line.size}</p>
+                  {line.size ? (
+                    <p className="text-xs text-muted-foreground">Size — {line.size}</p>
+                  ) : null}
                   <div className="mt-3 inline-flex items-center border border-border">
                     <button
                       type="button"
                       aria-label="Decrease quantity"
-                      onClick={() => setQty(line.id, line.size, line.qty - 1)}
+                      onClick={() => setQty(line.id, line.quantity - 1)}
                       className="p-2 transition-colors hover:bg-secondary"
                     >
                       <Minus className="size-3" />
                     </button>
-                    <span className="w-8 text-center text-xs">{line.qty}</span>
+                    <span className="w-8 text-center text-xs">{line.quantity}</span>
                     <button
                       type="button"
                       aria-label="Increase quantity"
-                      onClick={() => setQty(line.id, line.size, line.qty + 1)}
+                      onClick={() => setQty(line.id, line.quantity + 1)}
                       className="p-2 transition-colors hover:bg-secondary"
                     >
                       <Plus className="size-3" />
@@ -96,9 +102,11 @@ export function CartDrawer() {
           </div>
           <button
             type="button"
-            className="mt-4 w-full bg-ink py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90"
+            onClick={checkout}
+            disabled={lines.length === 0 || isCheckingOut}
+            className="mt-4 w-full bg-ink py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
           >
-            Checkout
+            {isCheckingOut ? "Redirecting…" : "Checkout"}
           </button>
           <p className="mt-3 text-center text-[11px] text-muted-foreground">
             Free returns within 30 days.

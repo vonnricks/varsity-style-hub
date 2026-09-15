@@ -6,7 +6,8 @@ import { RegionModal } from "@/components/storefront/RegionModal";
 import { Carousel } from "@/components/storefront/Carousel";
 import { ProductCard } from "@/components/storefront/ProductCard";
 import { useStore } from "@/components/storefront/store-context";
-import { products } from "@/lib/shop-data";
+import { productQueryOptions, productsQueryOptions } from "@/lib/use-products";
+import type { Product } from "@/lib/shop-data";
 
 export const Route = createFileRoute("/product/$productId")({
   head: () => ({
@@ -26,27 +27,29 @@ export const Route = createFileRoute("/product/$productId")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  loader: ({ params }) => {
-    const product = products.find((p) => p.id === params.productId);
+  loader: async ({ params, context }) => {
+    const [product, allProducts] = await Promise.all([
+      context.queryClient.ensureQueryData(productQueryOptions(params.productId)),
+      context.queryClient.ensureQueryData(productsQueryOptions),
+    ]);
     if (!product) throw notFound();
-    return { productId: product.id };
+    return { product, allProducts };
   },
   component: ProductPage,
 });
 
 function ProductPage() {
-  const { productId } = Route.useLoaderData();
-  const product = products.find((p) => p.id === productId)!;
+  const { product, allProducts } = Route.useLoaderData();
 
   return (
     <>
       <div className="min-h-screen bg-background">
         <Header />
         <main>
-          <Detail productId={product.id} />
+          <Detail product={product} />
           <div id="the-lineup">
             <Carousel title="The Lineup" subtitle="Shop the rest of the team collection.">
-              {products
+              {allProducts
                 .filter((p) => p.id !== product.id)
                 .map((p) => (
                   <ProductCard key={p.id} product={p} />
@@ -62,9 +65,8 @@ function ProductPage() {
   );
 }
 
-function Detail({ productId }: { productId: string }) {
+function Detail({ product }: { product: Product }) {
   const { addLine } = useStore();
-  const product = products.find((p) => p.id === productId)!;
 
   return (
     <section className="md:mx-auto md:grid md:max-w-[1600px] md:grid-cols-2 md:gap-10 md:px-8 md:py-10">
@@ -73,7 +75,9 @@ function Detail({ productId }: { productId: string }) {
           product.image,
           ...(product.hoverImage !== product.image ? [product.hoverImage] : []),
           ...(product.images || []),
-        ].map((src, i) => (
+        ]
+          .filter(Boolean)
+          .map((src, i) => (
           <img
             key={src}
             src={src}

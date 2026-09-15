@@ -7,16 +7,18 @@ import {
   type Context,
   type ReactNode,
 } from "react";
-import { products, type Product } from "@/lib/shop-data";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import type { Product } from "@/lib/shop-data";
+import {
+  addToCart,
+  getCheckoutUrl,
+  getCurrentCart,
+  removeLineItem,
+  updateLineItemQuantity,
+  type WixCartLineItem,
+} from "@/lib/wix-cart";
 
-export type CartLine = {
-  id: string;
-  name: string;
-  size: string;
-  price: number;
-  image: string;
-  qty: number;
-};
+export type CartLine = WixCartLineItem;
 
 type Overlay = "none" | "search" | "cart" | "menu" | "region";
 
@@ -24,8 +26,11 @@ type StoreValue = {
   lines: CartLine[];
   subtotal: number;
   count: number;
+  isLoading: boolean;
   addLine: (product: Product, size?: string) => void;
-  setQty: (id: string, size: string, qty: number) => void;
+  setQty: (lineItemId: string, qty: number) => void;
+  checkout: () => void;
+  isCheckingOut: boolean;
   overlay: Overlay;
   open: (o: Exclude<Overlay, "none">) => void;
   close: () => void;
@@ -40,57 +45,86 @@ const StoreContext =
   globalStore.__storefrontStoreContext ??
   (globalStore.__storefrontStoreContext = createContext<StoreValue | null>(null));
 
+const CART_QUERY_KEY = ["wix-cart"];
+
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [lines, setLines] = useState<CartLine[]>(() => {
-    const seed = products[0]!;
-    return [
-      { id: seed.id, name: seed.name, size: "M", price: seed.price, image: seed.image, qty: 1 },
-    ];
-  });
+  const queryClient = useQueryClient();
   const [overlay, setOverlay] = useState<Overlay>("none");
 
-  const addLine = useCallback((product: Product, size = "M") => {
-    setLines((prev) => {
-      const found = prev.find((l) => l.id === product.id && l.size === size);
-      if (found) {
-        return prev.map((l) => (l === found ? { ...l, qty: l.qty + 1 } : l));
-      }
-      return [
-        ...prev,
-        {
-          id: product.id,
-          name: product.name,
-          size,
-          price: product.price,
-          image: product.image,
-          qty: 1,
-        },
-      ];
-    });
-    setOverlay("cart");
-  }, []);
+  const cartQuery = useQuery({
+    queryKey: CART_QUERY_KEY,
+    queryFn: getCurrentCart,
+    staleTime: 10_000,
+  });
 
-  const setQty = useCallback((id: string, size: string, qty: number) => {
-    setLines((prev) =>
-      prev
-        .map((l) => (l.id === id && l.size === size ? { ...l, qty } : l))
-        .filter((l) => l.qty > 0),
-    );
-  }, []);
+  const addLineMutation = useMutation({
+    mutationFn: ({
+      catalogItemId,
+      variantId,
+    }: {
+      catalogItemId: string;
+      variantId: string | undefined;
+    }) => addToCart(catalogItemId, variantId, 1),
+    onSuccess: (cart) => {
+      queryClient.setQueryData(CART_QUERY_KEY, cart);
+      setOverlay("cart");
+    },
+  });
 
-  const value = useMemo<StoreValue>(() => {
-    const subtotal = lines.reduce((sum, l) => sum + l.price * l.qty, 0);
-    return {
+  const setQtyMutation = useMutation({
+    mutationFn: ({ lineItemId, qty }: { lineItemId: string; qty: number }) =>
+      qty > 0 ? updateLineItemQuantity(lineItemId, qty) : removeLineItem(lineItemId),
+    onSuccess: (cart) => {
+      queryClient.setQueryData(CART_QUERY_KEY, cart);
+    },
+  });
+
+  const checkoutMutation = useMutation({
+    mutationFn: async () => {
+      const cartId = cartQuery.data?.id;
+      if (!cartId) throw new Error("Your cart is empty");
+      return getCheckoutUrl(cartId);
+    },
+    onSuccess: (url) => {
+      window.location.href = url;
+    },
+  });
+
+  const addLine = useCallback(
+    (product: Product, size?: string) => {
+      const resolvedSize =
+        size ?? product.sizes.find((s) => !s.soldOut)?.label ?? product.sizes[0]?.label;
+      const variantId = resolvedSize ? product.variantIdBySize?.[resolvedSize] : undefined;
+      addLineMutation.mutate({ catalogItemId: product.id, variantId });
+    },
+    [addLineMutation],
+  );
+
+  const setQty = useCallback(
+    (lineItemId: string, qty: number) => {
+      setQtyMutation.mutate({ lineItemId, qty });
+    },
+    [setQtyMutation],
+  );
+
+  const lines = cartQuery.data?.lineItems ?? [];
+
+  const value = useMemo<StoreValue>(
+    () => ({
       lines,
-      subtotal,
-      count: lines.reduce((sum, l) => sum + l.qty, 0),
+      subtotal: cartQuery.data?.subtotal ?? 0,
+      count: lines.reduce((sum, l) => sum + l.quantity, 0),
+      isLoading: cartQuery.isLoading,
       addLine,
       setQty,
+      checkout: () => checkoutMutation.mutate(),
+      isCheckingOut: checkoutMutation.isPending,
       overlay,
       open: (o) => setOverlay(o),
       close: () => setOverlay("none"),
-    };
-  }, [lines, overlay, addLine, setQty]);
+    }),
+    [lines, cartQuery.data?.subtotal, cartQuery.isLoading, addLine, setQty, checkoutMutation, overlay],
+  );
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

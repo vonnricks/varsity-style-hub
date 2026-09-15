@@ -18,31 +18,35 @@ export function ProductCard({ product }: { product: Product }) {
         className="relative aspect-4/5 overflow-hidden"
         style={{ backgroundColor: product.imageBg ?? "#ffffff" }}
       >
-        <img
-          src={product.image}
-          alt={`${product.name} wool varsity jacket`}
-          loading="lazy"
-          width={1024}
-          height={1280}
-          className={`absolute inset-0 size-full transition-opacity duration-500 ${
-            product.imageFit === "contain" ? "object-contain p-4" : "object-cover"
-          } ${hover ? "opacity-0" : "opacity-100"}`}
-        />
-        <img
-          src={product.hoverImage}
-          alt={`${product.name} alternate colorway`}
-          loading="lazy"
-          width={1024}
-          height={1280}
-          className={`absolute inset-0 size-full transition-opacity duration-500 ${
-            (product.hoverImageFit ?? product.imageFit) === "contain"
-              ? "object-contain p-4"
-              : "object-cover"
-          } ${hover ? "opacity-100" : "opacity-0"}`}
-          style={{
-            backgroundColor: product.hoverImageBg ?? product.imageBg ?? "transparent",
-          }}
-        />
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={`${product.name} wool varsity jacket`}
+            loading="lazy"
+            width={1024}
+            height={1280}
+            className={`absolute inset-0 size-full transition-opacity duration-500 ${
+              product.imageFit === "contain" ? "object-contain p-4" : "object-cover"
+            } ${hover ? "opacity-0" : "opacity-100"}`}
+          />
+        ) : null}
+        {product.hoverImage ? (
+          <img
+            src={product.hoverImage}
+            alt={`${product.name} alternate colorway`}
+            loading="lazy"
+            width={1024}
+            height={1280}
+            className={`absolute inset-0 size-full transition-opacity duration-500 ${
+              (product.hoverImageFit ?? product.imageFit) === "contain"
+                ? "object-contain p-4"
+                : "object-cover"
+            } ${hover ? "opacity-100" : "opacity-0"}`}
+            style={{
+              backgroundColor: product.hoverImageBg ?? product.imageBg ?? "transparent",
+            }}
+          />
+        ) : null}
         {product.badge ? (
           <span className="absolute left-3 top-3 bg-ink px-2 py-1 text-[10px] label-caps text-primary-foreground">
             {product.badge}

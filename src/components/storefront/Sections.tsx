@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
@@ -76,11 +75,7 @@ export function TeamShots() {
       <div className="mt-6 md:grid md:grid-cols-2 md:gap-4 md:px-8 lg:grid-cols-4">
         {teamShots.map((shot, i) => (
           <div key={shot.team} className="contents md:block">
-            <Link
-              to="/product/$productId"
-              params={{ productId: shot.productId }}
-              className="group block"
-            >
+            <a href="#the-lineup" className="group block">
               <div className="relative aspect-square w-full overflow-hidden">
                 <img
                   src={shot.image}
@@ -99,7 +94,7 @@ export function TeamShots() {
                   Shop this team
                 </span>
               </div>
-            </Link>
+            </a>
             {i % 2 === 1 ? (
               <div className="md:hidden">
                 <DealBand {...deals[i === 1 ? 0 : 1]!} />

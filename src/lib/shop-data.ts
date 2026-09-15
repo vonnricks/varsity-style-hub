@@ -171,6 +171,9 @@ export type Product = {
   hoverImageFit?: "cover" | "contain";
   hoverImageBg?: string;
   images?: string[];
+  // Present on products loaded live from Wix Stores.
+  variantIdBySize?: Record<string, string>;
+  manageVariants?: boolean;
 };
 
 const sizeSet = (soldOut: string[] = []) =>
