@@ -373,28 +373,28 @@ export const teamShots: TeamShot[] = [
     rivalry: "BRIGHT BLUE AND GRAY",
     copy: "Luxury Style and Warmth",
     image: teamNavyAsset,
-    productId: "item-4",
+    productId: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a",
   },
   {
     team: "MIDNIGHT DISTRICT VARSITY JACKET",
     rivalry: "TRIPLE BACK",
     copy: "Stand Out In Comfort",
     image: teamMaroonAsset,
-    productId: "item-1",
+    productId: "b9dc34f9-1307-44ff-b5e8-3b6e4ab060e4",
   },
   {
     team: "WARRIOR LEGACY HOODIE – BURGUNDY",
     rivalry: "BRIGHT BURGUNDY & GOLD",
     copy: "Thick Cotton and Bright Colors",
     image: teamBlackAsset,
-    productId: "item-8",
+    productId: "ed48d2a7-4fd9-414f-9598-683face08840",
   },
   {
     team: "WARRIOR LEGACY HOODIE – BLACK",
     rivalry: "BLACK & BURGUNDY",
     copy: "Impecable Embroidery",
     image: teamGreenAsset,
-    productId: "item-7",
+    productId: "b539f338-4d5c-45bd-8572-468c50719162",
   },
 ];
 
