@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Header } from "@/components/storefront/Header";
 import { Footer } from "@/components/storefront/Footer";
@@ -67,6 +68,9 @@ function ProductPage() {
 
 function Detail({ product }: { product: Product }) {
   const { addLine } = useStore();
+  const [selectedSize, setSelectedSize] = useState<string | undefined>(
+    () => product.sizes.find((s) => !s.soldOut)?.label,
+  );
 
   return (
     <section className="md:mx-auto md:grid md:max-w-[1600px] md:grid-cols-2 md:gap-10 md:px-8 md:py-10">
@@ -107,25 +111,32 @@ function Detail({ product }: { product: Product }) {
         <p className="mt-7 text-[10px] label-caps text-muted-foreground">Select a size</p>
         <div className="mt-2 flex flex-wrap gap-2">
           {product.sizes.map((size) => (
-            <span
+            <button
               key={size.label}
-              className={`border px-3 py-1.5 text-[11px] label-caps ${
+              type="button"
+              disabled={size.soldOut}
+              onClick={() => setSelectedSize(size.label)}
+              aria-pressed={selectedSize === size.label}
+              className={`border px-3 py-1.5 text-[11px] label-caps transition-colors ${
                 size.soldOut
-                  ? "border-border text-muted-foreground line-through"
-                  : "border-foreground/25"
+                  ? "cursor-not-allowed border-border text-muted-foreground line-through"
+                  : selectedSize === size.label
+                    ? "border-ink bg-ink text-primary-foreground"
+                    : "border-foreground/25 hover:border-foreground/50"
               }`}
             >
               {size.label}
-            </span>
+            </button>
           ))}
         </div>
 
         <button
           type="button"
-          onClick={() => addLine(product)}
-          className="mt-7 w-full bg-ink px-8 py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90"
+          onClick={() => addLine(product, selectedSize)}
+          disabled={product.sizes.length > 0 && !selectedSize}
+          className="mt-7 w-full bg-ink px-8 py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          Add to bag
+          {product.sizes.length > 0 && !selectedSize ? "Select a size" : "Add to bag"}
         </button>
 
         <p className="mt-6 text-sm text-muted-foreground">
