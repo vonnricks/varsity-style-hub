@@ -89,5 +89,5 @@ export async function fetchWixProducts(): Promise<Product[]> {
   const list = data?.products ?? [];
   // Query results may omit variant details, so load each product fully.
   const full = await Promise.all(list.map((p) => fetchWixProduct(p.id).catch(() => null)));
-  return full.map((p, i) => p ?? mapWixProduct(list[i]));
+  return full.map((p, i) => p ?? mapWixProduct(list[i]!));
 }
