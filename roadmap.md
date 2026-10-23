@@ -1,0 +1,2 @@
+- [ ] Check purchases in the last 30 days — waiting for Wix access.
+- [ ] Change the top announcement to free shipping on all orders over $100.
