@@ -79,7 +79,7 @@ export const heroTiles = [
 export const BRAND = "CETS APPAREL";
 
 export const announcements = [
-  "FREE SHIPPING ON ALL ORDERS OVER $500",
+  "Free Shipping on All Orders over $100",
   "NEW TEAM COLORWAYS DROP EVERY SEASON",
   "Rep your rivalry — limited run styles available now",
 ];
