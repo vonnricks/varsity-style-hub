@@ -408,7 +408,7 @@ export const colorSwatches = [
 ];
 
 export const trustMessages = [
-  "Free shipping over $150",
+  "Free shipping over $100",
   "Premium wool and leather",
   "30-day easy returns",
   "Embroidered team crests",
