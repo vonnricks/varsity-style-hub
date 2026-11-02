@@ -363,7 +363,36 @@ export const products: Product[] = [
     imageBg: "#ffffff",
     images: [item8Lifestyle1Asset, item8Lifestyle2Asset, item8Lifestyle3Asset],
   },
+  {
+    id: "item-9",
+    name: "DMV Culture Collective Hoodie",
+    blurb:
+      "Represent your teams. Rep your city. Rep the DMV. This bold hoodie celebrates the passion, rivalries, and championship spirit of Washington, D.C., Maryland, and Virginia sports.",
+    price: 65,
+    image: dmvHoodieCoverAsset.url,
+    hoverImage: dmvHoodieStudioAsset.url,
+    sizes: [
+      { label: "M" },
+      { label: "L" },
+      { label: "XL" },
+      { label: "2XL" },
+      { label: "3XL" },
+      { label: "4XL" },
+    ],
+    badge: "New",
+    imageFit: "contain",
+    imageBg: "#ffffff",
+    hoverImageFit: "cover",
+    images: [dmvHoodieDetailAsset.url, dmvHoodieAngleAsset.url],
+    local: true,
+  },
 ];
+
+// Items kept in this site's own catalog rather than the Wix store. They are
+// merged into the lineup, and skipped when the Wix store already carries a
+// product with the same name.
+export const localProducts: Product[] = products.filter((p) => p.local === true);
+
 
 export type TeamShot = {
   team: string;
