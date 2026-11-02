@@ -1,30 +1,38 @@
 import { Link } from "@tanstack/react-router";
-import { heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
+import { heroPhoto, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
   return (
     <section className="relative w-full">
-      <div className="grid h-[calc(100svh+2rem)] grid-cols-2 grid-rows-2 md:h-[92vh]">
-        {heroTiles.map((tile, i) => (
-          <img
-            key={tile.alt}
-            src={tile.image}
-            alt={tile.alt}
-            width={1024}
-            height={1024}
-            loading={i === 0 ? "eager" : "lazy"}
-            className="size-full object-cover object-center"
-          />
-        ))}
+      <div className="relative w-full overflow-hidden">
+        <img
+          src={heroPhoto.image}
+          alt={heroPhoto.alt}
+          width={heroPhoto.width}
+          height={heroPhoto.height}
+          loading="eager"
+          className="block h-auto w-full"
+        />
+        <div className="pointer-events-none absolute inset-0 hidden bg-ink/35 md:block" />
+        <div className="pointer-events-none absolute inset-0 hidden flex-col items-center justify-center px-5 text-center md:flex">
+          <h1 className="display-title text-4xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
+            Rep your team
+          </h1>
+          <a
+            href="#pick-a-side"
+            className="pointer-events-auto mt-4 bg-maroon px-6 py-3 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90 lg:mt-5 lg:px-8 lg:py-4"
+          >
+
+            SHOP INVENTORY
+          </a>
+        </div>
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-ink/35" />
-      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
-        <h1 className="display-title text-5xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-7xl">
-          Rep your team
-        </h1>
+
+      <div className="flex flex-col items-center px-5 py-7 text-center md:hidden">
+        <h1 className="display-title text-4xl leading-[0.9]">Rep your team</h1>
         <a
           href="#pick-a-side"
-          className="pointer-events-auto mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
+          className="mt-4 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
         >
           SHOP INVENTORY
         </a>
@@ -32,6 +40,9 @@ export function Hero() {
     </section>
   );
 }
+
+
+
 
 
 function DealBand({ eyebrow, heading, copy }: { eyebrow: string; heading: string; copy: string }) {
