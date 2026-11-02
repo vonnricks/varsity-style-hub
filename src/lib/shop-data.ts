@@ -66,7 +66,7 @@ import teamMaroonAsset from "@/assets/team-maroon.png";
 import teamBlackAsset from "@/assets/team-black.png";
 import teamGreenAsset from "@/assets/team-green.png";
 import heroRivals from "@/assets/hero-rivals.jpg";
-import heroGroupPortrait from "@/assets/washington-varsity-group-portrait.png.asset.json";
+import heroGroupPortrait from "@/assets/hero-group-portrait.jpg.asset.json";
 
 export const heroImage = heroRivals;
 
