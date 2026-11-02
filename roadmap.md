@@ -1,1 +1,4 @@
 - [x] Change the top announcement to free shipping on all orders over $100.
+- [x] Add "DMV Culture Collective Hoodie" to the lineup (new, $65, M-4XL, 4 photos).
+- [ ] Make the DMV Culture Collective Hoodie orderable: it lives in the site's own catalog, not in Wix, so "Add to bag" can't check out. Needs the style added in the Wix store.
+- [ ] Product page boilerplate says "premium wool with genuine leather sleeves" — wrong for hoodies/vests. Waiting on the user's call.
