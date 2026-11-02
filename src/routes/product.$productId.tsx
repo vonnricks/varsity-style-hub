@@ -140,8 +140,9 @@ function Detail({ product }: { product: Product }) {
         </button>
 
         <p className="mt-6 text-sm text-muted-foreground">
-          Crafted from premium wool with genuine leather sleeves and hand-embroidered team
-          details. Cut for a classic fit that keeps you warm on game day and beyond.
+          Built for the people who rep their team loud. Heavyweight fabric, embroidered club
+          details, and a fit made for game day — so your colors travel with you long after the
+          final whistle.
         </p>
       </div>
     </section>
