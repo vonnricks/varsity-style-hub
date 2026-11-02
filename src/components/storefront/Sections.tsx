@@ -4,42 +4,32 @@ import { heroPhoto, teamShots, trustMessages } from "@/lib/shop-data";
 export function Hero() {
   return (
     <section className="relative w-full">
-      <div className="relative">
+      <div className="relative mx-auto aspect-[1585/992] max-h-[92vh] w-full overflow-hidden">
         <img
           src={heroPhoto.image}
           alt={heroPhoto.alt}
           width={heroPhoto.width}
           height={heroPhoto.height}
           loading="eager"
-          className="h-auto w-full object-cover object-center md:h-[92vh]"
+          className="size-full object-cover object-center"
         />
-        <div className="pointer-events-none absolute inset-0 hidden bg-ink/35 md:block" />
-      </div>
-
-      <div className="flex flex-col items-center px-5 py-8 text-center md:hidden">
-        <h1 className="display-title text-5xl leading-[0.9]">Rep your team</h1>
-        <a
-          href="#pick-a-side"
-          className="mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
-        >
-          SHOP INVENTORY
-        </a>
-      </div>
-
-      <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[92vh] flex-col items-center justify-center px-5 text-center md:flex">
-        <h1 className="display-title text-5xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-7xl">
-          Rep your team
-        </h1>
-        <a
-          href="#pick-a-side"
-          className="pointer-events-auto mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
-        >
-          SHOP INVENTORY
-        </a>
+        <div className="pointer-events-none absolute inset-0 bg-ink/35" />
+        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
+          <h1 className="display-title text-4xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-7xl">
+            Rep your team
+          </h1>
+          <a
+            href="#pick-a-side"
+            className="pointer-events-auto mt-4 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90 md:mt-5"
+          >
+            SHOP INVENTORY
+          </a>
+        </div>
       </div>
     </section>
   );
 }
+
 
 
 
