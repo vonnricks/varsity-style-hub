@@ -15,13 +15,14 @@ export function Hero() {
         />
         <div className="pointer-events-none absolute inset-0 hidden bg-ink/35 md:block" />
         <div className="pointer-events-none absolute inset-0 hidden flex-col items-center justify-center px-5 text-center md:flex">
-          <h1 className="display-title text-5xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-7xl">
+          <h1 className="display-title text-4xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
             Rep your team
           </h1>
           <a
             href="#pick-a-side"
-            className="pointer-events-auto mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
+            className="pointer-events-auto mt-4 bg-maroon px-6 py-3 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90 lg:mt-5 lg:px-8 lg:py-4"
           >
+
             SHOP INVENTORY
           </a>
         </div>
