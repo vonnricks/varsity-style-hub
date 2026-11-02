@@ -1,7 +1,7 @@
 import { Minus, Plus, X } from "lucide-react";
 import { useStore } from "./store-context";
 
-const FREE_THRESHOLD = 500;
+const FREE_THRESHOLD = 100;
 
 export function CartDrawer() {
   const { overlay, close, lines, setQty, subtotal, checkout, isCheckingOut } = useStore();
