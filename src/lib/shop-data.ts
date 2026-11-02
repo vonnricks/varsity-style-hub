@@ -57,6 +57,10 @@ import item8FrontAsset from "@/assets/item8-front.jpg";
 import item8Lifestyle1Asset from "@/assets/Burgundy_and_Gold.PNG";
 import item8Lifestyle2Asset from "@/assets/Burgundy_and_Gold_2.PNG";
 import item8Lifestyle3Asset from "@/assets/Burgundy_and_Gold3.PNG";
+import dmvHoodieCoverAsset from "@/assets/dmv-hoodie-cover.png.asset.json";
+import dmvHoodieStudioAsset from "@/assets/dmv-hoodie-studio.png.asset.json";
+import dmvHoodieDetailAsset from "@/assets/dmv-hoodie-detail.jpg.asset.json";
+import dmvHoodieAngleAsset from "@/assets/dmv-hoodie-angle.png.asset.json";
 import teamNavyAsset from "@/assets/team-navy.png";
 import teamMaroonAsset from "@/assets/team-maroon.png";
 import teamBlackAsset from "@/assets/team-black.png";
@@ -171,6 +175,8 @@ export type Product = {
   hoverImageFit?: "cover" | "contain";
   hoverImageBg?: string;
   images?: string[];
+  // Items kept in this site's own catalog instead of the Wix store.
+  local?: boolean;
   // Present on products loaded live from Wix Stores.
   variantIdBySize?: Record<string, string>;
   manageVariants?: boolean;
@@ -357,7 +363,36 @@ export const products: Product[] = [
     imageBg: "#ffffff",
     images: [item8Lifestyle1Asset, item8Lifestyle2Asset, item8Lifestyle3Asset],
   },
+  {
+    id: "item-9",
+    name: "DMV Culture Collective Hoodie",
+    blurb:
+      "Represent your teams. Rep your city. Rep the DMV. This bold hoodie celebrates the passion, rivalries, and championship spirit of Washington, D.C., Maryland, and Virginia sports.",
+    price: 65,
+    image: dmvHoodieCoverAsset.url,
+    hoverImage: dmvHoodieStudioAsset.url,
+    sizes: [
+      { label: "M" },
+      { label: "L" },
+      { label: "XL" },
+      { label: "2XL" },
+      { label: "3XL" },
+      { label: "4XL" },
+    ],
+    badge: "New",
+    imageFit: "contain",
+    imageBg: "#ffffff",
+    hoverImageFit: "cover",
+    images: [dmvHoodieDetailAsset.url, dmvHoodieAngleAsset.url],
+    local: true,
+  },
 ];
+
+// Items kept in this site's own catalog rather than the Wix store. They are
+// merged into the lineup, and skipped when the Wix store already carries a
+// product with the same name.
+export const localProducts: Product[] = products.filter((p) => p.local === true);
+
 
 export type TeamShot = {
   team: string;

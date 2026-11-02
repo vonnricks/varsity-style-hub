@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import type { Product } from "@/lib/shop-data";
 import {
   addToCart,
@@ -92,6 +93,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const addLine = useCallback(
     (product: Product, size?: string) => {
+      // Styles kept in this site's own catalog aren't in the Wix store yet, so
+      // they can't be added to the Wix cart.
+      if (product.local) {
+        toast(`${product.name} isn't available to order yet. Check back soon.`);
+        return;
+      }
       const resolvedSize =
         size ?? product.sizes.find((s) => !s.soldOut)?.label ?? product.sizes[0]?.label;
       const variantId = resolvedSize ? product.variantIdBySize?.[resolvedSize] : undefined;
