@@ -2,3 +2,4 @@
 - [x] Add "DMV Culture Collective Hoodie" to the lineup (new, $65, M-4XL, 4 photos).
 - [x] Make the DMV Culture Collective Hoodie orderable: added in the Wix store; add-to-bag and checkout verified working.
 - [x] Replace the product page boilerplate ("premium wool with genuine leather sleeves") with wording that fits jackets, vests and hoodies.
+- [ ] Fix hero photo not loading for the user on the live site: re-upload as optimized JPEG under a fresh URL and re-publish.
