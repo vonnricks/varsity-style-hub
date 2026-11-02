@@ -66,19 +66,17 @@ import teamMaroonAsset from "@/assets/team-maroon.png";
 import teamBlackAsset from "@/assets/team-black.png";
 import teamGreenAsset from "@/assets/team-green.png";
 import heroRivals from "@/assets/hero-rivals.jpg";
-import heroRival1Asset from "@/assets/hero-rival-1.jpg";
-import heroRival2Asset from "@/assets/hero-rival-2.jpg";
-import heroRival3Asset from "@/assets/hero-rival-3.jpg";
-import heroRival4Asset from "@/assets/hero-rival-4.jpg";
+import heroGroupPortrait from "@/assets/washington-varsity-group-portrait.png.asset.json";
 
 export const heroImage = heroRivals;
 
-export const heroTiles = [
-  { image: heroRival1Asset, alt: "Woman wearing a maroon and gold wool varsity jacket" },
-  { image: heroRival2Asset, alt: "Man wearing a navy and grey wool varsity jacket" },
-  { image: heroRival3Asset, alt: "Woman cheering in a black and red wool varsity jacket" },
-  { image: heroRival4Asset, alt: "Man wearing a black and grey wool varsity jacket" },
-];
+export const heroPhoto = {
+  image: heroGroupPortrait.url,
+  alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display",
+  width: 1585,
+  height: 992,
+};
+
 
 export const BRAND = "CETS APPAREL";
 

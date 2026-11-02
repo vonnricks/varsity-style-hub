@@ -1,24 +1,32 @@
 import { Link } from "@tanstack/react-router";
-import { heroTiles, teamShots, trustMessages } from "@/lib/shop-data";
+import { heroPhoto, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
   return (
     <section className="relative w-full">
-      <div className="grid h-[calc(100svh+2rem)] grid-cols-2 grid-rows-2 md:h-[92vh]">
-        {heroTiles.map((tile, i) => (
-          <img
-            key={tile.alt}
-            src={tile.image}
-            alt={tile.alt}
-            width={1024}
-            height={1024}
-            loading={i === 0 ? "eager" : "lazy"}
-            className="size-full object-cover object-center"
-          />
-        ))}
+      <div className="relative">
+        <img
+          src={heroPhoto.image}
+          alt={heroPhoto.alt}
+          width={heroPhoto.width}
+          height={heroPhoto.height}
+          loading="eager"
+          className="h-auto w-full object-cover object-center md:h-[92vh]"
+        />
+        <div className="pointer-events-none absolute inset-0 hidden bg-ink/35 md:block" />
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-ink/35" />
-      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
+
+      <div className="flex flex-col items-center px-5 py-8 text-center md:hidden">
+        <h1 className="display-title text-5xl leading-[0.9]">Rep your team</h1>
+        <a
+          href="#pick-a-side"
+          className="mt-5 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
+        >
+          SHOP INVENTORY
+        </a>
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[92vh] flex-col items-center justify-center px-5 text-center md:flex">
         <h1 className="display-title text-5xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-7xl">
           Rep your team
         </h1>
@@ -32,6 +40,7 @@ export function Hero() {
     </section>
   );
 }
+
 
 
 function DealBand({ eyebrow, heading, copy }: { eyebrow: string; heading: string; copy: string }) {
