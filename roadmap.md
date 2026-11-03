@@ -6,4 +6,5 @@
 - [x] Update the DMV Culture Collective Hoodie front photo to the new model portrait; card and product page verified on phone and computer. Needs republish for shoppers.
 - [x] Replace the hoodie front photo again with the full-body studio portrait, and move the hoodie's other three photos inside the site so they load like the rest of the product photos. Needs republish for shoppers.
 - [x] Capital Gold Varsity Jacket sizes: drop XS (unavailable), add 3XL. Card and product page verified. Needs republish for shoppers.
+- [x] Capital Gold 3XL buy path verified after the Wix listing was updated: add-to-bag, cart line, and Wix checkout all work. Site size row now takes stock from the store. Needs republish for shoppers.
 

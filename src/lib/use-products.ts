@@ -29,8 +29,9 @@ function withLocalItems(wixProducts: Product[]): Product[] {
 
 // When this site carries its own photos for a style that also lives in the Wix
 // store, the site's photos are shown. The store listing still decides price
-// and checkout. Sizes follow the site's list only where the catalog opts in
-// with `siteSizes` (used where the store's size row is wrong).
+// and checkout. Where the catalog opts in with `siteSizes`, the site decides
+// which sizes are offered (a size the store no longer sells, or a new one),
+// while the store still decides whether each of those sizes is in stock.
 function withSitePhotos(product: Product): Product {
   const key = product.name.trim().toLowerCase();
   const local = localByName.get(key);
@@ -40,7 +41,17 @@ function withSitePhotos(product: Product): Product {
     ...product,
     ...(local ? { image: local.image, hoverImage: local.hoverImage } : {}),
     ...(local?.images ? { images: local.images } : {}),
-    ...(sizes ? { sizes } : {}),
+    ...(sizes
+      ? {
+          sizes: sizes.map((s) => {
+            const store = product.sizes.find((x) => x.label === s.label);
+            if (!store) return s;
+            return store.soldOut === undefined
+              ? { ...s }
+              : { ...s, soldOut: store.soldOut };
+          }),
+        }
+      : {}),
   };
 }
 
