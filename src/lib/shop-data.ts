@@ -72,7 +72,19 @@ import heroRivals from "@/assets/hero-rivals.jpg";
 // the product photos, which display reliably for all visitors.
 import heroGroupPortrait from "@/assets/hero-washington-group.jpg";
 
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
+
 export const heroImage = heroRivals;
+
+// Photos the hero rotates through, in order.
+export const heroSlides = [
+  { image: heroGroupPortrait, alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display" },
+  { image: heroSlide2, alt: "CETS APPAREL team styles lifestyle photo" },
+  { image: heroSlide3, alt: "CETS APPAREL team styles lifestyle photo" },
+  { image: heroSlide4, alt: "CETS APPAREL team styles lifestyle photo" },
+];
 
 export const heroPhoto = {
   image: heroGroupPortrait,
