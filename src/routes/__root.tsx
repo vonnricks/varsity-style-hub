@@ -80,11 +80,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "CETS APPAREL — Team Varsity Jackets, Vests and Hoodies" },
+      {
+        name: "description",
+        content:
+          "CETS APPAREL varsity jackets, puffer vests and hoodies built on team spirit and rivalry. Rep your team.",
+      },
+      { name: "author", content: "CETS APPAREL" },
+      { property: "og:title", content: "CETS APPAREL — Rep Your Team" },
+      {
+        property: "og:description",
+        content:
+          "Team colorways in heavyweight wool, puffer vests and embroidered hoodies — rep your team.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },

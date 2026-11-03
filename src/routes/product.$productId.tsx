@@ -13,13 +13,13 @@ import type { Product } from "@/lib/shop-data";
 export const Route = createFileRoute("/product/$productId")({
   head: () => ({
     meta: [
-      { title: "Woolworks Team Jacket — Wool Varsity Jacket" },
+      { title: "CETS APPAREL — Team Varsity Jacket, Vest or Hoodie" },
       {
         name: "description",
         content:
           "Heavyweight wool varsity jacket in team colorways with felt patches and striped rib trims. Rep your team.",
       },
-      { property: "og:title", content: "Woolworks Team Jacket" },
+      { property: "og:title", content: "CETS APPAREL Team Jacket" },
       {
         property: "og:description",
         content: "Heavyweight wool varsity jacket in team colorways — rep your team.",
