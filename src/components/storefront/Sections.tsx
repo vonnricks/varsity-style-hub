@@ -1,18 +1,40 @@
 import { Link } from "@tanstack/react-router";
-import { heroPhoto, teamShots, trustMessages } from "@/lib/shop-data";
+import { useEffect, useState } from "react";
+import { heroPhoto, heroSlides, teamShots, trustMessages } from "@/lib/shop-data";
 
 export function Hero() {
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setActive((i) => (i + 1) % heroSlides.length), 5000);
+    return () => clearInterval(t);
+  }, []);
   return (
     <section className="relative w-full">
-      <div className="relative w-full overflow-hidden">
-        <img
-          src={heroPhoto.image}
-          alt={heroPhoto.alt}
-          width={heroPhoto.width}
-          height={heroPhoto.height}
-          loading="eager"
-          className="block h-auto w-full"
-        />
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ aspectRatio: `${heroPhoto.width} / ${heroPhoto.height}` }}
+      >
+        {heroSlides.map((slide, i) => (
+          <img
+            key={i}
+            src={slide.image}
+            alt={slide.alt}
+            loading="eager"
+            aria-hidden={i !== active}
+            className={`absolute inset-0 size-full object-cover transition-opacity duration-1000 ${i === active ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
+        <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Show photo ${i + 1}`}
+              onClick={() => setActive(i)}
+              className={`h-2 w-2 rounded-full border border-primary-foreground transition-colors ${i === active ? "bg-primary-foreground" : "bg-transparent"}`}
+            />
+          ))}
+        </div>
         <div className="pointer-events-none absolute inset-0 hidden bg-ink/35 md:block" />
         <div className="pointer-events-none absolute inset-0 hidden flex-col items-center justify-center px-5 text-center md:flex">
           <h1 className="display-title text-4xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
