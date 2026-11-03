@@ -45,7 +45,10 @@ function withSitePhotos(product: Product): Product {
       ? {
           sizes: sizes.map((s) => {
             const store = product.sizes.find((x) => x.label === s.label);
-            return store ? { ...s, soldOut: store.soldOut } : s;
+            if (!store) return s;
+            return store.soldOut === undefined
+              ? { ...s }
+              : { ...s, soldOut: store.soldOut };
           }),
         }
       : {}),
