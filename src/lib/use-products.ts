@@ -14,6 +14,14 @@ const siteSizesByName = new Map(
     .map((p) => [p.name.trim().toLowerCase(), p.sizes] as const),
 );
 
+// Prices the site's own catalog declares for a style, for the cases where the
+// store listing's price is not the one shoppers should see.
+const sitePriceByName = new Map(
+  products
+    .filter((p) => p.sitePrice)
+    .map((p) => [p.name.trim().toLowerCase(), p.price] as const),
+);
+
 // Items that live in this site's own catalog instead of the Wix store. They are
 // merged into the lineup, and skipped when the Wix store already carries a
 // product with the same name — so adding the style in Wix retires the local
