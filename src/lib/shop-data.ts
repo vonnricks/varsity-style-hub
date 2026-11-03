@@ -57,7 +57,9 @@ import item8FrontAsset from "@/assets/item8-front.jpg";
 import item8Lifestyle1Asset from "@/assets/Burgundy_and_Gold.PNG";
 import item8Lifestyle2Asset from "@/assets/Burgundy_and_Gold_2.PNG";
 import item8Lifestyle3Asset from "@/assets/Burgundy_and_Gold3.PNG";
-import dmvHoodieCoverAsset from "@/assets/dmv-hoodie-cover.png.asset.json";
+// Bundled with the site (not CDN-hosted) so it loads from the same place as
+// the other product photos, which display reliably for all visitors.
+import dmvHoodieFront from "@/assets/dmv-hoodie-front.jpg";
 import dmvHoodieStudioAsset from "@/assets/dmv-hoodie-studio.png.asset.json";
 import dmvHoodieDetailAsset from "@/assets/dmv-hoodie-detail.jpg.asset.json";
 import dmvHoodieAngleAsset from "@/assets/dmv-hoodie-angle.png.asset.json";
@@ -369,7 +371,7 @@ export const products: Product[] = [
     blurb:
       "Represent your teams. Rep your city. Rep the DMV. This bold hoodie celebrates the passion, rivalries, and championship spirit of Washington, D.C., Maryland, and Virginia sports.",
     price: 65,
-    image: dmvHoodieCoverAsset.url,
+    image: dmvHoodieFront,
     hoverImage: dmvHoodieStudioAsset.url,
     sizes: [
       { label: "M" },
