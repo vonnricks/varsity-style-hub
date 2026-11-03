@@ -14,16 +14,43 @@ export function Hero() {
         className="relative w-full overflow-hidden"
         style={{ aspectRatio: `${heroPhoto.width} / ${heroPhoto.height}` }}
       >
-        {heroSlides.map((slide, i) => (
-          <img
-            key={i}
-            src={slide.image}
-            alt={slide.alt}
-            loading="eager"
-            aria-hidden={i !== active}
-            className={`absolute inset-0 size-full object-cover transition-opacity duration-1000 ${i === active ? "opacity-100" : "opacity-0"}`}
-          />
-        ))}
+        {heroSlides.map((slide, i) => {
+          const hidden = i !== active;
+          // Only the photo being shown takes clicks, so the ones stacked behind
+          // it can't steal the tap.
+          const shell = `absolute inset-0 block size-full ${hidden ? "pointer-events-none" : "pointer-events-auto"}`;
+          const photo = (
+            <img
+              src={slide.image}
+              alt={slide.alt}
+              loading="eager"
+              className="size-full object-cover transition-opacity duration-1000"
+            />
+          );
+          const a11y = { "aria-hidden": hidden, tabIndex: hidden ? -1 : 0 } as const;
+          return slide.productId ? (
+            <Link
+              key={i}
+              to="/product/$productId"
+              params={{ productId: slide.productId }}
+              aria-label={slide.alt}
+              className={shell}
+              {...a11y}
+            >
+              {photo}
+            </Link>
+          ) : (
+            <a
+              key={i}
+              href={slide.anchor ?? "#"}
+              aria-label={slide.alt}
+              className={shell}
+              {...a11y}
+            >
+              {photo}
+            </a>
+          );
+        })}
         <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-2">
           {heroSlides.map((_, i) => (
             <button
@@ -34,19 +61,6 @@ export function Hero() {
               className={`h-2 w-2 rounded-full border border-primary-foreground transition-colors ${i === active ? "bg-primary-foreground" : "bg-transparent"}`}
             />
           ))}
-        </div>
-        <div className="pointer-events-none absolute inset-0 hidden bg-ink/35 md:block" />
-        <div className="pointer-events-none absolute inset-0 hidden flex-col items-center justify-center px-5 text-center md:flex">
-          <h1 className="display-title text-4xl leading-[0.9] text-primary-foreground drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
-            Rep your team
-          </h1>
-          <a
-            href="#pick-a-side"
-            className="pointer-events-auto mt-4 bg-maroon px-6 py-3 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90 lg:mt-5 lg:px-8 lg:py-4"
-          >
-
-            SHOP INVENTORY
-          </a>
         </div>
       </div>
 

@@ -84,17 +84,25 @@ import heroCapitalVestTerrace from "@/assets/hero-capital-vest-terrace.jpg";
 
 export const heroImage = heroRivals;
 
-// Photos the hero rotates through, in order.
-export const heroSlides = [
-  { image: heroGroupPortrait, alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display" },
-  { image: heroWeDemBoyz, alt: "Man in a navy We Dem Boyz varsity jacket seen from behind, Washington Monument in the background" },
-  { image: heroFightOldDcBlack, alt: "Man in an all-black Fight for Old DC varsity jacket in a brick alleyway" },
-  { image: heroFightOldDcBurgundy, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket" },
-  { image: heroWarriorHoodieBlack, alt: "Man in a black Warrior Legacy hoodie with the Capitol dome at sunset behind him" },
-  { image: heroWarriorHoodieBurgundy, alt: "Man in a burgundy Warrior Legacy hoodie leaning on a stone balustrade" },
-  { image: heroShadowVestMall, alt: "Man in a black District Shadow puffer vest seen from behind, overlooking the National Mall" },
-  { image: heroShadowVestUrban, alt: "Man in a black puffer vest and graphic hoodie in an urban concrete setting" },
-  { image: heroCapitalVestTerrace, alt: "Man in a burgundy Burgundy Capital puffer vest walking across a stone terrace" },
+// Photos the hero rotates through, in order. Each one opens the item it shows:
+// `productId` for a single product, `anchor` to jump to a section of the page.
+export type HeroSlide = {
+  image: string;
+  alt: string;
+  productId?: string;
+  anchor?: string;
+};
+
+export const heroSlides: HeroSlide[] = [
+  { image: heroGroupPortrait, alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display", anchor: "#the-lineup" },
+  { image: heroWeDemBoyz, alt: "Man in a navy We Dem Boyz varsity jacket seen from behind, Washington Monument in the background", productId: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a" },
+  { image: heroFightOldDcBlack, alt: "Man in an all-black Fight for Old DC varsity jacket in a brick alleyway", productId: "b9dc34f9-1307-44ff-b5e8-3b6e4ab060e4" },
+  { image: heroFightOldDcBurgundy, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket", productId: "1aa0f8df-4e72-46d6-a358-8ecb232d4924" },
+  { image: heroWarriorHoodieBlack, alt: "Man in a black Warrior Legacy hoodie with the Capitol dome at sunset behind him", productId: "b539f338-4d5c-45bd-8572-468c50719162" },
+  { image: heroWarriorHoodieBurgundy, alt: "Man in a burgundy Warrior Legacy hoodie leaning on a stone balustrade", productId: "ed48d2a7-4fd9-414f-9598-683face08840" },
+  { image: heroShadowVestMall, alt: "Man in a black District Shadow puffer vest seen from behind, overlooking the National Mall", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
+  { image: heroShadowVestUrban, alt: "Man in a black puffer vest and graphic hoodie in an urban concrete setting", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
+  { image: heroCapitalVestTerrace, alt: "Man in a burgundy Burgundy Capital puffer vest walking across a stone terrace", productId: "82f49fde-d95f-4242-9227-13a930add080" },
 ];
 
 export const heroPhoto = {
