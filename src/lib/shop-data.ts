@@ -66,12 +66,14 @@ import teamMaroonAsset from "@/assets/team-maroon.png";
 import teamBlackAsset from "@/assets/team-black.png";
 import teamGreenAsset from "@/assets/team-green.png";
 import heroRivals from "@/assets/hero-rivals.jpg";
-import heroGroupPortrait from "@/assets/hero-group-portrait.jpg.asset.json";
+// Bundled with the site (not CDN-hosted) so it loads from the same place as
+// the product photos, which display reliably for all visitors.
+import heroGroupPortrait from "@/assets/hero-washington-group.jpg";
 
 export const heroImage = heroRivals;
 
 export const heroPhoto = {
-  image: heroGroupPortrait.url,
+  image: heroGroupPortrait,
   alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display",
   width: 1585,
   height: 992,
