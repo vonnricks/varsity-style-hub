@@ -8,3 +8,4 @@
 - [x] Capital Gold Varsity Jacket sizes: drop XS (unavailable), add 3XL. Card and product page verified. Needs republish for shoppers.
 - [x] Capital Gold 3XL buy path verified after the Wix listing was updated: add-to-bag, cart line, and Wix checkout all work. Site size row now takes stock from the store. Needs republish for shoppers.
 
+- [x] District Legacy Varsity Jacket price: site now shows $125 (sitePrice override). Needs republish. Wix listing still charges $225 at checkout — user to update the store price.
