@@ -70,27 +70,38 @@ import teamGreenAsset from "@/assets/team-green.png";
 import heroRivals from "@/assets/hero-rivals.jpg";
 // Bundled with the site (not CDN-hosted) so it loads from the same place as
 // the product photos, which display reliably for all visitors.
-import heroGroupPortrait from "@/assets/hero-washington-group.jpg";
-
-import heroSlide2 from "@/assets/hero-slide-2.jpg";
-import heroSlide3 from "@/assets/hero-slide-3.jpg";
-import heroSlide4 from "@/assets/hero-slide-4.jpg";
+// The group portrait is cropped to 16:9 so every hero photo fills the same
+// space with nothing cut off.
+import heroGroupPortrait from "@/assets/hero-washington-group-169.jpg";
+import heroWeDemBoyz from "@/assets/hero-we-dem-boyz.jpg";
+import heroFightOldDcBlack from "@/assets/hero-fight-old-dc-black.jpg";
+import heroFightOldDcBurgundy from "@/assets/hero-fight-old-dc-burgundy.jpg";
+import heroWarriorHoodieBlack from "@/assets/hero-warrior-hoodie-black.jpg";
+import heroWarriorHoodieBurgundy from "@/assets/hero-warrior-hoodie-burgundy.jpg";
+import heroShadowVestMall from "@/assets/hero-shadow-vest-mall.jpg";
+import heroShadowVestUrban from "@/assets/hero-shadow-vest-urban.jpg";
+import heroCapitalVestTerrace from "@/assets/hero-capital-vest-terrace.jpg";
 
 export const heroImage = heroRivals;
 
 // Photos the hero rotates through, in order.
 export const heroSlides = [
   { image: heroGroupPortrait, alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display" },
-  { image: heroSlide2, alt: "CETS APPAREL team styles lifestyle photo" },
-  { image: heroSlide3, alt: "CETS APPAREL team styles lifestyle photo" },
-  { image: heroSlide4, alt: "CETS APPAREL team styles lifestyle photo" },
+  { image: heroWeDemBoyz, alt: "Man in a navy We Dem Boyz varsity jacket seen from behind, Washington Monument in the background" },
+  { image: heroFightOldDcBlack, alt: "Man in an all-black Fight for Old DC varsity jacket in a brick alleyway" },
+  { image: heroFightOldDcBurgundy, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket" },
+  { image: heroWarriorHoodieBlack, alt: "Man in a black Warrior Legacy hoodie with the Capitol dome at sunset behind him" },
+  { image: heroWarriorHoodieBurgundy, alt: "Man in a burgundy Warrior Legacy hoodie leaning on a stone balustrade" },
+  { image: heroShadowVestMall, alt: "Man in a black District Shadow puffer vest seen from behind, overlooking the National Mall" },
+  { image: heroShadowVestUrban, alt: "Man in a black puffer vest and graphic hoodie in an urban concrete setting" },
+  { image: heroCapitalVestTerrace, alt: "Man in a burgundy Burgundy Capital puffer vest walking across a stone terrace" },
 ];
 
 export const heroPhoto = {
   image: heroGroupPortrait,
   alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display",
-  width: 1585,
-  height: 992,
+  width: 1672,
+  height: 941,
 };
 
 
