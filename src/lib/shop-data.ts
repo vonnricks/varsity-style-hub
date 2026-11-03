@@ -177,18 +177,14 @@ export type Product = {
   hoverImageFit?: "cover" | "contain";
   hoverImageBg?: string;
   images?: string[];
+  // When true, this site's own size list is shown instead of the store's.
+  siteSizes?: boolean;
   // Items kept in this site's own catalog instead of the Wix store.
   local?: boolean;
   // Present on products loaded live from Wix Stores.
   variantIdBySize?: Record<string, string>;
   manageVariants?: boolean;
 };
-
-const sizeSet = (soldOut: string[] = []) =>
-  ["XS", "S", "M", "L", "XL"].map((label) => ({
-    label,
-    soldOut: soldOut.includes(label),
-  }));
 
 export const products: Product[] = [
   {
@@ -226,7 +222,16 @@ export const products: Product[] = [
     price: 225,
     image: item2CoverNoBg,
     hoverImage: item2CoverNoBg,
-    sizes: sizeSet(["S", "XL"]),
+    // XS is unavailable and 3XL is a new size, so this listing's sizes come from
+    // the site rather than the store.
+    sizes: [
+      { label: "S", soldOut: true },
+      { label: "M" },
+      { label: "L" },
+      { label: "XL" },
+      { label: "3XL" },
+    ],
+    siteSizes: true,
     imageFit: "contain",
     imageBg: "#ffffff",
     images: [

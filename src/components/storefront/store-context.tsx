@@ -102,6 +102,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const resolvedSize =
         size ?? product.sizes.find((s) => !s.soldOut)?.label ?? product.sizes[0]?.label;
       const variantId = resolvedSize ? product.variantIdBySize?.[resolvedSize] : undefined;
+      // The site may show a size the store listing has no variant for yet.
+      // Say so instead of putting a line in the cart that can't be checked out.
+      if (
+        resolvedSize &&
+        product.variantIdBySize &&
+        Object.keys(product.variantIdBySize).length > 0 &&
+        !variantId
+      ) {
+        toast(`${resolvedSize} isn't available to order yet. Check back soon.`);
+        return;
+      }
       addLineMutation.mutate({ catalogItemId: product.id, variantId });
     },
     [addLineMutation],

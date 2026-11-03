@@ -1,9 +1,17 @@
 import { queryOptions, useQuery } from "@tanstack/react-query";
 import { fetchWixProduct, fetchWixProducts } from "./wix-products";
-import { localProducts, type Product } from "./shop-data";
+import { localProducts, products, type Product } from "./shop-data";
 
 const localByName = new Map(
   localProducts.map((p) => [p.name.trim().toLowerCase(), p]),
+);
+
+// Sizes the site's own catalog declares for a style, for the cases where the
+// store's size row is wrong (a size that no longer exists, or a new one).
+const siteSizesByName = new Map(
+  products
+    .filter((p) => p.siteSizes && p.sizes.length)
+    .map((p) => [p.name.trim().toLowerCase(), p.sizes] as const),
 );
 
 // Items that live in this site's own catalog instead of the Wix store. They are
@@ -20,16 +28,19 @@ function withLocalItems(wixProducts: Product[]): Product[] {
 }
 
 // When this site carries its own photos for a style that also lives in the Wix
-// store, the site's photos are shown. The store listing still decides price,
-// sizes and checkout.
+// store, the site's photos are shown. The store listing still decides price
+// and checkout. Sizes follow the site's list only where the catalog opts in
+// with `siteSizes` (used where the store's size row is wrong).
 function withSitePhotos(product: Product): Product {
-  const local = localByName.get(product.name.trim().toLowerCase());
-  if (!local) return product;
+  const key = product.name.trim().toLowerCase();
+  const local = localByName.get(key);
+  const sizes = siteSizesByName.get(key);
+  if (!local && !sizes) return product;
   return {
     ...product,
-    image: local.image,
-    hoverImage: local.hoverImage,
-    ...(local.images ? { images: local.images } : {}),
+    ...(local ? { image: local.image, hoverImage: local.hoverImage } : {}),
+    ...(local?.images ? { images: local.images } : {}),
+    ...(sizes ? { sizes } : {}),
   };
 }
 
