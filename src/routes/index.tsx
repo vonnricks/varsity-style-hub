@@ -17,13 +17,13 @@ export const Route = createFileRoute("/")({
   loader: ({ context }) => context.queryClient.ensureQueryData(productsQueryOptions),
   head: () => ({
     meta: [
-      { title: "Woolworks — Wool Varsity Jackets to Rep Your Team" },
+      { title: "CETS APPAREL — Team Varsity Jackets to Rep Your Team" },
       {
         name: "description",
         content:
-          "Woolworks wool varsity jackets built on team spirit and rivalry. Shop team colorways in navy, maroon, black and green.",
+          "CETS APPAREL varsity jackets built on team spirit and rivalry. Shop team colorways in navy, maroon, black and green.",
       },
-      { property: "og:title", content: "Woolworks — Rep Your Team" },
+      { property: "og:title", content: "CETS APPAREL — Rep Your Team" },
       {
         property: "og:description",
         content:
