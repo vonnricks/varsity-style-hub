@@ -1,9 +1,17 @@
 import { queryOptions, useQuery } from "@tanstack/react-query";
 import { fetchWixProduct, fetchWixProducts } from "./wix-products";
-import { localProducts, type Product } from "./shop-data";
+import { localProducts, products, type Product } from "./shop-data";
 
 const localByName = new Map(
   localProducts.map((p) => [p.name.trim().toLowerCase(), p]),
+);
+
+// Sizes the site's own catalog declares for a style, for the cases where the
+// store's size row is wrong (a size that no longer exists, or a new one).
+const siteSizesByName = new Map(
+  products
+    .filter((p) => p.siteSizes && p.sizes.length)
+    .map((p) => [p.name.trim().toLowerCase(), p.sizes] as const),
 );
 
 // Items that live in this site's own catalog instead of the Wix store. They are
