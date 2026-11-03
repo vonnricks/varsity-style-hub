@@ -2,6 +2,10 @@ import { queryOptions, useQuery } from "@tanstack/react-query";
 import { fetchWixProduct, fetchWixProducts } from "./wix-products";
 import { localProducts, type Product } from "./shop-data";
 
+const localByName = new Map(
+  localProducts.map((p) => [p.name.trim().toLowerCase(), p]),
+);
+
 // Items that live in this site's own catalog instead of the Wix store. They are
 // merged into the lineup, and skipped when the Wix store already carries a
 // product with the same name — so adding the style in Wix retires the local
@@ -15,21 +19,37 @@ function withLocalItems(wixProducts: Product[]): Product[] {
   return [...extras, ...wixProducts];
 }
 
+// When this site carries its own photos for a style that also lives in the Wix
+// store, the site's photos are shown. The store listing still decides price,
+// sizes and checkout.
+function withSitePhotos(product: Product): Product {
+  const local = localByName.get(product.name.trim().toLowerCase());
+  if (!local) return product;
+  return {
+    ...product,
+    image: local.image,
+    hoverImage: local.hoverImage,
+    ...(local.images ? { images: local.images } : {}),
+  };
+}
+
 function localItemById(productId: string): Product | undefined {
   return localProducts.find((p) => p.id === productId);
 }
 
 export const productsQueryOptions = queryOptions({
   queryKey: ["wix-products"],
-  queryFn: async () => withLocalItems(await fetchWixProducts()),
+  queryFn: async () => withLocalItems(await fetchWixProducts()).map(withSitePhotos),
   staleTime: 60_000,
 });
 
 export const productQueryOptions = (productId: string) =>
   queryOptions({
     queryKey: ["wix-product", productId],
-    queryFn: async () =>
-      localItemById(productId) ?? (await fetchWixProduct(productId)),
+    queryFn: async () => {
+      const found = localItemById(productId) ?? (await fetchWixProduct(productId));
+      return found ? withSitePhotos(found) : found;
+    },
     staleTime: 60_000,
   });
 
