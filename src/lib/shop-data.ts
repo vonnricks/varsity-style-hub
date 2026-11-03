@@ -179,6 +179,8 @@ export type Product = {
   images?: string[];
   // When true, this site's own size list is shown instead of the store's.
   siteSizes?: boolean;
+  // When true, this site's own price is shown instead of the store's.
+  sitePrice?: boolean;
   // Items kept in this site's own catalog instead of the Wix store.
   local?: boolean;
   // Present on products loaded live from Wix Stores.
@@ -265,7 +267,9 @@ export const products: Product[] = [
     id: "item-4",
     name: "District Legacy Varsity Jacket",
     blurb: "",
-    price: 225,
+    // The store listing still says $225, so the site's own price is shown here.
+    price: 125,
+    sitePrice: true,
     image: item4CoverNoBg,
     hoverImage: item4FrontAsset,
     sizes: [
