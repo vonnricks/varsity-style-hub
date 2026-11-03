@@ -186,12 +186,6 @@ export type Product = {
   manageVariants?: boolean;
 };
 
-const sizeSet = (soldOut: string[] = []) =>
-  ["XS", "S", "M", "L", "XL"].map((label) => ({
-    label,
-    soldOut: soldOut.includes(label),
-  }));
-
 export const products: Product[] = [
   {
     id: "item-1",
