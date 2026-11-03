@@ -3,3 +3,5 @@
 - [x] Make the DMV Culture Collective Hoodie orderable: added in the Wix store; add-to-bag and checkout verified working.
 - [x] Replace the product page boilerplate ("premium wool with genuine leather sleeves") with wording that fits jackets, vests and hoodies.
 - [x] Fix hero photo not loading for the user on the live site: re-uploaded as optimized JPEG (2.4MB → 336KB) under a fresh URL and re-published.
+- [x] Update the DMV Culture Collective Hoodie front photo to the new model portrait; card and product page verified on phone and computer. Needs republish for shoppers.
+
