@@ -77,9 +77,9 @@ import hero2WarriorHoodieBlackGate from "@/assets/hero2-warrior-hoodie-black-gat
 import hero2ShadowVestStadium from "@/assets/hero2-shadow-vest-stadium.jpg";
 import hero2WarriorHoodieBurgundyStadium from "@/assets/hero2-warrior-hoodie-burgundy-stadium.jpg";
 import hero2WeDemBoyzStadium from "@/assets/hero2-we-dem-boyz-stadium.jpg";
-import hero2ShadowVestField from "@/assets/hero-shadow-vest-field-extended.jpg";
-import hero2FightOldDcBurgundyField from "@/assets/hero-fight-old-dc-burgundy-field-extended.jpg";
-import hero2FightOldDcBlackField from "@/assets/hero-fight-old-dc-black-field-extended.jpg";
+import hero2ShadowVestField from "@/assets/hero-district-shadow-field-new.jpg";
+import hero2FightOldDcBurgundyField from "@/assets/hero-capital-gold-stadium-new.jpg";
+import hero2FightOldDcBlackField from "@/assets/hero-midnight-district-field-new.jpg";
 import hero2DmvCultureHoodieMonument from "@/assets/hero2-dmv-culture-hoodie-monument.jpg";
 
 export const heroImage = heroRivals;
@@ -99,7 +99,7 @@ export const heroSlides: HeroSlide[] = [
   { image: hero2WarriorHoodieBurgundyStadium, alt: "Man in a burgundy Warrior Legacy hoodie leaning on a stone wall outside the stadium", productId: "ed48d2a7-4fd9-414f-9598-683face08840" },
   { image: hero2WeDemBoyzStadium, alt: "Man in a navy We Dem Boyz varsity jacket seen from behind, walking toward the stadium", productId: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a" },
   { image: hero2ShadowVestField, alt: "Man in a black District Shadow puffer vest standing on the field under the stadium lights", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
-  { image: hero2FightOldDcBurgundyField, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket on the field", productId: "1aa0f8df-4e72-46d6-a358-8ecb232d4924" },
+  { image: hero2FightOldDcBurgundyField, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket outside the stadium", productId: "1aa0f8df-4e72-46d6-a358-8ecb232d4924" },
   { image: hero2FightOldDcBlackField, alt: "Man in an all-black Fight for Old DC varsity jacket standing on the field", productId: "b9dc34f9-1307-44ff-b5e8-3b6e4ab060e4" },
   { image: hero2DmvCultureHoodieMonument, alt: "Woman in a black DMV Culture hoodie with the Washington Monument behind her", productId: "f503605d-3cc6-409b-916a-3d81d2197f9a" },
 ];
