@@ -82,13 +82,6 @@ import heroShadowVestMall from "@/assets/hero-shadow-vest-mall.jpg";
 import heroShadowVestUrban from "@/assets/hero-shadow-vest-urban.jpg";
 import heroCapitalVestTerrace from "@/assets/hero-capital-vest-terrace.jpg";
 import heroDmvCultureHoodie from "@/assets/hero-dmv-culture-hoodie.jpg";
-import hero2WarriorHoodieBlackGate from "@/assets/hero2-warrior-hoodie-black-gate.jpg";
-import hero2ShadowVestStadium from "@/assets/hero2-shadow-vest-stadium.jpg";
-import hero2WarriorHoodieBurgundyStadium from "@/assets/hero2-warrior-hoodie-burgundy-stadium.jpg";
-import hero2WeDemBoyzStadium from "@/assets/hero2-we-dem-boyz-stadium.jpg";
-import hero2ShadowVestField from "@/assets/hero2-shadow-vest-field.jpg";
-import hero2FightOldDcBurgundyField from "@/assets/hero2-fight-old-dc-burgundy-field.jpg";
-import hero2FightOldDcBlackField from "@/assets/hero2-fight-old-dc-black-field.jpg";
 import hero2DmvCultureHoodieMonument from "@/assets/hero2-dmv-culture-hoodie-monument.jpg";
 
 export const heroImage = heroRivals;
@@ -112,13 +105,6 @@ export const heroSlides: HeroSlide[] = [
   { image: heroShadowVestUrban, alt: "Man in a black puffer vest and graphic hoodie in an urban concrete setting", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
   { image: heroCapitalVestTerrace, alt: "Man in a burgundy Burgundy Capital puffer vest walking across a stone terrace", productId: "82f49fde-d95f-4242-9227-13a930add080" },
   { image: heroDmvCultureHoodie, alt: "Man in a black DMV Culture hoodie standing beside stone columns, the Washington Monument and National Mall behind him", productId: "f503605d-3cc6-409b-916a-3d81d2197f9a" },
-  { image: hero2WarriorHoodieBlackGate, alt: "Man in a black Warrior Legacy hoodie outside the stadium's North Gate", productId: "b539f338-4d5c-45bd-8572-468c50719162" },
-  { image: hero2ShadowVestStadium, alt: "Man in a black District Shadow puffer vest seen from behind, facing the stadium", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
-  { image: hero2WarriorHoodieBurgundyStadium, alt: "Man in a burgundy Warrior Legacy hoodie leaning on a stone wall outside the stadium", productId: "ed48d2a7-4fd9-414f-9598-683face08840" },
-  { image: hero2WeDemBoyzStadium, alt: "Man in a navy We Dem Boyz varsity jacket seen from behind, walking toward the stadium", productId: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a" },
-  { image: hero2ShadowVestField, alt: "Man in a black District Shadow puffer vest standing on the field under the stadium lights", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
-  { image: hero2FightOldDcBurgundyField, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket on the field", productId: "1aa0f8df-4e72-46d6-a358-8ecb232d4924" },
-  { image: hero2FightOldDcBlackField, alt: "Man in an all-black Fight for Old DC varsity jacket standing on the field", productId: "b9dc34f9-1307-44ff-b5e8-3b6e4ab060e4" },
   { image: hero2DmvCultureHoodieMonument, alt: "Woman in a black DMV Culture hoodie with the Washington Monument behind her", productId: "f503605d-3cc6-409b-916a-3d81d2197f9a" },
 ];
 
