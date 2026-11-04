@@ -77,9 +77,9 @@ import hero2WarriorHoodieBlackGate from "@/assets/hero2-warrior-hoodie-black-gat
 import hero2ShadowVestStadium from "@/assets/hero2-shadow-vest-stadium.jpg";
 import hero2WarriorHoodieBurgundyStadium from "@/assets/hero2-warrior-hoodie-burgundy-stadium.jpg";
 import hero2WeDemBoyzStadium from "@/assets/hero2-we-dem-boyz-stadium.jpg";
-import hero2ShadowVestField from "@/assets/hero2-shadow-vest-field.jpg";
-import hero2FightOldDcBurgundyField from "@/assets/hero2-fight-old-dc-burgundy-field.jpg";
-import hero2FightOldDcBlackField from "@/assets/hero2-fight-old-dc-black-field.jpg";
+import hero2ShadowVestField from "@/assets/hero-shadow-vest-field-extended.jpg";
+import hero2FightOldDcBurgundyField from "@/assets/hero-fight-old-dc-burgundy-field-extended.jpg";
+import hero2FightOldDcBlackField from "@/assets/hero-fight-old-dc-black-field-extended.jpg";
 import hero2DmvCultureHoodieMonument from "@/assets/hero2-dmv-culture-hoodie-monument.jpg";
 
 export const heroImage = heroRivals;
