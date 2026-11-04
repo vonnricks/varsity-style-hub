@@ -18,7 +18,7 @@ export function Hero() {
           const hidden = i !== active;
           // Only the photo being shown takes clicks, so the ones stacked behind
           // it can't steal the tap.
-          const shell = `absolute inset-0 block size-full ${hidden ? "pointer-events-none" : "pointer-events-auto"}`;
+          const shell = `absolute inset-0 block size-full transition-opacity duration-1000 ${hidden ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100 z-10"}`;
           const photo = (
             <img
               src={slide.image}
