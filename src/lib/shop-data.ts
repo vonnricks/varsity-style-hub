@@ -81,6 +81,7 @@ import heroWarriorHoodieBurgundy from "@/assets/hero-warrior-hoodie-burgundy.jpg
 import heroShadowVestMall from "@/assets/hero-shadow-vest-mall.jpg";
 import heroShadowVestUrban from "@/assets/hero-shadow-vest-urban.jpg";
 import heroCapitalVestTerrace from "@/assets/hero-capital-vest-terrace.jpg";
+import heroDmvCultureHoodie from "@/assets/hero-dmv-culture-hoodie.jpg";
 
 export const heroImage = heroRivals;
 
@@ -103,6 +104,7 @@ export const heroSlides: HeroSlide[] = [
   { image: heroShadowVestMall, alt: "Man in a black District Shadow puffer vest seen from behind, overlooking the National Mall", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
   { image: heroShadowVestUrban, alt: "Man in a black puffer vest and graphic hoodie in an urban concrete setting", productId: "f4d63011-c507-49a0-86c0-162b21fe7979" },
   { image: heroCapitalVestTerrace, alt: "Man in a burgundy Burgundy Capital puffer vest walking across a stone terrace", productId: "82f49fde-d95f-4242-9227-13a930add080" },
+  { image: heroDmvCultureHoodie, alt: "Man in a black DMV Culture hoodie standing beside stone columns, the Washington Monument and National Mall behind him", productId: "f503605d-3cc6-409b-916a-3d81d2197f9a" },
 ];
 
 export const heroPhoto = {
