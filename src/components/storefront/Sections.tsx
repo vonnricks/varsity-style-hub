@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section className="relative w-full">
       <div
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden bg-secondary"
         style={{ aspectRatio: `${heroPhoto.width} / ${heroPhoto.height}` }}
       >
         {heroSlides.map((slide, i) => {
@@ -24,7 +24,7 @@ export function Hero() {
               src={slide.image}
               alt={slide.alt}
               loading="eager"
-              className="size-full object-cover transition-opacity duration-1000"
+              className="size-full object-contain transition-opacity duration-1000"
             />
           );
           const a11y = { "aria-hidden": hidden, tabIndex: hidden ? -1 : 0 } as const;
