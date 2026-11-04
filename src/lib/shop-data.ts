@@ -95,7 +95,6 @@ export type HeroSlide = {
 };
 
 export const heroSlides: HeroSlide[] = [
-  { image: heroGroupPortrait, alt: "Five people in Washington varsity jackets and hoodies with two puffer vests on display", anchor: "#the-lineup" },
   { image: heroWeDemBoyz, alt: "Man in a navy We Dem Boyz varsity jacket seen from behind, Washington Monument in the background", productId: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a" },
   { image: heroFightOldDcBlack, alt: "Man in an all-black Fight for Old DC varsity jacket in a brick alleyway", productId: "b9dc34f9-1307-44ff-b5e8-3b6e4ab060e4" },
   { image: heroFightOldDcBurgundy, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket", productId: "1aa0f8df-4e72-46d6-a358-8ecb232d4924" },
