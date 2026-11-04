@@ -65,10 +65,9 @@ export function Hero() {
       </div>
 
       <div className="flex flex-col items-center px-5 py-7 text-center md:hidden">
-        <h1 className="display-title text-4xl leading-[0.9]">Rep your team</h1>
         <a
           href="#pick-a-side"
-          className="mt-4 bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
+          className="bg-maroon px-8 py-4 text-[11px] label-caps text-maroon-foreground transition-opacity hover:opacity-90"
         >
           SHOP INVENTORY
         </a>
