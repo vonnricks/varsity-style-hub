@@ -67,8 +67,11 @@ export function Header() {
             </button>
           </div>
 
-          <a href="/" className="display-title text-2xl md:text-3xl">
-            {BRAND}
+          <a href="/" className="flex flex-col items-center leading-none">
+            <span className="display-title text-2xl md:text-3xl">{BRAND}</span>
+            <span className="mt-1 text-[9px] label-caps text-muted-foreground md:text-[10px]">
+              Culture Elevated Through Style
+            </span>
           </a>
 
           <div className="flex flex-1 items-center justify-end">
