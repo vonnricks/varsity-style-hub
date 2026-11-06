@@ -11,6 +11,14 @@ import { productQueryOptions, productsQueryOptions } from "@/lib/use-products";
 import type { Product } from "@/lib/shop-data";
 
 export const Route = createFileRoute("/product/$productId")({
+  loader: async ({ params, context }) => {
+    const [product, allProducts] = await Promise.all([
+      context.queryClient.ensureQueryData(productQueryOptions(params.productId)),
+      context.queryClient.ensureQueryData(productsQueryOptions),
+    ]);
+    if (!product) throw notFound();
+    return { product, allProducts };
+  },
   head: ({ loaderData }) => ({
     meta: [
       { title: `${loaderData?.product.name ?? "Team Apparel"} — CETS APPAREL` },
@@ -28,14 +36,6 @@ export const Route = createFileRoute("/product/$productId")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  loader: async ({ params, context }) => {
-    const [product, allProducts] = await Promise.all([
-      context.queryClient.ensureQueryData(productQueryOptions(params.productId)),
-      context.queryClient.ensureQueryData(productsQueryOptions),
-    ]);
-    if (!product) throw notFound();
-    return { product, allProducts };
-  },
   component: ProductPage,
 });
 
