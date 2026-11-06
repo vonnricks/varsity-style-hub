@@ -11,23 +11,6 @@ import { productQueryOptions, productsQueryOptions } from "@/lib/use-products";
 import type { Product } from "@/lib/shop-data";
 
 export const Route = createFileRoute("/product/$productId")({
-  head: () => ({
-    meta: [
-      { title: "CETS APPAREL — Team Varsity Jacket, Vest or Hoodie" },
-      {
-        name: "description",
-        content:
-          "Heavyweight wool varsity jacket in team colorways with felt patches and striped rib trims. Rep your team.",
-      },
-      { property: "og:title", content: "CETS APPAREL Team Jacket" },
-      {
-        property: "og:description",
-        content: "Heavyweight wool varsity jacket in team colorways — rep your team.",
-      },
-      { property: "og:type", content: "product" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   loader: async ({ params, context }) => {
     const [product, allProducts] = await Promise.all([
       context.queryClient.ensureQueryData(productQueryOptions(params.productId)),
@@ -36,6 +19,23 @@ export const Route = createFileRoute("/product/$productId")({
     if (!product) throw notFound();
     return { product, allProducts };
   },
+  head: ({ loaderData }) => ({
+    meta: [
+      { title: `${loaderData?.product.name ?? "Team Apparel"} — CETS APPAREL` },
+      {
+        name: "description",
+        content:
+          loaderData?.product.blurb || "Shop CETS APPAREL team jackets, puffer vests and hoodies.",
+      },
+      { property: "og:title", content: `${loaderData?.product.name ?? "Team Apparel"} — CETS APPAREL` },
+      {
+        property: "og:description",
+        content: loaderData?.product.blurb || "Shop CETS APPAREL team jackets, puffer vests and hoodies.",
+      },
+      { property: "og:type", content: "product" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: ProductPage,
 });
 
