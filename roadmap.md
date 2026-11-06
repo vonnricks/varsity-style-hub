@@ -13,4 +13,4 @@
 - [x] Add Raven City Puffer Vest at $90, sizes M–4XL, supplied description, seven photos, and hero link in preview.
 - [x] Enable Raven City vest checkout: existing hero/local link resolves to the live Wix listing; size M adds at $90 and reaches Wix checkout. No order placed. Preview only; needs publishing.
 - [x] Update Raven City vest displayed price to $125 in preview.
-- [ ] Match Raven City checkout price to $125 if Wix still charges $90; requires the store price update.
+- [ ] Match Raven City checkout price to $125: verified Wix cart still charges $90; user must update the Wix listing before publishing.
