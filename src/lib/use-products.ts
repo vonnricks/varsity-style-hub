@@ -80,7 +80,14 @@ export const productQueryOptions = (productId: string) =>
   queryOptions({
     queryKey: ["wix-product", productId],
     queryFn: async () => {
-      const found = localItemById(productId) ?? (await fetchWixProduct(productId));
+      const local = localItemById(productId);
+      // Existing hero links and bookmarks keep the local ID. Once Wix carries
+      // the style, resolve that alias to the orderable store product instead.
+      const found = local
+        ? (await fetchWixProducts()).find(
+            (p) => p.name.trim().toLowerCase() === local.name.trim().toLowerCase(),
+          ) ?? local
+        : await fetchWixProduct(productId);
       return found ? withSitePhotos(found) : found;
     },
     staleTime: 60_000,
