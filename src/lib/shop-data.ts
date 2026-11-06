@@ -82,6 +82,13 @@ import hero2FightOldDcBurgundyField from "@/assets/hero-capital-gold-stadium-new
 import hero2FightOldDcBlackField from "@/assets/hero-midnight-district-field-new.jpg";
 import hero2DmvCultureHoodieMonument from "@/assets/hero2-dmv-culture-hoodie-monument.jpg";
 import heroBaltimoreRavenCityVest from "@/assets/hero-baltimore-raven-city-vest.jpg";
+import ravenVestFront from "@/assets/raven-vest-front.jpg";
+import ravenVestBack from "@/assets/raven-vest-back.jpg";
+import ravenVestAngled from "@/assets/raven-vest-angled.jpg";
+import ravenVestCollar from "@/assets/raven-vest-collar.jpg";
+import ravenVestModelFront from "@/assets/raven-vest-model-front.jpg";
+import ravenVestModelBack from "@/assets/raven-vest-model-back.jpg";
+import ravenVestModelPair from "@/assets/raven-vest-model-pair.jpg";
 
 export const heroImage = heroRivals;
 
@@ -103,7 +110,7 @@ export const heroSlides: HeroSlide[] = [
   { image: hero2FightOldDcBurgundyField, alt: "Man in a burgundy and gold Fight for Old DC varsity jacket outside the stadium", productId: "1aa0f8df-4e72-46d6-a358-8ecb232d4924" },
   { image: hero2FightOldDcBlackField, alt: "Man in an all-black Fight for Old DC varsity jacket standing on the field", productId: "b9dc34f9-1307-44ff-b5e8-3b6e4ab060e4" },
   { image: hero2DmvCultureHoodieMonument, alt: "Woman in a black DMV Culture hoodie with the Washington Monument behind her", productId: "f503605d-3cc6-409b-916a-3d81d2197f9a" },
-  { image: heroBaltimoreRavenCityVest, alt: "Woman wearing a Baltimore Raven City puffer vest on the stadium field", anchor: "#the-lineup" },
+  { image: heroBaltimoreRavenCityVest, alt: "Woman wearing a Baltimore Raven City puffer vest on the stadium field", productId: "item-10" },
 ];
 
 export const heroPhoto = {
@@ -427,6 +434,18 @@ export const products: Product[] = [
     imageBg: "#ffffff",
     hoverImageFit: "cover",
     images: [dmvHoodieDetail, dmvHoodieAngle],
+    local: true,
+  },
+  {
+    id: "item-10",
+    name: "Raven City Puffer Vest",
+    blurb: "Built for Baltimore pride with a clean streetwear edge, the Charm City Shadow Puffer Vest delivers warmth without sacrificing style. The sleek black finish is accented by bold purple-and-gold embroidered details that stand out from every angle. Layer it over your favorite hoodie or long sleeve for a versatile game-day or everyday look.",
+    price: 90,
+    image: ravenVestFront,
+    hoverImage: ravenVestBack,
+    sizes: [{ label: "M" }, { label: "L" }, { label: "XL" }, { label: "2XL" }, { label: "3XL" }, { label: "4XL" }],
+    imageFit: "contain",
+    images: [ravenVestAngled, ravenVestCollar, ravenVestModelFront, ravenVestModelBack, ravenVestModelPair],
     local: true,
   },
 ];

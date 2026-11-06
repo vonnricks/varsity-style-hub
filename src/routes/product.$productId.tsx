@@ -11,18 +11,18 @@ import { productQueryOptions, productsQueryOptions } from "@/lib/use-products";
 import type { Product } from "@/lib/shop-data";
 
 export const Route = createFileRoute("/product/$productId")({
-  head: () => ({
+  head: ({ loaderData }) => ({
     meta: [
-      { title: "CETS APPAREL — Team Varsity Jacket, Vest or Hoodie" },
+      { title: `${loaderData?.product.name ?? "Team Apparel"} — CETS APPAREL` },
       {
         name: "description",
         content:
-          "Heavyweight wool varsity jacket in team colorways with felt patches and striped rib trims. Rep your team.",
+          loaderData?.product.blurb || "Shop CETS APPAREL team jackets, puffer vests and hoodies.",
       },
-      { property: "og:title", content: "CETS APPAREL Team Jacket" },
+      { property: "og:title", content: `${loaderData?.product.name ?? "Team Apparel"} — CETS APPAREL` },
       {
         property: "og:description",
-        content: "Heavyweight wool varsity jacket in team colorways — rep your team.",
+        content: loaderData?.product.blurb || "Shop CETS APPAREL team jackets, puffer vests and hoodies.",
       },
       { property: "og:type", content: "product" },
       { name: "twitter:card", content: "summary_large_image" },

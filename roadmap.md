@@ -10,3 +10,5 @@
 
 - [x] District Legacy Varsity Jacket price: site now shows $125 (sitePrice override). Needs republish. Wix listing still charges $225 at checkout — user to update the store price.
 - [x] Extend the three stadium-field hero photos to fill the reel without cropping the models; photos, rotation and product links verified on desktop/mobile. Preview only.
+- [x] Add Raven City Puffer Vest at $90, sizes M–4XL, supplied description, seven photos, and hero link in preview.
+- [ ] Enable Raven City vest checkout after a matching listing is published in Wix.
