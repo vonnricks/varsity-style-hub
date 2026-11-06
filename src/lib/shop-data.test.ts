@@ -1,3 +1,4 @@
+// @ts-nocheck -- run with bun test; Bun test types are not part of the app build.
 import { expect, test } from "bun:test";
 import { plugin } from "bun";
 
