@@ -68,7 +68,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     }: {
       catalogItemId: string;
       variantId: string | undefined;
-      buyerNote?: string;
+      buyerNote: string | undefined;
     }) => addToCart(catalogItemId, variantId, 1).then(async (cart) => {
       if (!buyerNote) return cart;
       try {

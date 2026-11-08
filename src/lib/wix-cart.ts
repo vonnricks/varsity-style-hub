@@ -18,7 +18,7 @@ export type WixCart = {
   id: string | null;
   lineItems: WixCartLineItem[];
   subtotal: number;
-  note?: string;
+  note?: string | undefined;
 };
 
 const EMPTY_CART: WixCart = { id: null, lineItems: [], subtotal: 0 };

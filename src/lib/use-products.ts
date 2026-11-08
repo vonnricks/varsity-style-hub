@@ -1,6 +1,7 @@
 import { queryOptions, useQuery } from "@tanstack/react-query";
 import { fetchWixProduct, fetchWixProducts } from "./wix-products";
 import { localProducts, products, type Product } from "./shop-data";
+import { groupVests } from "./lineup-order";
 
 const localByName = new Map(
   localProducts.map((p) => [p.name.trim().toLowerCase(), p]),
@@ -80,7 +81,7 @@ function localItemById(productId: string): Product | undefined {
 
 export const productsQueryOptions = queryOptions({
   queryKey: ["wix-products"],
-  queryFn: async () => withLocalItems(await fetchWixProducts()).map(withSitePhotos),
+  queryFn: async () => groupVests(withLocalItems(await fetchWixProducts()).map(withSitePhotos)),
   staleTime: 60_000,
 });
 
