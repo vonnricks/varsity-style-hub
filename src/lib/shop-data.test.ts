@@ -31,3 +31,19 @@ test("Raven City's existing hero link resolves to its orderable Wix listing", as
   expect(resolved.image).toBe(local.image);
   expect(resolved.price).toBe(125);
 });
+
+test("We Dem Boyz (Dallas Legacy) jacket carries the Buy One Get One Free badge", async () => {
+  const dallas = {
+    id: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a",
+    name: "Dallas Legacy Varsity Jacket",
+    blurb: "", price: 225, image: "store-image", hoverImage: "store-image",
+    sizes: [{ label: "M" }],
+  };
+  mock.module("./wix-products", () => ({
+    fetchWixProducts: async () => [dallas],
+    fetchWixProduct: async () => dallas,
+  }));
+  const { productsQueryOptions } = await import("./use-products");
+  const lineup = await productsQueryOptions.queryFn();
+  expect(lineup.find(p => p.id === dallas.id)?.badge).toBe("Buy One Get One Free");
+});

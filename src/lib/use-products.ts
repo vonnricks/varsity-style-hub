@@ -22,6 +22,12 @@ const sitePriceByName = new Map(
     .map((p) => [p.name.trim().toLowerCase(), p.price] as const),
 );
 
+// Deals the site advertises on a store listing, keyed by the store product ID.
+// The store still runs the sale at checkout; this only shows the badge.
+const siteBadgeById = new Map([
+  ["e6d91c9a-77bf-4d6a-ba25-bd47e525117a", "Buy One Get One Free"],
+]);
+
 // Items that live in this site's own catalog instead of the Wix store. They are
 // merged into the lineup, and skipped when the Wix store already carries a
 // product with the same name — so adding the style in Wix retires the local
@@ -46,9 +52,11 @@ function withSitePhotos(product: Product): Product {
   const local = localByName.get(key);
   const sizes = siteSizesByName.get(key);
   const price = sitePriceByName.get(key);
-  if (!local && !sizes && price === undefined) return product;
+  const badge = siteBadgeById.get(product.id);
+  if (!local && !sizes && price === undefined && !badge) return product;
   return {
     ...product,
+    ...(badge ? { badge } : {}),
     ...(local ? { image: local.image, hoverImage: local.hoverImage } : {}),
     ...(local?.images ? { images: local.images } : {}),
     ...(price === undefined ? {} : { price }),
