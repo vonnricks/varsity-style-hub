@@ -7,6 +7,14 @@ const localByName = new Map(
   localProducts.map((p) => [p.name.trim().toLowerCase(), p]),
 );
 
+// These established vest listings use the site's selected back-logo photo
+// as their second image, without changing the store's cover or other photos.
+const vestBackByName = new Map(
+  products
+    .filter((p) => p.id === "item-5" || p.id === "item-6")
+    .map((p) => [p.name.trim().toLowerCase(), p.hoverImage] as const),
+);
+
 // Sizes the site's own catalog declares for a style, for the cases where the
 // store's size row is wrong (a size that no longer exists, or a new one).
 const siteSizesByName = new Map(
@@ -54,12 +62,14 @@ function withSitePhotos(product: Product): Product {
   const sizes = siteSizesByName.get(key);
   const price = sitePriceByName.get(key);
   const badge = siteBadgeById.get(product.id);
-  if (!local && !sizes && price === undefined && !badge) return product;
+  const vestBack = vestBackByName.get(key);
+  if (!local && !sizes && price === undefined && !badge && !vestBack) return product;
   return {
     ...product,
     ...(badge ? { badge } : {}),
     ...(local ? { image: local.image, hoverImage: local.hoverImage } : {}),
     ...(local?.images ? { images: local.images } : {}),
+    ...(vestBack ? { hoverImage: vestBack, hoverImageFit: "contain" as const } : {}),
     ...(price === undefined ? {} : { price }),
     ...(sizes
       ? {
