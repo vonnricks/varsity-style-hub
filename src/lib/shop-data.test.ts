@@ -32,6 +32,10 @@ test("Raven City's existing hero link resolves to its orderable Wix listing", as
   expect(resolved.price).toBe(125);
 });
 
+test("District Legacy (We Dem Boyz) Varsity Jacket costs $225", () => {
+  expect(products.find(p => p.name === "District Legacy Varsity Jacket")?.price).toBe(225);
+});
+
 test("We Dem Boyz (Dallas Legacy) jacket carries the Buy One Get One Free badge", async () => {
   const dallas = {
     id: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a",

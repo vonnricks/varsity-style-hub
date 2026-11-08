@@ -306,8 +306,9 @@ export const products: Product[] = [
     id: "item-4",
     name: "District Legacy Varsity Jacket",
     blurb: "",
-    // The store listing still says $225, so the site's own price is shown here.
-    price: 125,
+    // The site's own price is shown here; the store listing must be set to the
+    // same $225 so checkout charges it.
+    price: 225,
     sitePrice: true,
     image: item4CoverNoBg,
     hoverImage: item4FrontAsset,
