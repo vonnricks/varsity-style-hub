@@ -335,7 +335,7 @@ export const products: Product[] = [
     blurb: "",
     price: 125,
     image: item5FrontBackAsset,
-    hoverImage: item5FrontAsset,
+    hoverImage: item5BackAsset,
     sizes: [
       { label: "M" },
       { label: "L" },
@@ -359,7 +359,7 @@ export const products: Product[] = [
     blurb: "",
     price: 125,
     image: item6FrontBackAsset,
-    hoverImage: item6FrontAsset,
+    hoverImage: item6Stack7Asset,
     sizes: [
       { label: "M" },
       { label: "L" },
