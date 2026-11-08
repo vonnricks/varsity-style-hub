@@ -14,3 +14,5 @@
 - [x] Enable Raven City vest checkout: existing hero/local link resolves to the live Wix listing; size M adds at $90 and reaches Wix checkout. No order placed. Preview only; needs publishing.
 - [x] Update Raven City vest displayed price to $125 in preview.
 - [x] Match Raven City checkout price to $125: verified size M on the product page, Wix cart and Wix checkout at $125; no order placed. Delivery/tax not finalized without an address. Ready to publish.
+- [x] Add District Legacy free-jacket size notes: saved and shown in Wix cart; checkout opens at $225. Hosted checkout does not display the note; final order receipt not verified (no order placed). Preview only.
+- [x] Rearrange The Lineup so all vests are side by side; verified on the homepage. Preview only.

@@ -15,6 +15,7 @@ import {
   getCheckoutUrl,
   getCurrentCart,
   removeLineItem,
+  saveBuyerNote,
   updateLineItemQuantity,
   type WixCartLineItem,
 } from "@/lib/wix-cart";
@@ -28,7 +29,8 @@ type StoreValue = {
   subtotal: number;
   count: number;
   isLoading: boolean;
-  addLine: (product: Product, size?: string) => void;
+  addLine: (product: Product, size?: string, buyerNote?: string) => void;
+  buyerNote: string | undefined;
   setQty: (lineItemId: string, qty: number) => void;
   checkout: () => void;
   isCheckingOut: boolean;
@@ -62,14 +64,25 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     mutationFn: ({
       catalogItemId,
       variantId,
+      buyerNote,
     }: {
       catalogItemId: string;
       variantId: string | undefined;
-    }) => addToCart(catalogItemId, variantId, 1),
+      buyerNote: string | undefined;
+    }) => addToCart(catalogItemId, variantId, 1).then(async (cart) => {
+      if (!buyerNote) return cart;
+      try {
+        return await saveBuyerNote(cart, buyerNote);
+      } catch {
+        toast.error("Jacket added, but the free-jacket note wasn't saved. Please add it in Wix checkout.");
+        return cart;
+      }
+    }),
     onSuccess: (cart) => {
       queryClient.setQueryData(CART_QUERY_KEY, cart);
       setOverlay("cart");
     },
+    onError: () => toast.error("Couldn't add the jacket. Please try again."),
   });
 
   const setQtyMutation = useMutation({
@@ -92,7 +105,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   });
 
   const addLine = useCallback(
-    (product: Product, size?: string) => {
+    (product: Product, size?: string, buyerNote?: string) => {
       // Styles kept in this site's own catalog aren't in the Wix store yet, so
       // they can't be added to the Wix cart.
       if (product.local) {
@@ -113,7 +126,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         toast(`${resolvedSize} isn't available to order yet. Check back soon.`);
         return;
       }
-      addLineMutation.mutate({ catalogItemId: product.id, variantId });
+      addLineMutation.mutate({ catalogItemId: product.id, variantId, buyerNote });
     },
     [addLineMutation],
   );
@@ -130,6 +143,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const value = useMemo<StoreValue>(
     () => ({
       lines,
+      buyerNote: cartQuery.data?.note,
       subtotal: cartQuery.data?.subtotal ?? 0,
       count: lines.reduce((sum, l) => sum + l.quantity, 0),
       isLoading: cartQuery.isLoading,
@@ -141,7 +155,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       open: (o) => setOverlay(o),
       close: () => setOverlay("none"),
     }),
-    [lines, cartQuery.data?.subtotal, cartQuery.isLoading, addLine, setQty, checkoutMutation, overlay],
+    [lines, cartQuery.data?.subtotal, cartQuery.data?.note, cartQuery.isLoading, addLine, setQty, checkoutMutation, overlay],
   );
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;

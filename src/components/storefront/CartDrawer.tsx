@@ -4,7 +4,7 @@ import { useStore } from "./store-context";
 const FREE_THRESHOLD = 100;
 
 export function CartDrawer() {
-  const { overlay, close, lines, setQty, subtotal, checkout, isCheckingOut } = useStore();
+  const { overlay, close, lines, setQty, subtotal, checkout, isCheckingOut, buyerNote } = useStore();
   const isOpen = overlay === "cart";
   const progress = Math.min(100, (subtotal / FREE_THRESHOLD) * 100);
 
@@ -96,6 +96,7 @@ export function CartDrawer() {
         </div>
 
         <div className="border-t border-border p-5">
+          {buyerNote ? <p className="mb-4 whitespace-pre-wrap text-xs text-muted-foreground">{buyerNote}</p> : null}
           <div className="flex justify-between text-sm">
             <span className="label-caps text-[11px]">Subtotal</span>
             <span className="font-medium">${subtotal}</span>
