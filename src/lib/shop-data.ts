@@ -82,7 +82,7 @@ import hero2FightOldDcBurgundyField from "@/assets/hero-capital-gold-stadium-new
 import hero2FightOldDcBlackField from "@/assets/hero-midnight-district-field-new.jpg";
 import hero2DmvCultureHoodieMonument from "@/assets/hero2-dmv-culture-hoodie-monument.jpg";
 import heroBaltimoreRavenCityVest from "@/assets/hero-baltimore-raven-city-vest.jpg";
-import ravenVestFront from "@/assets/raven-vest-front.jpg";
+import ravenVestFront from "@/assets/raven-vest-front-scaled.jpg";
 import ravenVestBack from "@/assets/raven-vest-back.jpg";
 import ravenVestAngled from "@/assets/raven-vest-angled.jpg";
 import ravenVestCollar from "@/assets/raven-vest-collar.jpg";
