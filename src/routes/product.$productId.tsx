@@ -9,6 +9,9 @@ import { ProductCard } from "@/components/storefront/ProductCard";
 import { useStore } from "@/components/storefront/store-context";
 import { productQueryOptions, productsQueryOptions } from "@/lib/use-products";
 import type { Product } from "@/lib/shop-data";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { offersFreeJacketNote, freeJacketNote } from "@/lib/free-jacket-note";
 
 export const Route = createFileRoute("/product/$productId")({
   loader: async ({ params, context }) => {
@@ -47,7 +50,7 @@ function ProductPage() {
       <div className="min-h-screen bg-background">
         <Header />
         <main>
-          <Detail product={product} />
+          <Detail key={product.id} product={product} />
           <div id="the-lineup">
             <Carousel title="The Lineup" subtitle="Shop the rest of the team collection.">
               {allProducts
@@ -68,6 +71,7 @@ function ProductPage() {
 
 function Detail({ product }: { product: Product }) {
   const { addLine } = useStore();
+  const [freeSizeNote, setFreeSizeNote] = useState("");
   const [selectedSize, setSelectedSize] = useState<string | undefined>(
     () => product.sizes.find((s) => !s.soldOut)?.label,
   );
@@ -130,14 +134,31 @@ function Detail({ product }: { product: Product }) {
           ))}
         </div>
 
-        <button
+        {offersFreeJacketNote(product) ? (
+          <div className="mt-7">
+            <label htmlFor="free-jacket-note" className="text-[10px] label-caps text-muted-foreground">
+              Free jacket size — notes
+            </label>
+            <Textarea
+              id="free-jacket-note"
+              value={freeSizeNote}
+              onChange={(event) => setFreeSizeNote(event.target.value)}
+              placeholder="e.g. Free jacket: XL"
+              maxLength={300}
+              rows={3}
+              className="mt-2 resize-y"
+            />
+          </div>
+        ) : null}
+
+        <Button
           type="button"
-          onClick={() => addLine(product, selectedSize)}
+          onClick={() => addLine(product, selectedSize, offersFreeJacketNote(product) ? freeJacketNote(freeSizeNote) : undefined)}
           disabled={product.sizes.length > 0 && !selectedSize}
-          className="mt-7 w-full bg-ink px-8 py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+          className="mt-7 h-auto w-full rounded-none bg-ink px-8 py-4 text-[11px] label-caps text-primary-foreground transition-opacity hover:bg-ink hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {product.sizes.length > 0 && !selectedSize ? "Select a size" : "Add to bag"}
-        </button>
+        </Button>
 
         <p className="mt-6 text-sm text-muted-foreground">
           Built for the people who rep their team loud. Heavyweight fabric, embroidered club

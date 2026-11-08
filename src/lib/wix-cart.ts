@@ -1,5 +1,6 @@
 import { wixFetch } from "./wix-client";
 import { WIX_STORES_APP_ID } from "./wix-config";
+import { appendBuyerNote } from "./free-jacket-note";
 
 export type WixCartLineItem = {
   id: string;
@@ -17,6 +18,7 @@ export type WixCart = {
   id: string | null;
   lineItems: WixCartLineItem[];
   subtotal: number;
+  note?: string;
 };
 
 const EMPTY_CART: WixCart = { id: null, lineItems: [], subtotal: 0 };
@@ -35,7 +37,7 @@ type RawLineItem = {
     descriptionLines?: { name?: { original?: string }; plainText?: { original?: string } }[];
   };
 };
-type RawCart = { id?: string; lineItems?: RawLineItem[]; subtotal?: { amount?: string } };
+type RawCart = { id?: string; lineItems?: RawLineItem[]; subtotal?: { amount?: string }; note?: string };
 
 function extractSize(li: RawLineItem): string | undefined {
   const lines = li.attributes?.descriptionLines ?? [];
@@ -58,6 +60,7 @@ function mapCart(raw: RawCart | null | undefined): WixCart {
   }));
   return {
     id: raw.id ?? null,
+    note: raw.note,
     lineItems,
     subtotal: raw.subtotal?.amount != null ? Number(raw.subtotal.amount) : lineItems.reduce((s, l) => s + l.lineTotal, 0),
   };
@@ -70,6 +73,15 @@ export async function getCurrentCart(): Promise<WixCart> {
     { allow404: true },
   );
   return mapCart(data?.cart);
+}
+
+export async function saveBuyerNote(cart: WixCart, note: string): Promise<WixCart> {
+  const data = await wixFetch<{ cart: RawCart }>(
+    "https://www.wixapis.com/ecom/v2/carts/current",
+    { method: "PATCH", body: JSON.stringify({ cart: { note: appendBuyerNote(cart.note, note) } }) },
+  );
+  if (!data?.cart) throw new Error("Wix did not save the order note");
+  return mapCart(data.cart);
 }
 
 export async function addToCart(
