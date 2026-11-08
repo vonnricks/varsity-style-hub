@@ -136,6 +136,11 @@ export function TeamShots() {
                   height={1024}
                   className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                {shot.badge ? (
+                  <span className="absolute left-3 top-3 bg-maroon px-3 py-2 text-[10px] label-caps text-maroon-foreground">
+                    {shot.badge}
+                  </span>
+                ) : null}
               </div>
               <div className="px-5 py-6 text-center md:px-0 md:text-left">
                 <p className="text-[10px] label-caps text-maroon">{shot.rivalry}</p>

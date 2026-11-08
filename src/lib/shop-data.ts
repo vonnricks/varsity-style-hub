@@ -464,6 +464,8 @@ export type TeamShot = {
   copy: string;
   image: string;
   productId: string;
+  // Optional sale banner shown over the photo.
+  badge?: string;
 };
 
 export const teamShots: TeamShot[] = [
@@ -473,6 +475,7 @@ export const teamShots: TeamShot[] = [
     copy: "Luxury Style and Warmth",
     image: teamNavyAsset,
     productId: "e6d91c9a-77bf-4d6a-ba25-bd47e525117a",
+    badge: "Buy One Get One Free",
   },
   {
     team: "MIDNIGHT DISTRICT VARSITY JACKET",
